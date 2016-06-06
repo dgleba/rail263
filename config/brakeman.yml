@@ -1,0 +1,6 @@
+---
+:output_files:
+- brakeman-output.html
+:skip_libs: true
+:skip_files:
+- example_file_to_skip.rb

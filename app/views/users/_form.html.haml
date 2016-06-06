@@ -1,0 +1,9 @@
+= bootstrap_form_for(@user, layout: :horizontal, label_col: 'col-sm-2', control_col: 'col-sm-10') do |f|
+
+  = f.text_field :email
+  = f.text_field :crypted_password
+  = f.text_field :salt
+
+  = f.form_group do
+    = f.primary
+    = link_to t('actions.cancel'), users_path
