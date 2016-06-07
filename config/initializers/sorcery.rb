@@ -238,7 +238,7 @@ Rails.application.config.sorcery.configure do |config|
     # encryption algorithm name. See 'encryption_algorithm=' for available options.
     # Default: `:bcrypt`
     #
-    # user.encryption_algorithm =
+     user.encryption_algorithm = :none
 
 
     # make this configuration inheritable for subclasses. Useful for ActiveRecord's STI.
@@ -460,4 +460,10 @@ Rails.application.config.sorcery.configure do |config|
   # This line must come after the 'user config' block.
   # Define which model authenticates with sorcery.
   config.user_class = "User"
+  
+  # Solving incompatibility with authentication in production
+  # There's a solution proposed by @adamkangas, for context, see #147
+  # This requires forcing Sorcery::Controller inclusion at the end of sorcery.rb initializer:
+  # ActionController::Base.send(:include, Sorcery::Controller)
+  
 end

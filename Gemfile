@@ -11,6 +11,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'sqlite3'
 
+gem 'rails_admin'
+
 gem 'dotenv-rails', '>= 2.0.0'
 #gem 'bower-rails'
 #gem 'airbrake', '~> 4.1.0'
