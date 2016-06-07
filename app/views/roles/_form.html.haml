@@ -1,0 +1,8 @@
+= bootstrap_form_for(@role, layout: :horizontal, label_col: 'col-sm-2', control_col: 'col-sm-10') do |f|
+
+  = f.text_field :name
+  = f.text_field :description
+
+  = f.form_group do
+    = f.primary
+    = link_to t('actions.cancel'), roles_path

@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :roles
+  resources :users
+  resources :users
+  resources :roles
+  resources :users
+  resources :roles
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :customers
   resources :users

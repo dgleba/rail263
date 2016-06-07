@@ -1,8 +1,9 @@
 = bootstrap_form_for(@user, layout: :horizontal, label_col: 'col-sm-2', control_col: 'col-sm-10') do |f|
 
+  = f.text_field :name
   = f.text_field :email
   = f.text_field :crypted_password
-  = f.text_field :salt
+  = f.collection_select :role_id, Role.all, :id, :name, prompt: true
 
   = f.form_group do
     = f.primary

@@ -8,13 +8,36 @@ class User < ActiveRecord::Base
   validates :password_confirmation, presence: true, if: :password_update?
 
   # FIXME
-  def admin?
-    true
+  # def admin?
+    # true
+  # end
+
+  validates_presence_of :name
+  before_save :assign_role
+
+  def assign_role
+    self.role = Role.find_by name: "Regular" if self.role.nil?
   end
 
+  def admin?
+    self.role.name == "Admin"
+  end
+
+  def seller?
+    self.role.name == "Seller"
+  end
+
+  def regular?
+    self.role.name == "Regular"
+  end
+  
+
+  
   private
 
   def password_update?
     password.present? || new_record?
   end
+
+  belongs_to :role
 end

@@ -1,0 +1,33 @@
+%h1= Role.model_name.human
+
+.row
+  .col-sm-5.col-sm-offset-7
+    = search_form_for @q, class: 'search-form' do |f|
+      .input-group
+        = f.search_field :name_cont, class: 'form-control'
+        %span.input-group-btn
+          %button.btn.btn-primary
+            %i.fa.fa-search
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th= sort_link(@q, :name, Role.human_attribute_name(:name))
+      %th= sort_link(@q, :description, Role.human_attribute_name(:description))
+      %th
+      %th
+      %th
+
+  %tbody
+    - @roles.each do |role|
+      %tr
+        %td= role.name
+        %td= role.description
+        %td= link_to t('actions.show'), role
+        %td= link_to t('actions.edit'), edit_role_path(role)
+        %td= link_to t('actions.delete'), role, method: :delete, data: { confirm: t('actions.delete_question') }
+
+
+= paginate @roles
+
+= link_to t('actions.create'), new_role_path, class: 'btn btn-primary'

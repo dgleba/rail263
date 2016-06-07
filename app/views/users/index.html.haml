@@ -4,7 +4,7 @@
   .col-sm-5.col-sm-offset-7
     = search_form_for @q, class: 'search-form' do |f|
       .input-group
-        = f.search_field :email_cont, class: 'form-control'
+        = f.search_field :name_cont, class: 'form-control'
         %span.input-group-btn
           %button.btn.btn-primary
             %i.fa.fa-search
@@ -12,9 +12,10 @@
 %table.table.table-striped
   %thead
     %tr
+      %th= sort_link(@q, :name, User.human_attribute_name(:name))
       %th= sort_link(@q, :email, User.human_attribute_name(:email))
       %th= sort_link(@q, :crypted_password, User.human_attribute_name(:crypted_password))
-      %th= sort_link(@q, :salt, User.human_attribute_name(:salt))
+      %th= sort_link(@q, :role, User.human_attribute_name(:role))
       %th
       %th
       %th
@@ -22,9 +23,10 @@
   %tbody
     - @users.each do |user|
       %tr
+        %td= user.name
         %td= user.email
         %td= user.crypted_password
-        %td= user.salt
+        %td= user.role
         %td= link_to t('actions.show'), user
         %td= link_to t('actions.edit'), edit_user_path(user)
         %td= link_to t('actions.delete'), user, method: :delete, data: { confirm: t('actions.delete_question') }

@@ -6,14 +6,14 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-# r1 = Role.create({name: "Regular", description: "Can read items"})
-# r2 = Role.create({name: "Seller", description: "Can read and create items. Can update and destroy own items"})
-# r3 = Role.create({name: "Admin", description: "Can perform any CRUD operation on any resource"})
+r1 = Role.create({name: "Regular", description: ""})
+r2 = Role.create({name: "Seller", description: ""})
+r3 = Role.create({name: "Admin", description: "Can perform any CRUD operation on any resource"})
 
-# u1 = User.create({name: "reg", email: "r@e", password: "a", password_confirmation: "a", role_id: r1.id})
-# u2 = User.create({name: "sSue", email: "su@e", password: "a", password_confirmation: "a", role_id: r2.id})
-# u3 = User.create({name: "sKev", email: "k@e", password: "a", password_confirmation: "a", role_id: r2.id})
-# u4 = User.create({name: "admin", email: "a@e", password: "a", password_confirmation: "a", role_id: r3.id})
+u1 = User.create({name: "reg", email: "r@e", password: "a", password_confirmation: "a", role_id: r1.id})
+u2 = User.create({name: "sSue", email: "su@e", password: "a", password_confirmation: "a", role_id: r2.id})
+u3 = User.create({name: "sKev", email: "k@e", password: "a", password_confirmation: "a", role_id: r2.id})
+u4 = User.create({name: "admin", email: "a@a", password: "a", password_confirmation: "a", role_id: r3.id})
 
 # i1 = Item.create({name: "Rayban Sunglasses", description: "Stylish shades", price: 99.99, user_id: u2.id})
 # i2 = Item.create({name: "Gucci watch", description: "Expensive timepiece", price: 199.99, user_id: u2.id})

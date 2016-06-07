@@ -1,12 +1,14 @@
 %h1= User.model_name.human.singularize
 
 %dl.dl-horizontal
+  %dt= User.human_attribute_name :name
+  %dd= @user.name
   %dt= User.human_attribute_name :email
   %dd= @user.email
   %dt= User.human_attribute_name :crypted_password
   %dd= @user.crypted_password
-  %dt= User.human_attribute_name :salt
-  %dd= @user.salt
+  %dt= User.human_attribute_name :role
+  %dd= @user.role
 
 = link_to t('actions.edit'), edit_user_path(@user)
 \|

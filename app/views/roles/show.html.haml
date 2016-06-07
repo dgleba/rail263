@@ -1,0 +1,11 @@
+%h1= Role.model_name.human.singularize
+
+%dl.dl-horizontal
+  %dt= Role.human_attribute_name :name
+  %dd= @role.name
+  %dt= Role.human_attribute_name :description
+  %dd= @role.description
+
+= link_to t('actions.edit'), edit_role_path(@role)
+\|
+= link_to t('actions.cancel'), roles_path

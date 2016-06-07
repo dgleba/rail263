@@ -10,9 +10,13 @@ class ApplicationController < ActionController::Base
   end
 
   rescue_from CanCan::AccessDenied do |exception|
-    redirect_to :back, alert: exception.message
+    # redirect_to :back, alert: exception.message
+    redirect_to main_app.root_path, :alert => exception.message
   end
 
+  
+  
+  
   private
 
   # Overwrite the method sorcery calls when it

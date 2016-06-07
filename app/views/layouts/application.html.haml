@@ -24,9 +24,13 @@
 
         #navbar.collapse.navbar-collapse
           %ul.nav.navbar-nav
-
+            %li= link_to 'Customers', customers_path
+            
           %ul.nav.navbar-nav.navbar-right
             - if current_user
+
+              %li= link_to 'radmin', rails_admin.index_path('')
+
               %li.dropdown
                 %a.dropdown-toggle{ href: "#", data: { toggle: "dropdown" }, role: "button", aria: { expanded: "false" } }
                   %i.fa.fa-user
