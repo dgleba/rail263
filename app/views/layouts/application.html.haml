@@ -29,6 +29,7 @@
           %ul.nav.navbar-nav.navbar-right
             - if current_user
 
+              %li= link_to 'tadmin', '/admin'
               %li= link_to 'radmin', rails_admin.index_path('')
               %li= link_to 'Users', users_path
   

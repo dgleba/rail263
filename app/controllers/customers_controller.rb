@@ -2,6 +2,7 @@ class CustomersController < ApplicationController
   before_action :require_login
   load_and_authorize_resource :customer
 
+  # moved from application_controller. 2016-06-08 dgleba@gmail.com David Gleba 
   # override render to decorate all objects using the 'defer_draper' gem
   def render(*args)
     decorate_all

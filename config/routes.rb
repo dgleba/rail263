@@ -1,13 +1,21 @@
 Rails.application.routes.draw do
+
+  #administrate gem... 2016-06-08 David Gleba
+  namespace :admin do
+    resources :customers
+    resources :roles
+    resources :users
+    #root to: "customers#index"
+    root to: "roles#index"
+  end
+
   resources :roles
   resources :users
-  resources :users
-  resources :roles
-  resources :users
-  resources :roles
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
+  mount RailsAdmin::Engine => '/radmin', as: 'rails_admin'
+
   resources :customers
-  resources :users
+
   get 'login' => 'user_sessions#new', as: :login
   post 'login' => 'user_sessions#create'
   post 'logout' => 'user_sessions#destroy', as: :logout
