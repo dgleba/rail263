@@ -2,6 +2,12 @@ class CustomersController < ApplicationController
   before_action :require_login
   load_and_authorize_resource :customer
 
+  # override render to decorate all objects using the 'defer_draper' gem
+  def render(*args)
+    decorate_all
+    super
+  end
+
   # GET /customers
   def index
     @q = @customers.search params[:q]
