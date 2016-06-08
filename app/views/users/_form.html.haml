@@ -2,9 +2,15 @@
 
   = f.text_field :name
   = f.text_field :email
-  = f.text_field :crypted_password
+  -# = f.text_field :crypted_password
+  
+  = f.password_field :password
+  = f.password_field :password_confirmation
+      
   = f.collection_select :role_id, Role.all, :id, :name, prompt: true
 
   = f.form_group do
     = f.primary
     = link_to t('actions.cancel'), users_path
+
+
