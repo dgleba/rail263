@@ -11,6 +11,8 @@
   %dd= @rental_record.end_date
   %dt= RentalRecord.human_attribute_name :lastUpdated
   %dd= @rental_record.lastUpdated
+  %dt= 'SignatureOutput'
+  %dd= @rental_record.output
 
 = link_to t('actions.edit'), edit_rental_record_path(@rental_record)
 \|

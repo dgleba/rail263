@@ -10,13 +10,19 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
 //= require jquery
+//  specific order of loading...  http://stackoverflow.com/questions/17881384/jquery-gets-loaded-only-on-page-refresh-in-rails-4-application
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require select2
+//= require sigpad/jquery.signaturepad.min.js
+//= require sigpad/flashcanvas.js
+//= require sigpad/json2.min.js
+//= require turbolinks
 //= require_tree .
 
-$(function() {
-    $(".dgselect2").select2({
-    });
-});
+
+
+

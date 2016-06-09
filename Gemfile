@@ -9,13 +9,15 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'bcrypt', '~> 3.1.7'
 
-gem 'sqlite3'
 
+gem 'sqlite3'
 gem 'rails_admin'
 gem "administrate", "~> 0.2.2"
-
 gem "select2-rails"
 gem 'simple_form'
+gem 'turbolinks'
+gem 'jquery-turbolinks'
+
 
 gem 'dotenv-rails', '>= 2.0.0'
 #gem 'bower-rails'
