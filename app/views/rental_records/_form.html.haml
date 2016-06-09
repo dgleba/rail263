@@ -1,8 +1,6 @@
 = simple_form_for(@rental_record) do |f|
   = f.error_notification
 
-  
-  
   .form-inputs
     = f.association :customer
     = f.association :vehicle
@@ -10,11 +8,17 @@
     = f.input :end_date
     = f.input :lastUpdated
 
+    
     :css
+      .sigPad {
+        margin: 0;
+        padding: 0;
+        width: 303px; /* Change the width */
+      }
       .sigWrapper {
-      clear: both;
-      height: 108px; /* Change the height */
-      border: 1px solid #ccc;
+        clear: both;
+        height: 108px; /* Change the height */
+        border: 1px solid #ccc;
       }
     .sigPad
       %p.drawItDesc Draw your signature
@@ -26,8 +30,9 @@
         %canvas.pad{:height => "105", :width => "300"}
         = f.input :output , as: :hidden , input_html: { class: 'output' }
     %div
-      %br
-  
+      %br    
+
+      
   .form-actions
     = f.button :submit
 
