@@ -1,0 +1,11 @@
+= bootstrap_form_for(@rental_record, layout: :horizontal, label_col: 'col-sm-2', control_col: 'col-sm-10') do |f|
+
+  = f.collection_select :customer_id, Customer.all, :id, :name, prompt: true
+  = f.collection_select :vehicle_id, Vehicle.all, :id, :name, prompt: true
+  = f.date_select :start_date
+  = f.date_select :end_date
+  = f.datetime_select :lastUpdated
+
+  = f.form_group do
+    = f.primary
+    = link_to t('actions.cancel'), rental_records_path

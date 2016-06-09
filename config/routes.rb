@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :vehicles
+  resources :vehicles
+  resources :rental_records
+  resources :vehicles
   #administrate gem... 2016-06-08 David Gleba
   namespace :admin do
     resources :customers

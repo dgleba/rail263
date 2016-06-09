@@ -1,0 +1,17 @@
+%h1= RentalRecord.model_name.human.singularize
+
+%dl.dl-horizontal
+  %dt= RentalRecord.human_attribute_name :customer
+  %dd= @rental_record.customer
+  %dt= RentalRecord.human_attribute_name :vehicle
+  %dd= @rental_record.vehicle
+  %dt= RentalRecord.human_attribute_name :start_date
+  %dd= @rental_record.start_date
+  %dt= RentalRecord.human_attribute_name :end_date
+  %dd= @rental_record.end_date
+  %dt= RentalRecord.human_attribute_name :lastUpdated
+  %dd= @rental_record.lastUpdated
+
+= link_to t('actions.edit'), edit_rental_record_path(@rental_record)
+\|
+= link_to t('actions.cancel'), rental_records_path

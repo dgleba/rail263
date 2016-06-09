@@ -1,0 +1,12 @@
+= bootstrap_form_for(@vehicle, layout: :horizontal, label_col: 'col-sm-2', control_col: 'col-sm-10') do |f|
+
+  = f.text_field :name
+  = f.text_field :veh_reg_no
+  = f.text_field :category
+  = f.text_field :desc
+  = f.text_field :photo
+  = f.text_field :daily_rate
+
+  = f.form_group do
+    = f.primary
+    = link_to t('actions.cancel'), vehicles_path

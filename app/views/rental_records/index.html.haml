@@ -1,0 +1,39 @@
+%h1= RentalRecord.model_name.human
+
+.row
+  .col-sm-5.col-sm-offset-7
+    = search_form_for @q, class: 'search-form' do |f|
+      .input-group
+        = f.search_field :id_cont, class: 'form-control'
+        %span.input-group-btn
+          %button.btn.btn-primary
+            %i.fa.fa-search
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th= sort_link(@q, :customer, RentalRecord.human_attribute_name(:customer))
+      %th= sort_link(@q, :vehicle, RentalRecord.human_attribute_name(:vehicle))
+      %th= sort_link(@q, :start_date, RentalRecord.human_attribute_name(:start_date))
+      %th= sort_link(@q, :end_date, RentalRecord.human_attribute_name(:end_date))
+      %th= sort_link(@q, :lastUpdated, RentalRecord.human_attribute_name(:lastUpdated))
+      %th
+      %th
+      %th
+
+  %tbody
+    - @rental_records.each do |rental_record|
+      %tr
+        %td= rental_record.customer
+        %td= rental_record.vehicle
+        %td= rental_record.start_date
+        %td= rental_record.end_date
+        %td= rental_record.lastUpdated
+        %td= link_to t('actions.show'), rental_record
+        %td= link_to t('actions.edit'), edit_rental_record_path(rental_record)
+        %td= link_to t('actions.delete'), rental_record, method: :delete, data: { confirm: t('actions.delete_question') }
+
+
+= paginate @rental_records
+
+= link_to t('actions.create'), new_rental_record_path, class: 'btn btn-primary'

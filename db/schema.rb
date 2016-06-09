@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160607161356) do
+ActiveRecord::Schema.define(version: 20160609001337) do
 
   create_table "customers", force: :cascade do |t|
     t.string   "name"
@@ -21,6 +21,19 @@ ActiveRecord::Schema.define(version: 20160607161356) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "rental_records", force: :cascade do |t|
+    t.integer  "customer_id"
+    t.integer  "vehicle_id"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.datetime "lastUpdated"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "rental_records", ["customer_id"], name: "index_rental_records_on_customer_id"
+  add_index "rental_records", ["vehicle_id"], name: "index_rental_records_on_vehicle_id"
 
   create_table "roles", force: :cascade do |t|
     t.string   "name"
@@ -36,8 +49,20 @@ ActiveRecord::Schema.define(version: 20160607161356) do
     t.integer  "role_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.string   "salt"
   end
 
   add_index "users", ["role_id"], name: "index_users_on_role_id"
+
+  create_table "vehicles", force: :cascade do |t|
+    t.string   "name"
+    t.string   "veh_reg_no"
+    t.string   "category"
+    t.string   "desc"
+    t.binary   "photo"
+    t.decimal  "daily_rate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
