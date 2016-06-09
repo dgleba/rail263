@@ -21,6 +21,7 @@
 //= require sigpad/flashcanvas.js
 //= require sigpad/json2.min.js
 //= require turbolinks
+//= require cocoon
 //= require_tree .
 
 
