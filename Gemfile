@@ -17,6 +17,7 @@ gem "select2-rails"
 gem 'simple_form'
 gem 'turbolinks'
 gem 'jquery-turbolinks'
+gem 'cocoon'
 
 
 gem 'dotenv-rails', '>= 2.0.0'
