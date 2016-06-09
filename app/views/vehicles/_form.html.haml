@@ -1,12 +1,13 @@
-= bootstrap_form_for(@vehicle, layout: :horizontal, label_col: 'col-sm-2', control_col: 'col-sm-10') do |f|
+= simple_form_for(@vehicle) do |f|
+  = f.error_notification
 
-  = f.text_field :name
-  = f.text_field :veh_reg_no
-  = f.text_field :category
-  = f.text_field :desc
-  = f.text_field :photo
-  = f.text_field :daily_rate
+  .form-inputs
+    = f.input :name
+    = f.input :veh_reg_no
+    = f.input :category
+    = f.input :desc
+    = f.input :photo
+    = f.input :daily_rate
 
-  = f.form_group do
-    = f.primary
-    = link_to t('actions.cancel'), vehicles_path
+  .form-actions
+    = f.button :submit
