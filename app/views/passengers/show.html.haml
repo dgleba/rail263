@@ -1,0 +1,13 @@
+%h1= Passenger.model_name.human.singularize
+
+%dl.dl-horizontal
+  %dt= Passenger.human_attribute_name :name
+  %dd= @passenger.name
+  %dt= Passenger.human_attribute_name :description
+  %dd= @passenger.description
+  %dt= Passenger.human_attribute_name :rental_record
+  %dd= @passenger.rental_record
+
+= link_to t('actions.edit'), edit_passenger_path(@passenger)
+\|
+= link_to t('actions.cancel'), passengers_path
