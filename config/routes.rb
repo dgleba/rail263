@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
 
-  resources :passengers
+  resources :customers
+  resources :customers
+  resources :customers
+  resources :customers
+  resources :customers
   resources :passengers
   resources :jobs
   resources :projects
-  resources :rental_records
-  resources :vehicles
   resources :customers
-  resources :vehicles
-  resources :vehicles
   resources :rental_records
   resources :vehicles
   #administrate gem... 2016-06-08 David Gleba

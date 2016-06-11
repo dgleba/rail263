@@ -10,6 +10,6 @@
   %dt= Customer.human_attribute_name :discount
   %dd= @customer.discount
 
-= link_to t('actions.edit'), edit_customer_path(@customer)
-\|
+= link_to t('actions.edit'), edit_customer_path(@customer), class: 'btn btn-primary'
+\&nbsp &nbsp &nbsp|&nbsp &nbsp &nbsp
 = link_to t('actions.cancel'), customers_path
