@@ -1,0 +1,13 @@
+= simple_form_for(@pasenger_list) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :clocknum
+    = f.input :name
+    = f.input :active
+    = f.association :passenger
+
+  .form-actions
+    = f.button :submit
+    \&nbsp &nbsp|&nbsp &nbsp
+    = link_to t('actions.cancel'), pasenger_lists_path

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :pasenger_lists
   resources :customers
   resources :customers
   resources :customers
