@@ -12,6 +12,7 @@
       %script{:src => "http://cdnjs.cloudflare.com/ajax/libs/es5-shim/2.0.8/es5-shim.min.js"}
     = csrf_meta_tags
   %body{class: "#{controller.controller_name}"}
+    / %nav.navbar.navbar-inverse.navbar-static-top{role: 'navigation'}
     %nav.navbar.navbar-inverse.navbar-fixed-top{role: 'navigation'}
       .container-fluid
         .navbar-header
@@ -36,9 +37,7 @@
           %ul.nav.navbar-nav.navbar-right
             - if current_user
 
-              %li= link_to 'tadmin', '/admin'
               %li= link_to 'radmin', rails_admin.index_path('')
-              %li= link_to 'Users', users_path
               %li= link_to t('user_sessions.logout'), logout_path, method: :destroy
   
               %li.dropdown
@@ -48,6 +47,8 @@
                   %span.caret
                 %ul.dropdown-menu{ role: "menu" }
                   %li= link_to t('user_sessions.logout'), logout_path, method: :destroy
+                  %li= link_to 'tadmin', '/admin'
+                  %li= link_to 'Users', users_path
 
 
     .container-fluid
