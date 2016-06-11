@@ -20,9 +20,10 @@
 //= require sigpad/jquery.signaturepad.min.js
 //= require sigpad/flashcanvas.js
 //= require sigpad/json2.min.js
-//= require turbolinks
 //= require cocoon
 //= require_tree .
+//= require dgsigpad.js
+//= require turbolinks
 
 
 
