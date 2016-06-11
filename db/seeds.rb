@@ -42,13 +42,13 @@
   # {name: "f", address: "", phone: "", discount: nil},
 # ])
 
-Vehicle.create!([
-  {veh_reg_no: "GA5555E", category: "truck", name: "NISSAN CABSTAR 3.0L", desc: "Lorry, Manual ", photo: nil, daily_rate: "89.99"},
-  {veh_reg_no: "GA6666F", category: "truck", name: "OPEL COMBO 1.6L", desc: "Van, Manual", photo: nil, daily_rate: "69.99"},
-  {veh_reg_no: "SBA1111A", category: "car",  name: "NISSAN SUNNY 1.6L", desc: "4 Door Saloon, Automatic", photo: nil, daily_rate: "99.99"},
-  {veh_reg_no: "SBB2222B", category: "car",  name: "TOYOTA ALTIS 1.6L", desc: "4 Door Saloon, Automatic", photo: nil, daily_rate: "99.99"},
-  {veh_reg_no: "SBC3333C", category: "car",  name: "HONDA CIVIC 1.8L", desc: "4 Door Saloon, Automatic", photo: nil, daily_rate: "119.99"}
-])
+# Vehicle.create!([
+  # {veh_reg_no: "GA5555E", category: "truck", name: "NISSAN CABSTAR 3.0L", desc: "Lorry, Manual ", photo: nil, daily_rate: "89.99"},
+  # {veh_reg_no: "GA6666F", category: "truck", name: "OPEL COMBO 1.6L", desc: "Van, Manual", photo: nil, daily_rate: "69.99"},
+  # {veh_reg_no: "SBA1111A", category: "car",  name: "NISSAN SUNNY 1.6L", desc: "4 Door Saloon, Automatic", photo: nil, daily_rate: "99.99"},
+  # {veh_reg_no: "SBB2222B", category: "car",  name: "TOYOTA ALTIS 1.6L", desc: "4 Door Saloon, Automatic", photo: nil, daily_rate: "99.99"},
+  # {veh_reg_no: "SBC3333C", category: "car",  name: "HONDA CIVIC 1.8L", desc: "4 Door Saloon, Automatic", photo: nil, daily_rate: "119.99"}
+# ])
 
 # RentalRecord.create!([
   # {customer_id: 1, vehicle_id: 1, start_date: "2012-01-01", end_date: "2012-01-01", lastUpdated: nil},

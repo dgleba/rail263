@@ -6,6 +6,6 @@
   %dd= @<%= singular_table_name %>.<%= attribute.name %>
 <% end -%>
 
-= link_to t('actions.edit'), edit_<%= singular_table_name %>_path(@<%= singular_table_name %>)
+= link_to t('actions.edit'), edit_<%= singular_table_name %>_path(@<%= singular_table_name %>), class: 'btn btn-primary'
 \|
 = link_to t('actions.cancel'), <%= index_helper %>_path
