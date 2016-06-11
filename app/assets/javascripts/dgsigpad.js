@@ -8,7 +8,7 @@ $( document ).ready(function(){
 $('.sigPad').signaturePad(dgoptions);
 
 // if sigpad IS in a cocoon nested form..  
-// show sigpad using cocoon after insert using callback..
+// show sigpad using cocoon:after-insert --  using callback..
 // $('#passengers')
   // .on('cocoon:before-insert', function() {
     // $('.sigPad').signaturePad(dgoptions);

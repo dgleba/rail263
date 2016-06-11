@@ -13,7 +13,6 @@
 
 //= require jquery
 //  specific order of loading...  http://stackoverflow.com/questions/17881384/jquery-gets-loaded-only-on-page-refresh-in-rails-4-application
-//= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require select2
@@ -23,7 +22,6 @@
 //= require cocoon
 //= require_tree .
 //= require dgsigpad.js
-//= require turbolinks
 
 
 
