@@ -14,6 +14,10 @@ copy these into place..
 
 /srv/web/drail246b/config/puma.rb
 
+_____________ 
+
+
+example...
 
 cd /srv/web/drail246b
 
@@ -28,6 +32,27 @@ sudo ln -nfs /etc/nginx/sites-available/drail246b.conf /etc/nginx/sites-enabled/
 
 sudo restart puma-manager
 sudo service nginx restart
+
+_____________ 
+
+
+cd /srv/web/rail256a
+
+mkdir -p shared/pids shared/sockets shared/log
+
+sudo sh -c 'echo "/srv/web/rail256a" >> /etc/puma.conf'
+
+sudo cp  /etc/nginx/sites-available/rail256a.conf  /etc/nginx/sites-available/rail256a.conf$(date +"__%Y.%m.%d_%H.%M.%S").bk
+# copy file into place --  from rail256a app folder /srv/web/rail256a
+sudo cp  deploy/rail256a.conf /etc/nginx/sites-available/rail256a.conf
+sudo ln -nfs /etc/nginx/sites-available/rail256a.conf /etc/nginx/sites-enabled/rail256a.conf
+
+sudo restart puma-manager
+sudo service nginx restart
+
+_____________ 
+
+
 
 
 
