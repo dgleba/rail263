@@ -4,5 +4,6 @@ FactoryGirl.define do
     description "MyString"
     output "MyText"
     rental_record nil
+    passenger_list nil
   end
 end

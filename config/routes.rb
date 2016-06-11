@@ -5,6 +5,24 @@ Rails.application.routes.draw do
   resources :customers
   resources :customers
   resources :customers
+  resources :customers
+  resources :customers
+  resources :customers
+  resources :customers
+  resources :customers
+  resources :customers
+  resources :customers
+  resources :customers
+  resources :customers
+  resources :customers
+  resources :customers
+  resources :customers
+  resources :passengers
+  resources :customers
+  resources :customers
+  resources :customers
+  resources :customers
+  resources :customers
   resources :passengers
   resources :jobs
   resources :projects

@@ -1,0 +1,20 @@
+
+.search-width-50 {
+  width:33%;
+  min-width:100px; /* Change the width */
+}
+
+.pagination-vertical {
+  float: none;
+}
+
+.pagination
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.pagination-row {
+    height: 60%;
+}

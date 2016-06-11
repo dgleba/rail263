@@ -6,6 +6,9 @@
     = f.input :description
     = f.input :output
     = f.association :rental_record
+    = f.association :passenger_list
 
   .form-actions
     = f.button :submit
+    \&nbsp &nbsp|&nbsp &nbsp
+    = link_to t('actions.cancel'), passengers_path

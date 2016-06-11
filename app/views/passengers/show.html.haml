@@ -9,7 +9,9 @@
   %dd= @passenger.output
   %dt= Passenger.human_attribute_name :rental_record
   %dd= @passenger.rental_record
+  %dt= Passenger.human_attribute_name :passenger_list
+  %dd= @passenger.passenger_list
 
-= link_to t('actions.edit'), edit_passenger_path(@passenger)
-\|
+= link_to t('actions.edit'), edit_passenger_path(@passenger), class: 'btn btn-primary'
+\&nbsp &nbsp &nbsp|&nbsp &nbsp &nbsp
 = link_to t('actions.cancel'), passengers_path
