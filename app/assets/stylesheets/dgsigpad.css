@@ -1,0 +1,10 @@
+.sigPad {
+  margin: 0;
+  padding: 0;
+  width: 303px; /* Change the width */
+}
+.sigWrapper {
+  clear: both;
+  height: 108px; /* Change the height */
+  border: 1px solid #ccc;
+}

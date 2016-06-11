@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :passengers
+  resources :passengers
   resources :jobs
   resources :projects
   resources :rental_records
