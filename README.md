@@ -2,9 +2,42 @@
 
 This is a Rails 4.2.6 app.
 
+## to delete existing example scaffolds..
+
+find  -name '*customer*' -delete
+find . -name "customer*" -type d -exec rm -r "{}" \;
+
+find  -name '*vehicle*' -delete
+find . -name "vehicle*" -type d -exec rm -r "{}" \;
+
+
+fname1='rental'
+find  -name "*$fname1*" -delete
+find . -name "$fname1*" -type d -exec rm -r "{}" \;
+
+fname1='project'
+find  -name "*$fname1*" -delete
+find . -name "$fname1*" -type d -exec rm -r "{}" \;
+
+fname1='job'
+find  -name "*$fname1*" -delete
+find . -name "$fname1*" -type d -exec rm -r "{}" \;
+
+fname1='pasenger'
+find  -name "*$fname1*" -delete
+find . -name "$fname1*" -type d -exec rm -r "{}" \;
+
+
+fname1='passenger'
+find  -name "*$fname1*" -delete
+find . -name "$fname1*" -type d -exec rm -r "{}" \;
+
+
+
+
+
 ## Documentation
 
-* Staging and production deployment instructions are in `DEPLOYMENT.md`
 
 ## Prerequisites
 
@@ -14,16 +47,6 @@ This project requires:
 * MySQL must be installed and accepting connections
 
 ## Getting started
-
-### bin/setup
-
-Run the `bin/setup` script. This script will:
-
-* Check you have the required Ruby version
-* Install gems using Bundler
-* Create local copies of `.env`
-* Create, migrate, and seed the database
-
 ### Run it!
 
 1. Run `rspec spec` to make sure everything works.

@@ -1,5 +1,7 @@
 .nested-fields.well.well-compact
-  = f.input :name
+  / use assocation below... = f.input :name
+  = f.association :pasenger_list
+
   .sigPad
     %p.drawItDesc Draw your signature
     %ul.sigNav
