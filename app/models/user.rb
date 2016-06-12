@@ -24,23 +24,22 @@ class User < ActiveRecord::Base
   before_save :assign_role
 
   def assign_role
-    self.role = Role.find_by name: "Regular" if self.role.nil?
+    self.role = Role.find_by name: "sc_minimal" if self.role.nil?
   end
 
-  def admin?
-    self.role.name == "Admin"
+  def sc_admin?
+    self.role.name == "sc_admin"
   end
 
-  def seller?
-    self.role.name == "Seller"
+  def sc_seller?
+    self.role.name == "sc_seller"
   end
 
-  def regular?
-    self.role.name == "Regular"
+  def sc_regular?
+    self.role.name == "sc_regular"
   end
   
-
-  
+ 
   private
 
   def password_update?

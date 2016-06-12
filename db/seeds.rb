@@ -6,9 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-# r1 = Role.create({name: "Regular", description: ""})
-# r2 = Role.create({name: "Seller", description: ""})
-# r3 = Role.create({name: "Admin", description: "Can perform any CRUD operation on any resource"})
+# r1 = Role.create({name: "sc_regular", description: ""})
+# r2 = Role.create({name: "sc_seller", description: ""})
+# r3 = Role.create({name: "sc_admin", description: "Can perform any CRUD operation on any resource"})
 
 # u1 = User.create({name: "reg", email: "r@e", password: "a", password_confirmation: "a", role_id: r1.id})
 # u2 = User.create({name: "sSue", email: "su@e", password: "a", password_confirmation: "a", role_id: r2.id})
@@ -58,9 +58,9 @@
 # ])
 
 # Role.create!([
-  # {name: "Regular", description: "Can read items"},
-  # {name: "Seller", description: "Can read and create items. Can update and destroy own items"},
-  # {name: "Admin", description: "Can perform any CRUD operation on any resource"}
+  # {name: "sc_regular", description: "Can read items"},
+  # {name: "sc_seller", description: "Can read and create items. Can update and destroy own items"},
+  # {name: "sc_admin", description: "Can perform any CRUD operation on any resource"}
 # ])
 # User2.create!([
   # {name: "reg", role_id: 1, email: "r@e", encrypted_password: "$2a$11$.9D7oYc8u/JJ1QhymHdSZemPq5QLVEQOWV2PVT2Bs3MJ9WKjwMoxu", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: nil, last_sign_in_at: nil, current_sign_in_ip: nil, last_sign_in_ip: nil},

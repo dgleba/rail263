@@ -3,12 +3,12 @@ class Ability
 
   def initialize(user)
 
-    if user.admin?
+    if user.sc_admin?
       can :manage, :all
       can :access, :rails_admin       # only allow admin users to access Rails Admin
       can :dashboard                  # allow access to dashboard
 
-    elsif user.seller?
+    elsif user.sc_seller?
       can :read, Customer
       can :create, Customer
       can :update, Customer do |customer|
@@ -20,13 +20,13 @@ class Ability
       can :access, :rails_admin       # only allow admin users to access Rails Admin
       can :dashboard                  # allow access to dashboard
 
-    elsif user.regular?
+    elsif user.sc_regular?
       can :read, [Customer, Vehicle, RentalRecord]
       can :create, [Customer, Vehicle, RentalRecord]
       can :update, [Customer, Vehicle] 
 
     elsif user.sc_readonly?
-      can :read, Customer
+      can :read, Vehicle
       
     end
 
