@@ -49,6 +49,9 @@ gem 'ransack'
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
 
+group :prodution do
+  gem 'puma'
+end
 
 group :development, :test do
 #  gem 'capistrano'
