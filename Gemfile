@@ -20,6 +20,8 @@ gem 'turbolinks'
 gem 'jquery-turbolinks'
 gem 'cocoon'
 
+gem 'seed_dump'
+
 
 gem 'dotenv-rails', '>= 2.0.0'
 #gem 'bower-rails'

@@ -6,6 +6,13 @@ Rails.application.routes.draw do
   resources :passengers
   resources :pasenger_lists
   resources :passengers
+  resources :pasenger_lists
+  resources :rental_records
+  resources :vehicles
+  resources :customers
+  resources :passengers
+  resources :pasenger_lists
+  resources :passengers
 #
   resources :pasenger_lists
   resources :passengers

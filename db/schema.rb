@@ -11,7 +11,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160612010139) do
+ActiveRecord::Schema.define(version: 20160620172720) do
+
+  create_table "customers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "phone"
+    t.float    "discount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pasenger_lists", force: :cascade do |t|
+    t.string   "clocknum"
+    t.string   "name"
+    t.boolean  "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "passengers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.text     "output"
+    t.integer  "rental_record_id"
+    t.integer  "pasenger_list_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "passengers", ["pasenger_list_id"], name: "index_passengers_on_pasenger_list_id"
+  add_index "passengers", ["rental_record_id"], name: "index_passengers_on_rental_record_id"
+
+  create_table "rental_records", force: :cascade do |t|
+    t.integer  "customer_id"
+    t.integer  "vehicle_id"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.datetime "lastUpdated"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "rental_records", ["customer_id"], name: "index_rental_records_on_customer_id"
+  add_index "rental_records", ["vehicle_id"], name: "index_rental_records_on_vehicle_id"
 
   create_table "roles", force: :cascade do |t|
     t.string   "name"
@@ -31,5 +74,16 @@ ActiveRecord::Schema.define(version: 20160612010139) do
   end
 
   add_index "users", ["role_id"], name: "index_users_on_role_id"
+
+  create_table "vehicles", force: :cascade do |t|
+    t.string   "veh_reg_no"
+    t.string   "category"
+    t.string   "name"
+    t.string   "desc"
+    t.binary   "photo"
+    t.decimal  "daily_rate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

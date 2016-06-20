@@ -25,7 +25,7 @@
       %th
       %th= sort_link(@q, :veh_reg_no, Vehicle.human_attribute_name(:veh_reg_no))
       %th= sort_link(@q, :category, Vehicle.human_attribute_name(:category))
-      %th= sort_link(@q, :brand, Vehicle.human_attribute_name(:brand))
+      %th= sort_link(@q, :name, Vehicle.human_attribute_name(:name))
       %th= sort_link(@q, :desc, Vehicle.human_attribute_name(:desc))
       %th= sort_link(@q, :photo, Vehicle.human_attribute_name(:photo))
       %th= sort_link(@q, :daily_rate, Vehicle.human_attribute_name(:daily_rate))
@@ -37,7 +37,7 @@
         %td= link_to t('actions.edit'), edit_vehicle_path(vehicle)
         %td= vehicle.veh_reg_no
         %td= vehicle.category
-        %td= vehicle.brand
+        %td= vehicle.name
         %td= vehicle.desc
         %td= vehicle.photo
         %td= vehicle.daily_rate
