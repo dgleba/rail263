@@ -59,6 +59,6 @@ class PasengerListsController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def pasenger_list_params
-    params.require(:pasenger_list).permit(:clocknum, :name, :active, :passenger_id)
+    params.require(:pasenger_list).permit(:clocknum, :name, :active)
   end
 end

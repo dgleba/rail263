@@ -1,12 +1,12 @@
 %h1= Vehicle.model_name.human.singularize
 
 %dl.dl-horizontal
-  %dt= Vehicle.human_attribute_name :name
-  %dd= @vehicle.name
   %dt= Vehicle.human_attribute_name :veh_reg_no
   %dd= @vehicle.veh_reg_no
   %dt= Vehicle.human_attribute_name :category
   %dd= @vehicle.category
+  %dt= Vehicle.human_attribute_name :brand
+  %dd= @vehicle.brand
   %dt= Vehicle.human_attribute_name :desc
   %dd= @vehicle.desc
   %dt= Vehicle.human_attribute_name :photo
@@ -14,6 +14,6 @@
   %dt= Vehicle.human_attribute_name :daily_rate
   %dd= @vehicle.daily_rate
 
-= link_to t('actions.edit'), edit_vehicle_path(@vehicle)
-\|
+= link_to t('actions.edit'), edit_vehicle_path(@vehicle), class: 'btn btn-primary'
+\&nbsp &nbsp &nbsp|&nbsp &nbsp &nbsp
 = link_to t('actions.cancel'), vehicles_path

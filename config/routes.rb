@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  resources :rental_records
+  resources :vehicles
+  resources :customers
+  resources :passengers
+  resources :pasenger_lists
   resources :passengers
 #
   resources :pasenger_lists

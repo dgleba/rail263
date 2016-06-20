@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+function Purpose() {
+# begin block comment =============================
+: <<'END'
+
+#  Purpose:  tar the current folder and give the archive a useful name..
+
+END
+# end block comment ===============================
+}
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#cd ; 
+date ; set +vx  ; set -vx ; # echo off, then echo on
+#
+
+cd /srv/web/rail256a
+
+mkdir -p shared/pids shared/sockets shared/log
+
+sudo cp deploy/puma.conf /etc/init/puma.conf
+sudo cp deploy/puma-manager.conf /etc/init/puma-manager.conf
+cp deploy/puma.rb config/puma.rb
+
+sudo sh -c 'echo "/srv/web/rail256a" >> /etc/puma.conf'
+
+sudo cp  /etc/nginx/sites-available/rail256a.conf  /etc/nginx/sites-available/rail256a.conf$(date +"__%Y.%m.%d_%H.%M.%S").bk
+# copy file into place --  from rail256a app folder /srv/web/rail256a
+sudo cp  deploy/rail256a.conf /etc/nginx/sites-available/rail256a.conf
+sudo ln -nfs /etc/nginx/sites-available/rail256a.conf /etc/nginx/sites-enabled/rail256a.conf
+
+sudo start puma-manager
+sudo restart puma-manager
+sudo service nginx restart
+

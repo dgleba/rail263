@@ -21,9 +21,9 @@ class Ability
       can :dashboard                  # allow access to dashboard
 
     elsif user.sc_regular?
-      can :read, [Customer, Vehicle, RentalRecord]
-      can :create, [Customer, Vehicle, RentalRecord]
-      can :update, [Customer, Vehicle] 
+      can :read, [Customer, Vehicle, RentalRecord, Passenger]
+      can :create, [Customer, Vehicle, RentalRecord, Passenger]
+      can :update, [Customer, Vehicle, Passenger] 
 
     elsif user.sc_readonly?
       can :read, Vehicle

@@ -11,68 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160612011607) do
-
-  create_table "customers", force: :cascade do |t|
-    t.string   "name"
-    t.string   "address"
-    t.string   "phone"
-    t.float    "discount"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "jobs", force: :cascade do |t|
-    t.string   "description"
-    t.boolean  "done"
-    t.integer  "project_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  add_index "jobs", ["project_id"], name: "index_jobs_on_project_id"
-
-  create_table "pasenger_lists", force: :cascade do |t|
-    t.string   "clocknum"
-    t.string   "name"
-    t.boolean  "active"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "passengers", force: :cascade do |t|
-    t.string   "name"
-    t.string   "description"
-    t.integer  "rental_record_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-    t.text     "output"
-    t.integer  "pasenger_list_id"
-  end
-
-  add_index "passengers", ["pasenger_list_id"], name: "index_passengers_on_pasenger_list_id"
-  add_index "passengers", ["rental_record_id"], name: "index_passengers_on_rental_record_id"
-
-  create_table "projects", force: :cascade do |t|
-    t.string   "name"
-    t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "rental_records", force: :cascade do |t|
-    t.integer  "customer_id"
-    t.integer  "vehicle_id"
-    t.date     "start_date"
-    t.date     "end_date"
-    t.datetime "lastUpdated"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.text     "output"
-  end
-
-  add_index "rental_records", ["customer_id"], name: "index_rental_records_on_customer_id"
-  add_index "rental_records", ["vehicle_id"], name: "index_rental_records_on_vehicle_id"
+ActiveRecord::Schema.define(version: 20160612010139) do
 
   create_table "roles", force: :cascade do |t|
     t.string   "name"
@@ -85,23 +24,12 @@ ActiveRecord::Schema.define(version: 20160612011607) do
     t.string   "name"
     t.string   "email"
     t.string   "crypted_password"
+    t.string   "salt"
     t.integer  "role_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.string   "salt"
   end
 
   add_index "users", ["role_id"], name: "index_users_on_role_id"
-
-  create_table "vehicles", force: :cascade do |t|
-    t.string   "name"
-    t.string   "veh_reg_no"
-    t.string   "category"
-    t.string   "desc"
-    t.binary   "photo"
-    t.decimal  "daily_rate"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
 end

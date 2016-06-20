@@ -26,7 +26,6 @@
       %th= sort_link(@q, :clocknum, PasengerList.human_attribute_name(:clocknum))
       %th= sort_link(@q, :name, PasengerList.human_attribute_name(:name))
       %th= sort_link(@q, :active, PasengerList.human_attribute_name(:active))
-      %th= sort_link(@q, :passenger, PasengerList.human_attribute_name(:passenger))
 
   %tbody
     - @pasenger_lists.each do |pasenger_list|
@@ -36,6 +35,5 @@
         %td= pasenger_list.clocknum
         %td= pasenger_list.name
         %td= pasenger_list.active
-        %td= pasenger_list.passenger
 
 = paginate @pasenger_lists

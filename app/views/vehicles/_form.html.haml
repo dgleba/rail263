@@ -2,12 +2,14 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :name
     = f.input :veh_reg_no
     = f.input :category
+    = f.input :brand
     = f.input :desc
     = f.input :photo
     = f.input :daily_rate
 
   .form-actions
     = f.button :submit
+    \&nbsp &nbsp|&nbsp &nbsp
+    = link_to t('actions.cancel'), vehicles_path

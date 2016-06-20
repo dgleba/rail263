@@ -1,8 +1,8 @@
 FactoryGirl.define do
   factory :vehicle do
-    name "MyString"
     veh_reg_no "MyString"
     category "MyString"
+    brand "MyString"
     desc "MyString"
     photo ""
     daily_rate "9.99"
