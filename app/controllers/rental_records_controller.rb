@@ -59,6 +59,11 @@ class RentalRecordsController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def rental_record_params
-    params.require(:rental_record).permit(:customer_id, :vehicle_id, :start_date, :end_date, :lastUpdated)
+    #params.require(:rental_record).permit(:customer_id, :vehicle_id, :start_date, :end_date, :lastUpdated)
+    params.require(:rental_record).permit(
+      :customer_id, :vehicle_id, :start_date, :end_date, :lastUpdated,  
+      passengers_attributes: [:id, :description, :name, :output, :pasenger_list_id, :_destroy , pasenger_lists_attributes: [:id, :clocknum, :name, :active, :_destroy]] 
+      )
   end
 end
+

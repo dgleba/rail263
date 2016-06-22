@@ -59,6 +59,7 @@ class PassengersController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def passenger_params
-    params.require(:passenger).permit(:name, :description, :output, :rental_record_id, :pasenger_list_id)
+    #params.require(:passenger).permit(:name, :description, :output, :rental_record_id, :pasenger_list_id)
+    params.require(:passenger).permit(:name, :description, :output, :rental_record_id, :pasenger_list_id, pasenger_lists_attributes: [:id, :clocknum, :name])
   end
 end

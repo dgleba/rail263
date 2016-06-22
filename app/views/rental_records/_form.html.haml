@@ -8,7 +8,17 @@
     = f.input :end_date
     = f.input :lastUpdated
 
+    %h3 Passengers
+    #passengers
+      = f.simple_fields_for :passengers do |passenger|
+        = render 'passenger_fields', f: passenger
+        
+      .links
+        = link_to_add_association 'add passenger', f, :passengers
+    
   .form-actions
     = f.button :submit
     \&nbsp &nbsp|&nbsp &nbsp
     = link_to t('actions.cancel'), rental_records_path
+
+   

@@ -10,7 +10,7 @@
   .col-sm-6.col-md-5.col-lg-4{:style => "background-color:white;"}
     = search_form_for @q, class: 'search-form ' do |f|
       .input-group
-        = f.search_field :customer_cont, class: 'form-control'
+        = f.search_field :id_cont, class: 'form-control'
         %span.input-group-btn
           %button.btn.btn-primary
             %i.fa.fa-search    
