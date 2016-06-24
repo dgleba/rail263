@@ -12,5 +12,7 @@ rails generate scaffold RentalRecord customer:references vehicle:references star
 employee table comes from elsewhere. I don't control it. It has the name of the employee
 
 
-
+todo:
+-add to_s in models
+-add 
 
