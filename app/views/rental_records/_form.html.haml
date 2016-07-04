@@ -8,10 +8,13 @@
     = f.input :end_date
     = f.input :lastUpdated
 
+    - a = f.object.start_datex
+    - puts a
+    
     %h3 Passengers
     #passengers
       = f.simple_fields_for :passengers do |passenger|
-        = render 'passenger_fields', f: passenger
+        = render 'passenger_fields', f: passenger, passenger: f.object
       
       .links
         = link_to_add_association 'add passenger', f, :passengers

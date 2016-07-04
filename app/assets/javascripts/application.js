@@ -16,13 +16,15 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require select2
-//= require sigpad/jquery.signaturepad.min.js
-//= require sigpad/flashcanvas.js
-//= require sigpad/json2.min.js
+
+//= require signature-pad
+//  // after equal sign will comment out line...
+//=// require sigpad/jquery.signaturepad.min.js
+//=// require sigpad/flashcanvas.js
+//=// require sigpad/json2.min.js
+
 //= require cocoon
 //= require_tree .
-//= require dgsigpad.js
-
 
 
 

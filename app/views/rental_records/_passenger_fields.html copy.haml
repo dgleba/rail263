@@ -1,0 +1,38 @@
+.nested-fields.well.well-compact
+  / use assocation below... = f.input :name
+
+  - if f.association :pasenger_list<1?
+    = f.association :pasenger_list
+    .sigPad
+      %p.drawItDesc Draw your signature
+      %ul.sigNav
+        %li.clearButton
+          %a{:href => "#clear"} Clear
+      .sig.sigWrapper
+        .typed
+        %canvas.pad{:height => "105", :width => "300"}
+          = f.input :output , as: :hidden , input_html: { class: 'output' }
+  - else
+    = f.association :pasenger_list
+    %p Signature Previously Requested
+      
+  %div
+  %br    
+
+
+  = link_to_remove_association "remove passenger", f
+  
+  :javascript
+    var dgoptions = {
+      bgColour : '#F0FEEF'
+       , drawOnly : true
+    };
+    $(document).ready(function() {
+      // if sigpad IS in a cocoon nested form..
+      // show sigpad using cocoon:after-insert --  using callback..
+      $('#passengers')
+        .on('cocoon:after-insert', function() {
+          $('.sigPad').signaturePad(dgoptions);
+          //$('.sigPad').signaturePad({displayOnly:true}).regenerate(sig);
+      })
+    });

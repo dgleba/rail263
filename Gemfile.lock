@@ -324,6 +324,9 @@ GEM
     sexp_processor (4.7.0)
     shoulda-matchers (3.1.1)
       activesupport (>= 4.0.0)
+    signature-pad-rails (0.5)
+      jquery-rails (>= 3.0.0, < 5.1)
+      rails (>= 3.0.0, < 5.1)
     simple_form (3.2.1)
       actionpack (> 4, < 5.1)
       activemodel (> 4, < 5.1)
@@ -417,6 +420,7 @@ DEPENDENCIES
   select2-rails
   selenium-webdriver
   shoulda-matchers (~> 3.0)
+  signature-pad-rails
   simple_form
   simplecov
   simplecov-console
@@ -430,4 +434,4 @@ RUBY VERSION
    ruby 2.3.0p0
 
 BUNDLED WITH
-   1.12.3
+   1.12.5

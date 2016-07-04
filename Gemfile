@@ -19,6 +19,7 @@ gem 'simple_form'
 gem 'turbolinks'
 gem 'jquery-turbolinks'
 gem 'cocoon'
+gem 'signature-pad-rails'
 
 gem 'seed_dump'
 

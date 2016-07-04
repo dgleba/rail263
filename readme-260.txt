@@ -1,3 +1,5 @@
+_____________
+
 
 #rails g scaffold RentalRecord customer:references start_date:date end_date:date --no-migration -f
 #rails g scaffold Customer clocknum:string phone:string --no-migration -f
@@ -11,8 +13,15 @@ rails generate scaffold RentalRecord customer:references vehicle:references star
 
 employee table comes from elsewhere. I don't control it. It has the name of the employee
 
+_____________
+
 
 todo:
+
+2016-06-24:
 -add to_s in models
--add 
+
+_____________
+
+
 

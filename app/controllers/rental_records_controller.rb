@@ -14,6 +14,7 @@ class RentalRecordsController < ApplicationController
 
   # GET /rental_records/new
   def new
+    @signed = false
   end
 
   # GET /rental_records/1/edit
