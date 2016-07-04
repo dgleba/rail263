@@ -1,16 +1,19 @@
 !!!
 %html
   %head
-    %title rail253y
-    /
-      rail253y
-      version: #{Rails.application.config.version} (#{l(Rails.application.config.version_time)})
+    %meta{:charset => "utf-8"}
+      %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+        %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+          %title rail253y
+          /
+            rail253y
+            version: #{Rails.application.config.version} (#{l(Rails.application.config.version_time)})
 
-    = stylesheet_link_tag    'application', media: 'all'
-    = javascript_include_tag 'application'
-    /[if lt IE 9]
-      %script{:src => "http://cdnjs.cloudflare.com/ajax/libs/es5-shim/2.0.8/es5-shim.min.js"}
-    = csrf_meta_tags
+          = stylesheet_link_tag    'application', media: 'all'
+          = javascript_include_tag 'application'
+          /[if lt IE 9]
+            %script{:src => "http://cdnjs.cloudflare.com/ajax/libs/es5-shim/2.0.8/es5-shim.min.js"}
+          = csrf_meta_tags
   %body{class: "#{controller.controller_name}"}
     / switch between fixed which always shows on the screen to scrolling - static top. will have to edit bootstrap_overides.css padding-top
     / %nav.navbar.navbar-inverse.navbar-fixed-top{role: 'navigation'}
