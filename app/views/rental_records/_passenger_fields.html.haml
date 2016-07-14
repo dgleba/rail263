@@ -2,7 +2,7 @@
   / use assocation below... = f.input :name
 
   / http://stackoverflow.com/questions/8766624/if-database-entry-is-empty-show-this-message-in-view
-  passenger.output.present?
+  / debugging with mark campbell.. passenger.output.present?
   
   - if f.object.output.present?
     = f.association :pasenger_list
@@ -23,6 +23,35 @@
   %br    
 
 
-  = link_to_remove_association "remove passenger", f
+  / = link_to_remove_association "remove passenger", f
   
  
+  :javascript
+    $(function() {
+      var dgoptions = {
+          bgColour : '#F0FEEF'
+           , drawOnly : true
+        };
+      
+      // if sigpad is not in a cocoon nested form.. 
+      // also, without this, it won't show sigpad when edit is pressed. 2016-06-24.  
+      $('.sigPad').signaturePad(dgoptions);
+
+
+      // if sigpad IS in a cocoon nested form..
+      // show sigpad using cocoon:after-insert --  using callback..
+      $('#passengers')
+        .on('cocoon:after-insert', function() {
+          $('.sigPad').signaturePad(dgoptions);
+          //$('.sigPad').signaturePad({displayOnly:true}).regenerate(sig);
+      })
+
+
+      // if this IS in a cocoon nested form..  
+      // show it using cocoon:after-insert --  using callback..
+      $('#passengers')
+        .on('cocoon:after-insert', function() {
+          $(".dgselect2").select2({
+        });
+        })
+    });      

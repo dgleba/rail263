@@ -1,6 +1,6 @@
 $(function() {
 
-  var dgoptions = {
+  var dgoptions-offline = {
       bgColour : '#F0FEEF'
        , drawOnly : true
     };
@@ -12,7 +12,7 @@ $(function() {
 
   // if sigpad IS in a cocoon nested form..
   // show sigpad using cocoon:after-insert --  using callback..
-  $('#passengers')
+  $('#passengers-offline')
     .on('cocoon:after-insert', function() {
       $('.sigPad').signaturePad(dgoptions);
       //$('.sigPad').signaturePad({displayOnly:true}).regenerate(sig);
@@ -21,12 +21,11 @@ $(function() {
 
   // if this IS in a cocoon nested form..  
   // show it using cocoon:after-insert --  using callback..
-  $('#passengers')
+  $('#passengers-offline')
     .on('cocoon:after-insert', function() {
       $(".dgselect2").select2({
     });
     })
-
 
 });
 

@@ -11,7 +11,31 @@
   %dd= @passenger.rental_record
   %dt= Passenger.human_attribute_name :pasenger_list
   %dd= @passenger.pasenger_list
+  %br
+  %br
 
-= link_to t('actions.edit'), edit_passenger_path(@passenger), class: 'btn btn-primary'
-\&nbsp &nbsp &nbsp|&nbsp &nbsp &nbsp
-= link_to t('actions.cancel'), passengers_path
+ 
+  / requester_email: "#{current_user.email if current_user}",
+  / http://stackoverflow.com/questions/4708369/injecting-variable-values-into-javascript-and-haml-in-ror
+  / https://github.com/thomasjbradley/saving-signatures-sample/blob/master/documentation.md
+  /
+  .sigPad.signed
+    .sigWrapper
+      .typed
+      %canvas.pad{:height => "111", :width => "311"}    
+
+  %br
+  %br
+  %br
+     
+  = link_to t('actions.edit'), edit_passenger_path(@passenger), class: 'btn btn-primary'
+  \&nbsp &nbsp &nbsp|&nbsp &nbsp &nbsp
+  = link_to t('actions.cancel'), passengers_path
+
+
+  :javascript
+    $(document).ready(function() {
+      //   
+      var sig = #{@passenger.output};
+      $('.sigPad').signaturePad({displayOnly : true}).regenerate(sig);
+      });
