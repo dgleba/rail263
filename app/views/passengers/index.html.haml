@@ -9,14 +9,11 @@
         %h4{:class => "vcenter", :style => "color:black;margin-left:1px;"}= Passenger.model_name.human
   .col-sm-6.col-md-5.col-lg-4{:style => "background-color:white;"}
     = search_form_for @q, class: 'search-form ' do |f|
-      .input-group
-        = f.search_field :pasenger_list_name_or_pasenger_list_clocknum_cont_any, class: 'form-control'
-        
-        
-        / I cant seem to get it to search a calculated field.
-        / error: 
-        /= f.search_field :searchm_cont, class: 'form-control'
-        
+      .input-group 
+
+        = f.search_field most_passengers_cont, class: 'form-control' , :placeholder => "Most fields.."
+        = f.search_field :pasenger_list_name_or_pasenger_list_clocknum_cont_any, class: 'form-control', :placeholder => "Name or Clock"
+        = f.search_field :rental_record_id_eq, class: 'form-control', :placeholder => "Rental Record ID"        
         
         %span.input-group-btn
           %button.btn.btn-primary
@@ -51,3 +48,5 @@
         %td= passenger.searchm
 
 = paginate @passengers
+
+

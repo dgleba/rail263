@@ -4,6 +4,9 @@ This is a Rails 4.2.6 app.
 
 ## to delete existing example scaffolds..
 
+in a command prompt terminal..
+cd into the project folder
+
 find  -name '*customer*' -delete
 find . -name "customer*" -type d -exec rm -r "{}" \;
 
@@ -31,6 +34,21 @@ find . -name "$fname1*" -type d -exec rm -r "{}" \;
 fname1='passenger'
 find  -name "*$fname1*" -delete
 find . -name "$fname1*" -type d -exec rm -r "{}" \;
+
+
+rm -rf .git
+git init
+git add -A  # Add all files and commit them
+git commit -m "truncated and started over"
+
+delete the databases in db/*.sqlite3
+
+edit these files to remove unwanted items..
+ability.rb      
+application.html
+routes.rb        
+schema.rb       
+seeds.rb        
 
 
 
