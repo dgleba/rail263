@@ -4,8 +4,9 @@ class PassengersController < ApplicationController
 
   # GET /passengers
   def index
-    @q = @passengers.search params[:q]
-    @passengers = @q.result.page(params[:page])
+    @q = @passengers.ransack params[:q]
+    # ransack: include associated tables in the search..
+    @passengers = @q.result.page(params[:page]).includes(:pasenger_list, :rental_record)
   end
 
   # GET /passengers/1
@@ -60,6 +61,6 @@ class PassengersController < ApplicationController
   # Only allow a trusted parameter "white list" through.
   def passenger_params
     #params.require(:passenger).permit(:name, :description, :output, :rental_record_id, :pasenger_list_id)
-    params.require(:passenger).permit(:name, :description, :output, :rental_record_id, :pasenger_list_id, pasenger_lists_attributes: [:id, :clocknum, :name])
+    params.require(:passenger).permit(:name, :description, :output, :rental_record_id, :pasenger_list_id, :searchm_cont, pasenger_lists_attributes: [:id, :clocknum, :name])
   end
 end

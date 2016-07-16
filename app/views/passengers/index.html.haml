@@ -10,7 +10,14 @@
   .col-sm-6.col-md-5.col-lg-4{:style => "background-color:white;"}
     = search_form_for @q, class: 'search-form ' do |f|
       .input-group
-        = f.search_field :name_or_created_at_cont, class: 'form-control'
+        = f.search_field :pasenger_list_name_or_pasenger_list_clocknum_cont_any, class: 'form-control'
+        
+        
+        / I cant seem to get it to search a calculated field.
+        / error: 
+        /= f.search_field :searchm_cont, class: 'form-control'
+        
+        
         %span.input-group-btn
           %button.btn.btn-primary
             %i.fa.fa-search
@@ -39,5 +46,8 @@
         %td= passenger.output
         %td= passenger.rental_record
         %td= passenger.pasenger_list
+        / add id and calculated column to the view..
+        %td= passenger.id
+        %td= passenger.searchm
 
 = paginate @passengers
