@@ -55,14 +55,16 @@ seeds.rb
 
 # Reference...
 
-This project started as a fork from https://github.com/manuelvanrijn/rails-template
+This project started as a fork from https://github.com/manuelvanrijn/rails-template. 
+
 I then edited it so I could understand it.
+
 My project is:
-github.com/dgleba/rails-template-dg1 -  locally i called it railt251b
+github.com/dgleba/rails-template-dg1 -  locally I called it railt251b
 
 I then copied it here and it is my template with example app.
 
-## Documentation
+## Documentation from Manuelvanrijn
 
 
 ## Prerequisites
