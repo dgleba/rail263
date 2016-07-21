@@ -1,49 +1,49 @@
-# rail256
+# rail260
 
 This is a Rails 4.2.6 app.
 
 ## to delete existing example scaffolds..
 
-in a command prompt terminal..
-cd into the project folder
+in a command prompt terminal..  
+cd into the project folder  
 
-find  -name '*customer*' -delete
-find . -name "customer*" -type d -exec rm -r "{}" \;
+find  -name '*customer*' -delete  
+find . -name "customer*" -type d -exec rm -r "{}" \;  
 
-find  -name '*vehicle*' -delete
-find . -name "vehicle*" -type d -exec rm -r "{}" \;
-
-
-fname1='rental'
-find  -name "*$fname1*" -delete
-find . -name "$fname1*" -type d -exec rm -r "{}" \;
-
-fname1='project'
-find  -name "*$fname1*" -delete
-find . -name "$fname1*" -type d -exec rm -r "{}" \;
-
-fname1='job'
-find  -name "*$fname1*" -delete
-find . -name "$fname1*" -type d -exec rm -r "{}" \;
-
-fname1='pasenger'
-find  -name "*$fname1*" -delete
-find . -name "$fname1*" -type d -exec rm -r "{}" \;
+find  -name '*vehicle*' -delete  
+find . -name "vehicle*" -type d -exec rm -r "{}" \;  
 
 
-fname1='passenger'
-find  -name "*$fname1*" -delete
-find . -name "$fname1*" -type d -exec rm -r "{}" \;
+fname1='rental'  
+find  -name "*$fname1*" -delete  
+find . -name "$fname1*" -type d -exec rm -r "{}" \;  
+
+fname1='project'  
+find  -name "*$fname1*" -delete  
+find . -name "$fname1*" -type d -exec rm -r "{}" \;  
+
+fname1='job'  
+find  -name "*$fname1*" -delete  
+find . -name "$fname1*" -type d -exec rm -r "{}" \;  
+
+fname1='pasenger'  
+find  -name "*$fname1*" -delete  
+find . -name "$fname1*" -type d -exec rm -r "{}" \;  
+
+ 
+fname1='passenger'  
+find  -name "*$fname1*" -delete  
+find . -name "$fname1*" -type d -exec rm -r "{}" \;  
 
 
-rm -rf .git
-git init
-git add -A  # Add all files and commit them
-git commit -m "truncated and started over"
+rm -rf .git  
+git init  
+git add -A  # Add all files and commit them  
+git commit -m "truncated and started over"  
 
-delete the databases in db/*.sqlite3
+delete the databases in db/*.sqlite3  
 
-edit these files to remove unwanted items..
+edit these files to remove unwanted items..  
 ability.rb      
 application.html
 routes.rb        
@@ -53,6 +53,14 @@ seeds.rb
 
 
 
+# Reference...
+
+This project started as a fork from https://github.com/manuelvanrijn/rails-template
+I then edited it so I could understand it.
+My project is:
+github.com/dgleba/rails-template-dg1 -  locally i called it railt251b
+
+I then copied it here and it is my template with example app.
 
 ## Documentation
 
@@ -61,8 +69,7 @@ seeds.rb
 
 This project requires:
 
-* Ruby 2.1.4, preferably managed using [rbenv][]
-* MySQL must be installed and accepting connections
+* Ruby 2.1.4, or higher preferably managed using [rbenv][]
 
 ## Getting started
 ### Run it!
@@ -96,3 +103,5 @@ bundle exec bundle-audit
 # check for rails security issues using brakeman
 bundle exec brakeman
 ```
+
+
