@@ -2,6 +2,8 @@
 
 This is a Rails 4.2.6 app.
 
+I use this as my template. It includes an example app. The following shows how to delete the example so you can use this as a template for another app.
+
 ## to delete existing example scaffolds...
 
 in a command prompt terminal..  
@@ -57,12 +59,14 @@ seeds.rb
 
 This project started as a fork from https://github.com/manuelvanrijn/rails-template. 
 
-I then edited it so I could understand it.
 
 My project is:
 github.com/dgleba/rails-template-dg1 -  locally I called it railt251b
 
+I then edited it so I could understand it better. I removed some items I am not using right now.
+
 I then copied it here and it is my template with example app.
+
 
 ## Documentation from Manuelvanrijn
 
