@@ -2,7 +2,7 @@
 
 This is a Rails 4.2.6 app.
 
-## to delete existing example scaffolds..
+## to delete existing example scaffolds...
 
 in a command prompt terminal..  
 cd into the project folder  
