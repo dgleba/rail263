@@ -5,15 +5,12 @@
   %dd= @passenger.name
   %dt= Passenger.human_attribute_name :description
   %dd= @passenger.description
-  %dt= Passenger.human_attribute_name :output
-  %dd= @passenger.output
   %dt= Passenger.human_attribute_name :rental_record
   %dd= @passenger.rental_record
   %dt= Passenger.human_attribute_name :pasenger_list
   %dd= @passenger.pasenger_list
   %br
-  %br
-
+  
  
   / requester_email: "#{current_user.email if current_user}",
   / http://stackoverflow.com/questions/4708369/injecting-variable-values-into-javascript-and-haml-in-ror
@@ -23,15 +20,17 @@
     .sigWrapper
       .typed
       %canvas.pad{:height => "111", :width => "311"}    
-
-  %br
-  %br
+      
   %br
      
   = link_to t('actions.edit'), edit_passenger_path(@passenger), class: 'btn btn-primary'
   \&nbsp &nbsp &nbsp|&nbsp &nbsp &nbsp
   = link_to t('actions.cancel'), passengers_path
 
+  %br
+  %br
+  %dt= Passenger.human_attribute_name :output
+  %dd= @passenger.output
 
   :javascript
     $(document).ready(function() {

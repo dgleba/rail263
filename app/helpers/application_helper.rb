@@ -19,7 +19,23 @@ module ApplicationHelper
     end
     most_attributes.join("_or_") + "_cont_any"
   end
+ 
+  # search most columns in passengers table
+  def most2_passengers_cont
+    most_attributes = []
+    attributes_to_exclude = [
+      "created_at",
+      "updated_at",
+      "rental_record_id",
+      "id"     
+    ]
+    Passenger.column_names.each do |column_name|
+      most_attributes << column_name unless column_name.in?(attributes_to_exclude)
+    end
+    most_attributes.join("_or_") + "_cont_any"
+  end
   
+ 
 
   # search most columns in passengers table
   # this here as a copy...

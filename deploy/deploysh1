@@ -30,7 +30,7 @@ cp deploy/puma.rb config/puma.rb
 
 
 #old..
-#sudo sh -c 'echo "/srv/web/rail260" >> /etc/puma.conf'
+#sudo sh -c 'echo "/srv/web/humidex248" >> /etc/puma.conf'
 #
 # remove line containing  ???  and replace the line completely with the new text ...
 # example.. sed 's/.*TEXT_TO_BE_REPLACED.*/This line is removed by the admin/'
@@ -42,7 +42,7 @@ if grep --quiet srv/web/rail260 /etc/puma.conf; then
   echo  the text exists.. do nothing..
 else
   #  it's not found..
-  sudo sh -c 'echo "/srv/web/rail260" >> /etc/puma.conf'
+  sudo sh -c 'echo "/srv/web/humidex248" >> /etc/puma.conf'
 fi
 
 
