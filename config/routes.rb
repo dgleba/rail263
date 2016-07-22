@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  devise_for :users
   get :send_user1_email, to: 'users#send_user1_email', as: :send_user1_email
 
   resources :pasenger_lists

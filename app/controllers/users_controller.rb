@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_action :require_login
+  before_filter :authenticate_user!
+  #before_action :require_login
   load_and_authorize_resource :user
 
   # moved from application_controller. 2016-06-08 dgleba@gmail.com David Gleba 

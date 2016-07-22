@@ -45,7 +45,8 @@ gem 'bootstrap_form'
 gem 'active_link_to'
 
 # variant: sorcery-cancancan
-gem 'sorcery'
+gem 'devise'
+#gem 'sorcery'
 gem 'cancancan', '~> 1.10'
 
 # variant: ransack-kaminari
