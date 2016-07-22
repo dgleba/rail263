@@ -1,0 +1,131 @@
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2016-07-21[Jul-Thu]14-43PM
+
+works!!
+
+create user.
+email is sent on creating user.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+https://launchschool.com/blog/handling-emails-in-rails
+
+
+ rails g mailer example_mailer
+
+ 
+
+class ExampleMailer < ActionMailer::Base
+  default from: "from@example.com"
+
+  def sample_email(user)
+    @user = user
+    mail(to: @user.email, subject: 'Sample Email')
+  end
+end
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi <%= @user.name %></h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2016-07-21[Jul-Thu]12-54PM
+
+http://www.subelsky.com/2014/05/fixing-socketerror-getaddrinfo-name-or.html
+
+
+C:\var\share203\rail262\config\application.rb
+require "resolv-replace.rb" # David Gleba 2016-07-21
+
+
+C:\Users\dgleba>ping MESG01.stackpole.ca
+
+Pinging MESG01.stackpole.ca [10.5.1.210] with 32 bytes of data:
+Reply from 10.5.1.210: bytes=32 time=9ms TTL=122
+Reply from 10.5.1.210: bytes=32 time=9ms TTL=122
+
+
+10.5.1.210  # MESG01.stackpole.ca
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2016-07-21[Jul-Thu]12-58PM
+
+OpenSSL::SSL::SSLError in UsersController#create
+hostname "10.5.1.210" does not match the server certificate
+
+Extracted source (around line #36):
+34
+35
+36
+37
+38
+39
+              
+      
+        # Sends email to user when user is created. 2016-07-21_Thu_12.31-PM David Gleba
+        ExampleMailer.sample_email(@user).deliver
+      
+        format.html { redirect_to @user, notice: t('success_create') }
+        format.json { render :show, status: :created, location: @user }
+
+Rails.root: /home/albe/share203/rail262
+
+Application Trace | Framework Trace | Full Trace
+app/controllers/users_controller.rb:36:in `block in create'
+app/controllers/users_controller.rb:32:in `create'
+Request
+
+Parameters:
+
+{"utf8"=>"?",
+ "authenticity_token"=>"QNWvCIRN2BZC7cuCa7BbMfkib90FpZwqeVD3L0l1sPcOauITwqNGaFl0IYPXj/F3RKq5MAs9LYfq03r+/zg9TQ==",
+ "user"=>{"name"=>"dg",
+ "email"=>"dgleba@stackpole.com",
+ "password"=>"[FILTERED]",
+ "password_confirmation"=>"[FILTERED]",
+ "role_id"=>"3"},
+ "commit"=>"Create User"}
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2016-07-21[Jul-Thu]14-43PM
+
+I used gmail and it worked.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+

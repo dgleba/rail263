@@ -1,19 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :rental_records
-  resources :vehicles
-  resources :customers
-  resources :passengers
-  resources :pasenger_lists
-  resources :passengers
-  resources :pasenger_lists
-  resources :rental_records
-  resources :vehicles
-  resources :customers
-  resources :passengers
-  resources :pasenger_lists
-  resources :passengers
-#
+
+  get :send_user1_email, to: 'users#send_user1_email', as: :send_user1_email
+
   resources :pasenger_lists
   resources :passengers
   resources :jobs
@@ -41,7 +30,6 @@ Rails.application.routes.draw do
   resources :users
 
   mount RailsAdmin::Engine => '/radmin', as: 'rails_admin'
-
 
   get 'login' => 'user_sessions#new', as: :login
   post 'login' => 'user_sessions#create'

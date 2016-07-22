@@ -10,6 +10,12 @@
   %dt= User.human_attribute_name :role
   %dd= @user.role
 
+= link_to "Send user by email", :controller => "users", :action => "send_user1_email", :id => @user.id
+
+&nbsp &nbsp &nbsp &nbsp &nbsp 
+  
 = link_to t('actions.edit'), edit_user_path(@user)
-\|
+
+&nbsp &nbsp  &nbsp &nbsp &nbsp 
+
 = link_to t('actions.cancel'), users_path

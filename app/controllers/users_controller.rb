@@ -31,6 +31,10 @@ class UsersController < ApplicationController
   def create
     respond_to do |format|
       if @user.save
+      
+        # Sends email to user when user is created. 2016-07-21_Thu_12.31-PM David Gleba
+        ExampleMailer.sample_email(@user).deliver
+      
         format.html { redirect_to @user, notice: t('success_create') }
         format.json { render :show, status: :created, location: @user }
       else
@@ -62,6 +66,16 @@ class UsersController < ApplicationController
     end
   end
 
+
+  def send_user1_email
+    @user = User.find(params[:id])
+    
+    ExampleMailer.sample_email(@user).deliver
+    flash[:notice] = "user email has been sent."
+    redirect_to user_path(@user.id)
+  end
+
+    
   private
 
   # Only allow a trusted parameter "white list" through.

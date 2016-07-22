@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+function Purpose() {
+# begin block comment =============================
+: <<'END'
+
+#  Purpose:  tar the current folder and give the archive a useful name..
+
+usage: run this from /srv/web/rail260
+
+cd /srv/web/rail260
+deploy/deploysh
+
+
+END
+# end block comment ===============================
+}
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#cd ; 
+date ; set +vx  ; set -vx ; # echo off, then echo on
+#
+
+cd /srv/web/rail260
+
+mkdir -p shared/pids shared/sockets shared/log
+
+sudo cp deploy/puma.conf /etc/init/puma.conf
+sudo cp deploy/puma-manager.conf /etc/init/puma-manager.conf
+cp deploy/puma.rb config/puma.rb
+
+
+#old..
+#sudo sh -c 'echo "/srv/web/humidex248" >> /etc/puma.conf'
+#
+# remove line containing  ???  and replace the line completely with the new text ...
+# example.. sed 's/.*TEXT_TO_BE_REPLACED.*/This line is removed by the admin/'
+# sudo sed -i "s/.*/srv/web/rail260.*//srv/web/rail260/g" /etc/puma.conf
+
+
+# add path to etc/puma.conf...
+if grep --quiet srv/web/rail260 /etc/puma.conf; then
+  echo  the text exists.. do nothing..
+else
+  #  it's not found..
+  sudo sh -c 'echo "/srv/web/humidex248" >> /etc/puma.conf'
+fi
+
+
+sudo cp  /etc/nginx/sites-available/rail260.conf  /etc/nginx/sites-available/rail260.conf$(date +"__%Y.%m.%d_%H.%M.%S").bk
+# copy file into place --  from rail260 app folder /srv/web/rail260
+sudo cp  deploy/rail260.conf /etc/nginx/sites-available/rail260.conf
+sudo ln -nfs /etc/nginx/sites-available/rail260.conf /etc/nginx/sites-enabled/rail260.conf
+
+#https://github.com/sferik/rails_admin/issues/2515 -- Gradient has outdated direction syntax. New syntax is like `to left` instead of `right` #2515
+bundle exec rake assets:precompile RAILS_ENV=production
+
+
+sudo start puma-manager
+sudo restart puma-manager
+sudo service nginx restart
+
