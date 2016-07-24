@@ -4,7 +4,11 @@ require_dependency "<%= namespaced_file_path %>/application_controller"
 <% end -%>
 <% module_namespacing do -%>
 class <%= controller_class_name %>Controller < ApplicationController
-  before_action :require_login
+  # devise..
+  before_filter :authenticate_user!
+  # sorcery..
+  #before_action :require_login
+  # cancancan..
   load_and_authorize_resource :<%= singular_table_name %>
 
   # GET <%= route_url %>

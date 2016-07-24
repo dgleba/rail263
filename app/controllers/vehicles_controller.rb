@@ -1,5 +1,9 @@
 class VehiclesController < ApplicationController
-  before_action :require_login
+  # devise..
+  before_filter :authenticate_user!
+  # sorcery..
+  #before_action :require_login
+  # cancancan..
   load_and_authorize_resource :vehicle
 
   # GET /vehicles

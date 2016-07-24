@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
 
-
   devise_for :users
+
+  scope "/admin" do
+    resources :users
+  end
+
+  # send email by button click on show users form...
   get :send_user1_email, to: 'users#send_user1_email', as: :send_user1_email
 
   resources :pasenger_lists
@@ -32,9 +37,10 @@ Rails.application.routes.draw do
 
   mount RailsAdmin::Engine => '/radmin', as: 'rails_admin'
 
-  get 'login' => 'user_sessions#new', as: :login
-  post 'login' => 'user_sessions#create'
-  post 'logout' => 'user_sessions#destroy', as: :logout
+  # for sorcery...
+  # get 'login' => 'user_sessions#new', as: :login
+  # post 'login' => 'user_sessions#create'
+  # post 'logout' => 'user_sessions#destroy', as: :logout
 
   root 'home#index'
 end

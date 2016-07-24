@@ -1,5 +1,9 @@
 class RentalRecordsController < ApplicationController
-  before_action :require_login
+  # devise..
+  before_filter :authenticate_user!
+  # sorcery..
+  #before_action :require_login
+  # cancancan..
   load_and_authorize_resource :rental_record
 
   # GET /rental_records
@@ -62,8 +66,8 @@ class RentalRecordsController < ApplicationController
   def rental_record_params
     #params.require(:rental_record).permit(:customer_id, :vehicle_id, :start_date, :end_date, :lastUpdated)
     params.require(:rental_record).permit(
-      :customer_id, :vehicle_id, :start_date, :end_date, :lastUpdated,  
-      passengers_attributes: [:id, :description, :name, :output, :pasenger_list_id, :_destroy , pasenger_lists_attributes: [:id, :clocknum, :name, :active, :_destroy]] 
+      :customer_id, :vehicle_id, :start_date, :end_date, :lastUpdated,
+      passengers_attributes: [:id, :description, :name, :output, :pasenger_list_id, :_destroy , pasenger_lists_attributes: [:id, :clocknum, :name, :active, :_destroy]]
       )
   end
 end

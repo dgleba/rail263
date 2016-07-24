@@ -1,6 +1,9 @@
 class CustomersController < ApplicationController
+  # devise..
   before_filter :authenticate_user!
+  # sorcery..
   #before_action :require_login
+  # cancancan..
   load_and_authorize_resource :customer
 
   # GET /customers

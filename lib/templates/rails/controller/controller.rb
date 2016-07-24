@@ -3,7 +3,10 @@ require_dependency "<%= namespaced_path %>/application_controller"
 <% end -%>
 <% module_namespacing do -%>
 class <%= class_name %>Controller < ApplicationController
-  before_action :require_login
+  # devise..
+  before_filter :authenticate_user!
+  # sorcery..
+  #before_action :require_login
 
 <% actions.each do |action| -%>
   def <%= action %>
