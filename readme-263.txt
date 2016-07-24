@@ -147,6 +147,21 @@ rails generate scaffold Vehicle veh_reg_no:string category:string name:string de
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+dgs-MacBook-Pro:rail263 dg$
+
+grep -r rail2 . |grep -v deploy|grep -v tmp |grep -v .git|grep -v /log |grep -v /offlin|grep -v readme-26
+
+./.erdconfig:title: rail253y
+./app/views/layouts/application.html.haml:          %title rail253y
+./app/views/layouts/application.html.haml:            rail253y
+./app/views/layouts/application.html.haml:          = link_to 'rail253y', root_path, class: 'navbar-brand'
+./config/initializers/session_store.rb:Rails.application.config.session_store :cookie_store, key: '_rail253y_session'
+./README.md:# rail260
+
+dgs-MacBook-Pro:rail263 dg$
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 _____________
 
 _____________

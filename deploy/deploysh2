@@ -8,7 +8,6 @@ function Purpose() {
 
 usage: run this from /srv/web/rail260
 
-
 cd /srv/web/rail260
 deploy/deploysh
 
@@ -17,7 +16,7 @@ END
 # end block comment ===============================
 }
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#cd ; 
+#cd ;
 date ; set +vx  ; set -vx ; # echo off, then echo on
 #
 

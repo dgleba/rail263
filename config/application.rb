@@ -8,7 +8,7 @@ Bundler.require(*Rails.groups)
 
 require "resolv-replace.rb" # David Gleba 2016-07-21
 
-module Rail253y
+module Rail263
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
