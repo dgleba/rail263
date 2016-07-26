@@ -35,12 +35,14 @@ fname1='passenger'
 find  -name "*$fname1*" -delete  
 find . -name "$fname1*" -type d -exec rm -r "{}" \;  
 
+### git repo...
 
 rm -rf .git  
 git init  
 git add -A  # Add all files and commit them  
 git commit -m "truncated and started over"  
 
+###  Other files..
 delete the databases in db/*.sqlite3  
 
 edit these files to remove unwanted items..  
@@ -49,6 +51,23 @@ application.html
 routes.rb        
 schema.rb       
 seeds.rb        
+
+
+
+### Appliccation name is referenced in..
+
+
+grep -r rail2 . |grep -v deploy|grep -v tmp |grep -v .git|grep -v /log |grep -v /offlin|grep -v readme-26  
+
+./.erdconfig:title: rail253y   
+./app/views/layouts/application.html.haml:          %title rail253y  
+./app/views/layouts/application.html.haml:            rail253y  
+./app/views/layouts/application.html.haml:          = link_to 'rail253y', root_path, class: 'navbar-brand'  
+./config/initializers/  session_store.rb:Rails.application.config.session_store :cookie_store, key:rail253y_session'  
+./README.md:# rail260  
+
+
+_____________
 
 
 
