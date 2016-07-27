@@ -22,7 +22,8 @@ gem 'cocoon'
 gem 'signature-pad-rails'
 
 gem 'seed_dump'
-
+#gem 'yaml_db'
+gem "yaml_db", :git => "git://github.com/dgleba/yaml_db.git"
 
 gem 'dotenv-rails', '>= 2.0.0'
 #gem 'bower-rails'

@@ -21,6 +21,7 @@
 docprivate/
 /shared/
 /offline/
+yaml_db/
 
 # mac stuff..
 
