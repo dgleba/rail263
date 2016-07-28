@@ -21,7 +21,8 @@
 docprivate/
 /shared/
 /offline/
-yaml_db/
+db/yamldb/
+db/yamldb_date/
 
 # mac stuff..
 
