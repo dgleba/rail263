@@ -8,7 +8,7 @@
       %li
         %h4{:class => "vcenter", :style => "color:black;margin-left:1px;"}= Passenger.model_name.human
 
-  .col-sm-4.col-md-4.col-lg-3{:style => "background-color:white;"}
+  .col-sm-4.col-md-4.col-lg-4{:style => "background-color:white;"}
     /#searchformtoggle1{:style => "display:none"}
     = search_form_for @q, {:class => "search-form"} do |f|
       .input-group 
@@ -24,7 +24,8 @@
           %button.btn.btn-primary
             %i.fa.fa-search
 
-
+  .col-sm-4.col-md-4.col-lg-3{:style => "background-color:white;"}
+    = page_entries_info @passengers, :entry_name => 'item'
 
 = paginate @passengers
 
