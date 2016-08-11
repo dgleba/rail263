@@ -40,7 +40,7 @@ find . -name "$fname1*" -type d -exec rm -r "{}" \;
 rm -rf .git  
 git init  
 git add -A  # Add all files and commit them  
-git commit -m "truncated and started over"  
+git commit -m "Removed history and started over"  
 
 ###  Other files..
 delete the databases in db/*.sqlite3  
