@@ -44,10 +44,12 @@
       <%= p.try(:output).truncate(29) %>
     </dd>
   <% end %>
-  
+</dl>
+ 
 </br>
 
-
 <%= link_to t('actions.edit'), edit_rental_record_path(@rental_record), class: 'btn btn-primary' %>
-&nbsp &nbsp &nbsp|&nbsp &nbsp &nbsp
+
+&nbsp &nbsp &nbsp  |  &nbsp &nbsp &nbsp
+
 <%= link_to t('actions.cancel'), rental_records_path %>
