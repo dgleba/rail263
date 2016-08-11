@@ -1,0 +1,53 @@
+<h1>
+  <%= RentalRecord.model_name.human.singularize %>
+</h1>
+<dl class="dl-horizontal">
+  <dt>
+    <%= RentalRecord.human_attribute_name :customer %>
+  </dt>
+  <dd>
+    <%= @rental_record.customer %>
+  </dd>
+  <dt>
+    <%= RentalRecord.human_attribute_name :vehicle %>
+  </dt>
+  <dd>
+    <%= @rental_record.vehicle %>
+  </dd>
+  <dt>
+    <%= RentalRecord.human_attribute_name :start_date %>
+  </dt>
+  <dd>
+    <%= @rental_record.start_date %>
+  </dd>
+  <dt>
+    <%= RentalRecord.human_attribute_name :end_date %>
+  </dt>
+  <dd>
+    <%= @rental_record.end_date %>
+  </dd>
+  <dt>
+    <%= RentalRecord.human_attribute_name :lastUpdated %>
+  </dt>
+  <dd>
+    <%= @rental_record.lastUpdated %>
+  </dd>
+</dl>
+
+
+<dl class="dl-horizontal">
+  <% @rental_record.passengers.each do |p| %>
+    <dt>
+      Output
+    </dt>
+    <dd>
+      <%= p.try(:output).truncate(29) %>
+    </dd>
+  <% end %>
+  
+</br>
+
+
+<%= link_to t('actions.edit'), edit_rental_record_path(@rental_record), class: 'btn btn-primary' %>
+&nbsp &nbsp &nbsp|&nbsp &nbsp &nbsp
+<%= link_to t('actions.cancel'), rental_records_path %>
