@@ -1,0 +1,13 @@
+= simple_form_for(@customer) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :address
+    = f.input :phone
+    = f.input :discount
+
+  .form-actions
+    = f.button :submit
+    \&nbsp &nbsp|&nbsp &nbsp
+    = link_to t('actions.cancel'), customers_path
