@@ -2,12 +2,20 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :veh_reg_no
-    = f.input :category
     = f.input :name
     = f.input :desc
-    = f.input :photo
-    = f.input :daily_rate
+    /= f.input :photo
+
+    %ul.list-inline
+      %li
+        = f.input :veh_reg_no
+      %li
+        = f.input :daily_rate
+
+    = f.input :category , collection: [ "Car", "Truck", "SUV"], as: :radio_buttons,  item_label_class: "radio-inline", item_wrapper_tag: false
+
+    /= f.input :category 
+    /= f.input :daily_rate
 
   .form-actions
     = f.button :submit

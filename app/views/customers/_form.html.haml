@@ -16,10 +16,27 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :name
+
+  .row
+    .col-sm-2{:style => "background-color:white;"}
+      %ul.list-inline
+        %li
+          &nbsp
+    .col-sm-9{:style => "background-color:white;"}
+      %ul.list-inline
+        %li
+          = f.input :name
+        %li
+          = f.input :phone
+
+    /= f.input :name
+    /= f.input :phone
+
     = f.input :address
-    = f.input :phone
-    = f.input :discount
+    
+    / simple_form inline radio buttons
+    / http://stackoverflow.com/questions/25352643/how-to-generate-a-radio-inline-label-with-simple-form-and-bootstrap
+    = f.input :discount , collection: [ 0.1 , 0.15 , 0.2 ] , as: :radio_buttons, item_label_class: "radio-inline", item_wrapper_tag: false
 
   .form-actions
     = f.button :submit
