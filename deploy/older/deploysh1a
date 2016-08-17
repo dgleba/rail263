@@ -16,18 +16,11 @@ END
 # end block comment ===============================
 }
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#cd ;
+#cd ; 
 date ; set +vx  ; set -vx ; # echo off, then echo on
 #
 
-
-prjname = 'rail260
-dpath = "/srv/web/$prjname"
-
-echo $prjname
-echo $dpath
-
-cd $dpath
+cd /srv/web/rail260
 
 mkdir -p shared/pids shared/sockets shared/log
 
@@ -37,26 +30,26 @@ cp deploy/puma.rb config/puma.rb
 
 
 #old..
-#sudo sh -c 'echo "$dpath" >> /etc/puma.conf'
+#sudo sh -c 'echo "/srv/web/rail260" >> /etc/puma.conf'
 #
 # remove line containing  ???  and replace the line completely with the new text ...
 # example.. sed 's/.*TEXT_TO_BE_REPLACED.*/This line is removed by the admin/'
-# sudo sed -i "s/.*$dpath.*//$dpath/g" /etc/puma.conf
+# sudo sed -i "s/.*/srv/web/rail260.*//srv/web/rail260/g" /etc/puma.conf
 
 
 # add path to etc/puma.conf...
-if grep --quiet $dpath /etc/puma.conf; then
+if grep --quiet srv/web/rail260 /etc/puma.conf; then
   echo  the text exists.. do nothing..
 else
   #  it's not found..
-  sudo sh -c "echo $dpath >> /etc/puma.conf"
+  sudo sh -c 'echo "/srv/web/rail260" >> /etc/puma.conf'
 fi
 
 
-sudo cp  /etc/nginx/sites-available/$prjname.conf  /etc/nginx/sites-available/$prjname.conf$(date +"__%Y.%m.%d_%H.%M.%S").bk
-# copy file into place --  from $prjname app folder /srv/web/$prjname
-sudo cp  deploy/$prjname.conf /etc/nginx/sites-available/$prjname.conf
-sudo ln -nfs /etc/nginx/sites-available/$prjname.conf /etc/nginx/sites-enabled/$prjname.conf
+sudo cp  /etc/nginx/sites-available/rail260.conf  /etc/nginx/sites-available/rail260.conf$(date +"__%Y.%m.%d_%H.%M.%S").bk
+# copy file into place --  from rail260 app folder /srv/web/rail260
+sudo cp  deploy/rail260.conf /etc/nginx/sites-available/rail260.conf
+sudo ln -nfs /etc/nginx/sites-available/rail260.conf /etc/nginx/sites-enabled/rail260.conf
 
 #https://github.com/sferik/rails_admin/issues/2515 -- Gradient has outdated direction syntax. New syntax is like `to left` instead of `right` #2515
 bundle exec rake assets:precompile RAILS_ENV=production
