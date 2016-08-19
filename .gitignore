@@ -23,6 +23,7 @@ docprivate/
 /offline/
 db/yamldb/
 db/yamldb_date/
+CI-Lists/
 
 # mac stuff..
 

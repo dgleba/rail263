@@ -14,7 +14,13 @@
 //= require jquery
 //  specific order of loading...  http://stackoverflow.com/questions/17881384/jquery-gets-loaded-only-on-page-refresh-in-rails-4-application
 //= require jquery_ujs
+
+//= require best_in_place
+//= require jquery-ui
+//= require best_in_place.jquery-ui
+
 //= require bootstrap-sprockets
+
 //= require select2
 
 //= require signature-pad
@@ -25,6 +31,3 @@
 
 //= require cocoon
 //= require_tree .
-
-
-

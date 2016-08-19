@@ -98,3 +98,8 @@ group :development, :test do
 end
 
 gem 'marco-polo'
+
+# <!-- https://github.com/bernat/best_in_place -->
+gem 'best_in_place'
+#
+

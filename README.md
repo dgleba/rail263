@@ -51,7 +51,7 @@ application.html
 routes.rb        
 schema.rb       
 seeds.rb        
-
+application_helper.rb
 
 
 ### Appliccation name is referenced in..
