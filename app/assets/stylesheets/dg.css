@@ -18,3 +18,12 @@
 .pagination-row {
     height: 60%;
 }
+
+/* to put space between simple_form label and field. Problem shows in horizontal and inline items 
+    http://stackoverflow.com/questions/30034735/adding-space-between-labels-and-fields
+*/
+.control-label { margin-right: 15px; }
+/* not sure if this one helps.. */
+.label-class { margin-right: 20px; }
+
+
