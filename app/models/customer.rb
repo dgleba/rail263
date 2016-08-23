@@ -2,6 +2,9 @@ class Customer < ActiveRecord::Base
 
   default_scope {order('id DESC')}
 
+  # use audited for model record history
+  audited
+
   def self.mnm
     Customer.find_by_sql "select  substr(c.name,1,4) as nm , c.* from customers as c;"
   end

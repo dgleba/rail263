@@ -9,6 +9,9 @@ class RentalRecord < ActiveRecord::Base
   accepts_nested_attributes_for :passengers,  allow_destroy: true
   #accepts_nested_attributes_for :passengers, reject_if: :all_blank, allow_destroy: true
 
+  # use audited for model record history
+  audited
+  
   default_scope {order('id DESC')}
 
   def to_s

@@ -31,7 +31,7 @@ class Ability
     end
 
   end
-  
+
   
 # sc_minimal  
 # sc_readonly  

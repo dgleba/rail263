@@ -10,6 +10,9 @@ class Passenger < ActiveRecord::Base
   #accepts_nested_attributes_for :pasenger_list, :reject_if => :all_blank
 
   # http://stackoverflow.com/questions/13309062/searching-multiple-fields-with-ransack/13311237#13311237
+
+  # use audited for model record history
+  audited
   
   def searchm
     # i also tried searchm_cont

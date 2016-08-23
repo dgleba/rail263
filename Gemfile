@@ -102,4 +102,12 @@ gem 'marco-polo'
 # <!-- https://github.com/bernat/best_in_place -->
 gem 'best_in_place'
 #
+# https://github.com/airblade/paper_trail
+gem 'paper_trail'
+# you have to specify what changed attributes to record. No thanks.
+#
+# https://github.com/collectiveidea/audited
+# old call... gem "audited"
+gem "audited-activerecord"
+#
 
