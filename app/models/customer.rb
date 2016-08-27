@@ -1,7 +1,10 @@
 class Customer < ActiveRecord::Base
 
-  default_scope {order('id DESC')}
+  self.table_name = 'customers'
 
+  default_scope {order('id DESC')}
+  
+  
   # use audited for model record history
   audited
 

@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  before_filter :set_paper_trail_whodunnit
+  
   # move decorator out of this controller. put it in each individual controller. 2016-06-08
   
   rescue_from CanCan::AccessDenied do |exception|

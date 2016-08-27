@@ -30,7 +30,7 @@ class AdminAbility
       can :export, [Customer, Vehicle, Passenger] 
       can :history, [Customer, Vehicle, Passenger]        # for HistoryIndex
       # Performed checks for `member` scoped actions:
-      can :history, [Customer, Vehicle, Passenger]        # for HistoryShow
+      #can :history, [Customer, Vehicle, Passenger]        # for HistoryShow
       can :show_in_app, [Customer, Vehicle, Passenger] 
       
     elsif user.sc_readonly?
