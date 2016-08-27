@@ -1,6 +1,6 @@
 class CustomersController < ApplicationController
   # devise..
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :set_paper_trail_whodunnit
   # sorcery..
   #before_action :require_login
   # cancancan..

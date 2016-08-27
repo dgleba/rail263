@@ -103,7 +103,7 @@ gem 'marco-polo'
 gem 'best_in_place'
 #
 # https://github.com/airblade/paper_trail
-# you have to specify what changed attributes to record. no record of what is changed by default.
+# bundle exec rails generate paper_trail:install --with-changes --with-associations
 gem 'paper_trail'
 #
 # https://github.com/collectiveidea/audited

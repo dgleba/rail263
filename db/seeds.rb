@@ -10,13 +10,13 @@
  r2 = Role.create({name: "sc_seller", description: ""})
  r3 = Role.create({name: "sc_admin", description: "Can perform any CRUD operation on any resource"})
 
- # User.create! email: 'a@e', name: 'admin' , password: 'a', password_confirmation: 'a', role_id: r3.id
- # User.create! email: 'a', name: 'admin' , password: 'a', password_confirmation: 'a', role_id: r3.id
+ User.create! email: 'a@e', name: 'admin' , password: 'a', password_confirmation: 'a', role_id: r3.id
+ User.create! email: 'a', name: 'admin' , password: 'a', password_confirmation: 'a', role_id: r3.id
 
- # u1 = User.create({name: "reg", email: "r", password: "a", password_confirmation: "a", role_id: r1.id})
-# u2 = User.create({name: "sSue", email: "su@e", password: "a", password_confirmation: "a", role_id: r2.id})
-# u3 = User.create({name: "sKev", email: "k@e", password: "a", password_confirmation: "a", role_id: r2.id})
-# u4 = User.create({name: "admin", email: "a", password: "a", password_confirmation: "a", role_id: r3.id})
+ u1 = User.create({name: "reg", email: "r", password: "a", password_confirmation: "a", role_id: r1.id})
+u2 = User.create({name: "sSue", email: "su@e", password: "a", password_confirmation: "a", role_id: r2.id})
+u3 = User.create({name: "sKev", email: "k@e", password: "a", password_confirmation: "a", role_id: r2.id})
+u4 = User.create({name: "admin", email: "a", password: "a", password_confirmation: "a", role_id: r3.id})
 
  
 # i1 = Item.create({name: "Rayban Sunglasses", description: "Stylish shades", price: 99.99, user_id: u2.id})
@@ -33,33 +33,33 @@
 # ])
 
 
- # Customer.create!([
-  # {name: "Tan Ah Teck", address: "8 Happy Ave", phone: "88888888", discount: 0.1},
-  # {name: "Mohammed Ali", address: "1 Kg Java", phone: "99999999", discount: 0.15},
-  # {name: "Kumar", address: "5 Serangoon Road", phone: "55555555", discount: 0.0},
-  # {name: "Kevin Jones", address: "2 Sunset boulevard", phone: "22222222", discount: 0.2},
-  # # {name: "a", address: "", phone: "", discount: nil},
-  # # {name: "b", address: "", phone: "", discount: nil},
-  # # {name: "c", address: "", phone: "", discount: nil},
-  # {name: "David Gleba", address: "462 Albert St.", phone: "5199494568", discount: nil},
-  # # {name: "e", address: "", phone: "", discount: nil},
-  # # {name: "f", address: "", phone: "", discount: nil},
- # ])
+ Customer.create!([
+  {name: "Tan Ah Teck", address: "8 Happy Ave", phone: "88888888", discount: 0.1},
+  {name: "Mohammed Ali", address: "1 Kg Java", phone: "99999999", discount: 0.15},
+  {name: "Kumar", address: "5 Serangoon Road", phone: "55555555", discount: 0.0},
+  {name: "Kevin Jones", address: "2 Sunset boulevard", phone: "22222222", discount: 0.2},
+  # {name: "a", address: "", phone: "", discount: nil},
+  # {name: "b", address: "", phone: "", discount: nil},
+  # {name: "c", address: "", phone: "", discount: nil},
+  {name: "David Gleba", address: "462 Albert St.", phone: "5199494568", discount: nil},
+  # {name: "e", address: "", phone: "", discount: nil},
+  # {name: "f", address: "", phone: "", discount: nil},
+ ])
 
-# Vehicle.create!([
-  # {veh_reg_no: "GA5555E", category: "truck", name: "NISSAN CABSTAR 3.0L", desc: "Lorry, Manual ", photo: nil, daily_rate: "89.99"},
-  # {veh_reg_no: "GA6666F", category: "truck", name: "OPEL COMBO 1.6L", desc: "Van, Manual", photo: nil, daily_rate: "69.99"},
-  # {veh_reg_no: "SBA1111A", category: "car",  name: "NISSAN SUNNY 1.6L", desc: "4 Door Saloon, Automatic", photo: nil, daily_rate: "99.99"},
-  # {veh_reg_no: "SBB2222B", category: "car",  name: "TOYOTA ALTIS 1.6L", desc: "4 Door Saloon, Automatic", photo: nil, daily_rate: "99.99"},
-  # {veh_reg_no: "SBC3333C", category: "car",  name: "HONDA CIVIC 1.8L", desc: "4 Door Saloon, Automatic", photo: nil, daily_rate: "119.99"}
-# ])
+Vehicle.create!([
+  {veh_reg_no: "GA5555E", category: "truck", name: "NISSAN CABSTAR 3.0L", desc: "Lorry, Manual ", photo: nil, daily_rate: "89.99"},
+  {veh_reg_no: "GA6666F", category: "truck", name: "OPEL COMBO 1.6L", desc: "Van, Manual", photo: nil, daily_rate: "69.99"},
+  {veh_reg_no: "SBA1111A", category: "car",  name: "NISSAN SUNNY 1.6L", desc: "4 Door Saloon, Automatic", photo: nil, daily_rate: "99.99"},
+  {veh_reg_no: "SBB2222B", category: "car",  name: "TOYOTA ALTIS 1.6L", desc: "4 Door Saloon, Automatic", photo: nil, daily_rate: "99.99"},
+  {veh_reg_no: "SBC3333C", category: "car",  name: "HONDA CIVIC 1.8L", desc: "4 Door Saloon, Automatic", photo: nil, daily_rate: "119.99"}
+])
 
-# RentalRecord.create!([
-  # {customer_id: 1, vehicle_id: 1, start_date: "2012-01-01", end_date: "2012-01-01", lastUpdated: nil},
-  # {customer_id: 1, vehicle_id: 2, start_date: "2012-02-01", end_date: "2012-02-01", lastUpdated: nil},
-  # {customer_id: 3, vehicle_id: 3, start_date: "2012-01-05", end_date: "2012-01-05", lastUpdated: nil},
-  # {customer_id: 4, vehicle_id: 3, start_date: "2012-01-20", end_date: "2012-01-20", lastUpdated: nil}
-# ])
+RentalRecord.create!([
+  {customer_id: 1, vehicle_id: 1, start_date: "2012-01-01", end_date: "2012-01-01", lastUpdated: nil},
+  {customer_id: 1, vehicle_id: 2, start_date: "2012-02-01", end_date: "2012-02-01", lastUpdated: nil},
+  {customer_id: 3, vehicle_id: 3, start_date: "2012-01-05", end_date: "2012-01-05", lastUpdated: nil},
+  {customer_id: 4, vehicle_id: 3, start_date: "2012-01-20", end_date: "2012-01-20", lastUpdated: nil}
+])
 
 # Role.create!([
   # {name: "sc_regular", description: "Can read items"},
@@ -76,10 +76,10 @@
 
 # === 620
 
-# PasengerList.create!([
-  # {clocknum: "123", name: "David Gleba", active: false},
-  # {clocknum: "124", name: "Deano", active: false}
-# ])
+PasengerList.create!([
+  {clocknum: "123", name: "David Gleba", active: false},
+  {clocknum: "124", name: "Deano", active: false}
+])
 
 # Role.create!([
   # {name: "sc_regular", description: ""},

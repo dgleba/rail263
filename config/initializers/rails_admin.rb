@@ -1,5 +1,6 @@
 RailsAdmin.config do |config|
 
+
   ### Popular gems integration
 
   #== Devise ==
@@ -8,6 +9,7 @@ RailsAdmin.config do |config|
   end
   config.current_user_method(&:current_user)
 
+  
   #sorcery
   # config.authenticate_with do
     # # Use sorcery's before filter to auth users
@@ -17,13 +19,15 @@ RailsAdmin.config do |config|
 
 
   ## == Cancan ==
-   config.authorize_with :cancan
+   config.authorize_with :cancan, AdminAbility
 
   ## == Pundit ==
   # config.authorize_with :pundit
 
   ## == PaperTrail ==
-  # config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
+  #config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
+  #config.audit_with :paper_trail, 'Whodunnit', 'PaperTrail::Version' # PaperTrail >= 3.0.0
+  config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
 
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
 
