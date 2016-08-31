@@ -1,6 +1,5 @@
 RailsAdmin.config do |config|
 
-
   ### Popular gems integration
 
   #== Devise ==
@@ -46,4 +45,7 @@ RailsAdmin.config do |config|
      history_index
      history_show
   end
+
+  config.total_columns_width = 1000
+  
 end
