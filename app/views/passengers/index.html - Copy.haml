@@ -9,37 +9,42 @@
         %h4{:class => "vcenter", :style => "color:black;margin-left:1px;"}= Passenger.model_name.human
 
   .col-sm-4.col-md-4.col-lg-4{:style => "background-color:white;"}
+    /#searchformtoggle1{:style => "display:none"}
+    = search_form_for @q, {:class => "search-form"} do |f|
+      .input-group 
+        / http://stackoverflow.com/questions/27451693/display-two-fields-side-by-side-in-a-bootstrap-form
+        = f.search_field most_passengers_cont, class: 'form-control' , :placeholder => "Most fields..(enter one word)"
+        = f.search_field most2_passengers_cont, class: 'form-control' , :placeholder => "Most fields.."
+        %span.input-group-addon{:class => "seperator1", :style => "max-width:1px;"} &nbsp
+        = f.search_field :pasenger_list_name_or_pasenger_list_clocknum_cont_any, class: 'form-control', :placeholder => "Name or Clock"
+        = f.search_field :rental_record_id_eq, class: 'form-control', :placeholder => "Rental Record ID"        
 
-    %div#idhiddendiv1.hiddendiv1{:style => "display:none"}
-    
-      /show hide search works, it just doesn't persist on refresh. 2016-09-01.
-      
-      = search_form_for @q, {:class => "search-form"} do |f|
-        .input-group 
-          / http://stackoverflow.com/questions/27451693/display-two-fields-side-by-side-in-a-bootstrap-form
-          = f.search_field most_passengers_cont, class: 'form-control' , :placeholder => "Most fields..(enter one word)"
-          = f.search_field most2_passengers_cont, class: 'form-control' , :placeholder => "Most fields.."
-          %span.input-group-addon{:class => "seperator1", :style => "max-width:1px;"} &nbsp
-          = f.search_field :pasenger_list_name_or_pasenger_list_clocknum_cont_any, class: 'form-control', :placeholder => "Name or Clock"
-          = f.search_field :rental_record_id_eq, class: 'form-control', :placeholder => "Rental Record ID"        
-          %span.input-group-btn
-            %button.btn.btn-primary
-              %i.fa.fa-search
+        
+        %span.input-group-btn
+          %button.btn.btn-primary
+            %i.fa.fa-search
 
   .col-sm-2.col-md-2.col-lg-2{:style => "background-color:white;"}
-
-    <a href="#" id="show_div">Toggle Search...</a>
-    /<div id="idhiddendiv1" class="hiddendiv1">.can you see me??.</div>
-    /%a{:href => "http://www.w3schools.com/html/"} Visit our HTML tutorial
-
+    %a{:href => "http://www.w3schools.com/html/"} Visit our HTML tutorial
   .col-sm-2.col-md-2.col-lg-2{:style => "background-color:white;"}
     = page_entries_info @passengers, :entry_name => 'item'
     / this works..   &nbsp  ---- use &#032; instead of &nbsp; for just a plain whitespace. 
 
     
 = paginate @passengers
+
+
+
+/.form-group
+/  .checkbox
+/    %label
+/      %input.checkbox-class{"data-toggle-div" => "#loremdiv", :type => "checkbox"}>/
+/      Toggle - loremdiv
+/#loremdiv{:style => "display:none"}
+/  Lorem ipsum dolor sit amet, justo tamquam vix et, nec ut illum omnesque consequat. Sea ex idque placerat.
   
 
+  
 %table.table.table-striped
   %thead
     %tr
@@ -70,12 +75,3 @@
 = paginate @passengers
 
 
-/ http://stackoverflow.com/questions/10340108/how-to-hide-html-div
-:javascript
-  $(function() {
-      $('a#show_div')
-        .click(function(event){
-        event.preventDefault();
-        $('div#idhiddendiv1').toggle();
-      });
-  });
