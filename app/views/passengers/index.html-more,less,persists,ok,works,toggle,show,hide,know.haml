@@ -1,10 +1,9 @@
 :css
-  hr {height:1px;}
   a {display:block;line-height:1em;}
-  #resize01 {height:40px;overflow:hidden;background:#eee;}
+  #resize01 {height:39px;overflow:hidden;background:#eee;}
   #viewmore, #viewless {
-      margin:0px 0 0 0;
-      padding:8px 5px;
+      margin:5px 0 0 0;
+      padding:7px 5px;
       background:#598296;
       color:#fff;
       display:inline-block;
@@ -13,7 +12,7 @@
   -moz-border-radius: 3px;
   border-radius: 3px;
   }
-  
+
 .container-fluid
 
 .row
@@ -25,6 +24,7 @@
         %h4{:class => "vcenter", :style => "color:black;margin-left:1px;"}= Passenger.model_name.human
 
   .col-sm-4.col-md-4.col-lg-4{:style => "background-color:white;"}
+
     %div#resize01
       = search_form_for @q, {:class => "search-form"} do |f|
         .input-group 
@@ -39,8 +39,11 @@
               %i.fa.fa-search
 
   .col-sm-2.col-md-2.col-lg-2{:style => "background-color:white;"}
+
     <a href="#" id="viewmore">+ View more (Search)</a>
     <a href="#" id="viewless">- View less (Search)</a>
+    /<a href="#" id="show_div">Toggle Search...</a>
+    /<div id="idhiddendiv1" class="hiddendiv1">.can you see me??.</div>
 
   .col-sm-2.col-md-2.col-lg-2{:style => "background-color:white;"}
     = page_entries_info @passengers, :entry_name => 'item'
@@ -79,9 +82,8 @@
 
 = paginate @passengers
 
-%hr
 
-/ old.. http://stackoverflow.com/questions/10340108/how-to-hide-html-div
+/ http://stackoverflow.com/questions/10340108/how-to-hide-html-div
 / http://jsfiddle.net/arunpjohny/yjxzQ/
 / http://stackoverflow.com/questions/16473299/remember-toggle-state-on-div-after-page-refresh
 
@@ -89,13 +91,18 @@
 
 :javascript
   $(function() {
-     
+      $('a#show_div')
+        .click(function(event){
+        event.preventDefault();
+        $('div#idhiddendiv1').toggle();
+      });
+      
   $('#viewless').hide();
   $('#viewmore').click(function(){
       var el = $('#resize01'),
           curHeight = el.height(),
           autoHeight = el.css('height', 'auto').height();
-      el.height(curHeight).animate({height: autoHeight}, 0);
+      el.height(curHeight).animate({height: autoHeight}, 150);
       $('#viewmore').hide();
       $('#viewless').show();
 
@@ -103,7 +110,7 @@
   });
 
   $('#viewless').click(function(){
-      $('#resize01').animate({height: '40'}, 0);
+      $('#resize01').animate({height: '39'}, 150);
       $('#viewmore').show();
       $('#viewless').hide();
       
