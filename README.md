@@ -44,6 +44,7 @@ git commit -m "Removed history and started over"
 
 ###  Other files..
 delete the databases in db/*.sqlite3  
+delete rail263\config\initializers\rails_admin-263.rb
 
 edit these files to remove unwanted items..  
 ability.rb      
@@ -54,7 +55,7 @@ seeds.rb
 application_helper.rb
 
 
-### Appliccation name is referenced in..
+### Application name is referenced in..
 
 
 grep -r rail2 . |grep -v deploy|grep -v tmp |grep -v .git|grep -v /log |grep -v /offlin|grep -v readme-26  

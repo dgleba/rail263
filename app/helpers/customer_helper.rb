@@ -1,4 +1,4 @@
-module Rail263Helper
+module CustomerHelper
   
   # search most columns in passengers table
   def most_customers_cont

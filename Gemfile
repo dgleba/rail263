@@ -111,5 +111,6 @@ gem "audited-activerecord"
 gem 'rails_admin'
 gem "administrate", "~> 0.2.2"
 #
-
+gem 'populator'
+gem 'faker'
 
