@@ -1,0 +1,21 @@
+== 20160620172717 CreatePassengers: migrating =================================
+-- create_table(:passengers)
+rake aborted!
+StandardError: An error has occurred, all later migrations canceled:
+
+Mysql2::Error: Can't create table 'rail263_dev.#sql-49b_45' (errno: 150): ALTER TABLE `passengers` ADD CONSTRAINT `fk_rails_dd6536b529`
+FOREIGN KEY (`rental_record_id`)
+  REFERENCES `rental_records` (`id`)
+/home/albe/share203/rail263/db/migrate/20160620172717_create_passengers.rb:3:in `change'
+ActiveRecord::StatementInvalid: Mysql2::Error: Can't create table 'rail263_dev.#sql-49b_45' (errno: 150): ALTER TABLE `passengers` ADD CONSTRAINT `fk_rails_dd6536b529`
+FOREIGN KEY (`rental_record_id`)
+  REFERENCES `rental_records` (`id`)
+/home/albe/share203/rail263/db/migrate/20160620172717_create_passengers.rb:3:in `change'
+Mysql2::Error: Can't create table 'rail263_dev.#sql-49b_45' (errno: 150)
+/home/albe/share203/rail263/db/migrate/20160620172717_create_passengers.rb:3:in `change'
+Tasks: TOP => db:migrate
+(See full trace by running task with --trace)
+
+
+soln:
+change migration order.

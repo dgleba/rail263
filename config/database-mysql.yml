@@ -12,7 +12,7 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: rail263_dev
+  database: runtimerev_dev
   pool: 5
   username: root
   password: lean
@@ -26,7 +26,7 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: rail263_test
+  database: runtimerev_test
   pool: 5
   username: root
   password: lean
@@ -37,8 +37,8 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  #database: rail263_prod
-  database: rail263_prod
+  #database: runtimerev_prod
+  database: runtimerev_prod
   pool: 5
   host: localhost
   port: 3306

@@ -19,9 +19,9 @@ module Rail263
     
     # not works?? .. config.time_zone = 'America/Detroit'
     # application.rb
-    # config.time_zone = 'Eastern Time (US & Canada)'
+    config.time_zone = 'Eastern Time (US & Canada)'
     # works.. http://stackoverflow.com/questions/22581235/rails-4-want-to-have-rails-use-my-local-time-zone-for-created-at-updated-at
-    config.active_record.default_timezone = :local
+    #config.active_record.default_timezone = :local
 
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
