@@ -35,6 +35,20 @@ fname1='passenger'
 find  -name "*$fname1*" -delete  
 find . -name "$fname1*" -type d -exec rm -r "{}" \;  
 
+_____________ 
+
+This can be done, but doesn't delete as much as the above.
+
+rails destroy scaffold Customer  
+ rails destroy scaffold RentalRecords  
+ rails destroy scaffold Vehicle  
+ etc...  
+ 
+_____________ 
+
+
+ 
+ 
 ### git repo...
 
 rm -rf .git  
@@ -68,6 +82,8 @@ grep -r rail2 . |grep -v deploy|grep -v tmp |grep -v .git|grep -v /log |grep -v 
 ./README.md:# rail260  
 
 
+
+ 
 _____________
 
 

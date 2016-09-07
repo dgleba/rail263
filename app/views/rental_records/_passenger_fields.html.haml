@@ -8,7 +8,7 @@
     = f.association :pasenger_list
     %p Signature Previously Requested
   - else
-    = f.association :pasenger_list
+    = f.association :pasenger_list, :as => :collection_select, collection: PasengerList.order(:name, :clocknum).where(active: true), :label_method => lambda { |pasenger_list| "#{pasenger_list.name} , #{pasenger_list.clocknum}" }
     .sigPad
       %p.drawItDesc Draw your signature
       %ul.sigNav
@@ -55,3 +55,5 @@
         });
         })
     });      
+    
+    

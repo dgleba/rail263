@@ -14,7 +14,13 @@ namespace :db do
     
     #[Contact1].each(&:delete_all)
  
-    Customer.populate 12 do |a|
+    PasengerList.populate 12 do |a12|
+      a12.name     = Faker::Name.name
+      a12.clocknum  = Faker::Number.between(827, 5000)
+      a12.active   = Faker::Boolean.boolean
+    end
+
+    Customer.populate 3 do |a|
       a.name    = Faker::Name.name
       a.address  = Faker::Address.street_address
       a.phone = Faker::PhoneNumber.phone_number
@@ -32,3 +38,5 @@ namespace :db do
   end
   
 end
+
+ 
