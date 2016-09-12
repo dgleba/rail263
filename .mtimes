@@ -3,8 +3,6 @@
 1468703835|.rubocop.yml
 1468703835|.ruby-version
 1468703838|DEPLOYMENT.md
-1472917423|Gemfile
-1472917458|Gemfile.lock
 1468703839|Procfile
 1468703839|Rakefile
 1469214152|__offline/20160722190232_add_devise_to_users - Copy1.rb
@@ -300,4 +298,4 @@
 1472954578|config/database-mysql.yml
 1468703836|config/database.yml
 1473010527|lib/tasks/populate.rake
-1473650363|.mtimes
+1473607630|Gemfile
