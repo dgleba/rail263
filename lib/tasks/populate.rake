@@ -14,17 +14,31 @@ namespace :db do
     
     #[Contact1].each(&:delete_all)
  
-    PasengerList.populate 12 do |a12|
-      a12.name     = Faker::Name.name
-      a12.clocknum  = Faker::Number.between(827, 5000)
-      a12.active   = Faker::Boolean.boolean
+    # PasengerList.populate 12 do |a12|
+      # a12.name     = Faker::Name.name
+      # a12.clocknum  = Faker::Number.between(827, 5000)
+      # a12.active   = Faker::Boolean.boolean
+    # end
+
+    # Customer.populate 3 do |a|
+      # a.name    = Faker::Name.name
+      # a.address  = Faker::Address.street_address
+      # a.phone = Faker::PhoneNumber.phone_number
+      # a.discount = [0.0, 0.1, 0.15, 0.2]
+    # end
+
+    [Category].each(&:delete_all)
+    
+    Category.populate 22 do |a|
+      a.name    = Faker::Company.buzzword
+      #a.name    = Faker::Music.instrument
+      a.active  = Faker::Boolean.boolean(0.7)
     end
 
-    Customer.populate 3 do |a|
-      a.name    = Faker::Name.name
-      a.address  = Faker::Address.street_address
-      a.phone = Faker::PhoneNumber.phone_number
-      a.discount = [0.0, 0.1, 0.15, 0.2]
+    Cd.populate 34 do |a|
+      a.name    = Faker::Book.title
+      a.artist  = Faker::Book.author
+      a.published  = Faker::Time.backward(990, :all)
     end
 
   

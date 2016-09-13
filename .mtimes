@@ -218,7 +218,6 @@
 1472303418|db/migrate/20160827131021_add_transaction_id_column_to_versions.rb
 1468703838|db/production.sqlite3
 1472914454|db/schema.rb
-1472299031|db/seeds.rb
 1472658518|deploy/copyof/rbcp,railci278.bat
 1468703838|deploy/deploy-drail-howto-notes.txt
 1469388533|deploy/deploysh
@@ -297,5 +296,6 @@
 1473014043|app/views/rental_records/_passenger_fields.html.haml
 1472954578|config/database-mysql.yml
 1468703836|config/database.yml
-1473010527|lib/tasks/populate.rake
 1473607630|Gemfile
+1473723041|db/seeds.rb
+1473725756|lib/tasks/populate.rake

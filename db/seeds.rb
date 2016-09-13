@@ -14,9 +14,9 @@
  User.create! email: 'a', name: 'admin' , password: 'a', password_confirmation: 'a', role_id: r3.id
 
  u1 = User.create({name: "reg", email: "r", password: "a", password_confirmation: "a", role_id: r1.id})
-u2 = User.create({name: "sSue", email: "su@e", password: "a", password_confirmation: "a", role_id: r2.id})
-u3 = User.create({name: "sKev", email: "k@e", password: "a", password_confirmation: "a", role_id: r2.id})
-u4 = User.create({name: "admin", email: "a", password: "a", password_confirmation: "a", role_id: r3.id})
+  u2 = User.create({name: "sSue", email: "su@e", password: "a", password_confirmation: "a", role_id: r2.id})
+  u3 = User.create({name: "sKev", email: "k@e", password: "a", password_confirmation: "a", role_id: r2.id})
+  u4 = User.create({name: "admin", email: "a", password: "a", password_confirmation: "a", role_id: r3.id})
 
  
 # i1 = Item.create({name: "Rayban Sunglasses", description: "Stylish shades", price: 99.99, user_id: u2.id})
@@ -78,7 +78,10 @@ RentalRecord.create!([
 
 PasengerList.create!([
   {clocknum: "123", name: "David Gleba", active: false},
-  {clocknum: "124", name: "Deano", active: false}
+  {clocknum: "124", name: "Deano", active: false},
+  {clocknum: "125", name: "Joe", active: false},
+  {clocknum: "525", name: "Pell Gotler", active: false},
+  {clocknum: "625", name: "Ted Budly", active: false},
 ])
 
 # Role.create!([
