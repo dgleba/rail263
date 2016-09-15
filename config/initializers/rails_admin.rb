@@ -31,7 +31,11 @@ RailsAdmin.config do |config|
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
 
   config.actions do
-    dashboard                     # mandatory
+    #dashboard                     # mandatory
+    # hide disable record count bar graphs, https://github.com/sferik/rails_admin/wiki/Dashboard-action
+    dashboard do    
+      statistics false
+    end
     index                         # mandatory
     new
     export
@@ -62,7 +66,7 @@ RailsAdmin.config do |config|
     # end
   # end
 
-  
+ 
 end
 
   
