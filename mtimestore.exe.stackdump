@@ -1,0 +1,9 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=61134FB3
+eax=00000000 ebx=00000000 ecx=800181B8 edx=00000001 esi=00000400 edi=8003A650
+ebp=0028ABF8 esp=0028A340 program=C:\n\dropbox\csd\p2\1\mtimestore.exe, pid 8092, thread main
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
+0028ABF8  61134FB3 (00000002, 0028AC1C, 80028280, 61007F58)
+0028ACF8  61007FB5 (00000000, 0028CD84, 61007120, 00000000)
+End of stack trace
