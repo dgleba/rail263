@@ -1,0 +1,353 @@
+=
+
+
+
+
+
+newest at top...
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2016-09-03[Sep-Sat]11-00AM
+
+rails destroy  scaffold Contact1
+
+rails g scaffold Contact1  name address active:boolean updatetime:datetime
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+=
+
+
+some may be from 258 which may not have all fields..
+
+
+rails g scaffold RentalRecord customer:references start_date:date end_date:date --no-migration -f
+rails g scaffold Customer clocknum:string phone:string --no-migration -f
+
+=
+
+rails g scaffold RentalRecord customer:references start_date:date end_date:date --no-migration -f
+rails g scaffold Customer clocknum:string phone:string --no-migration -f
+=
+
+#rails g scaffold RentalRecord customer:references start_date:date end_date:date --no-migration -f
+#rails g scaffold Customer clocknum:string phone:string --no-migration -f
+
+rails g scaffold PasengerList clocknum:string name:string active:boolean -f
+rails g scaffold Passenger name:string description:string output:text rental_record:belongs_to pasenger_list:references -f
+
+rails generate scaffold Customer name:string address:string phone:string discount:float -f
+rails generate scaffold Vehicle veh_reg_no:string category:string name:string desc:string photo:binary daily_rate:decimal -f
+rails generate scaffold RentalRecord customer:references vehicle:references start_date:date end_date:date lastUpdated:datetime -f
+
+=
+
+rails generate scaffold Customer clocknum:string address:string phone:string discount:float lastUpdated:datetime -f
+
+rails generate scaffold Customer clocknum:string address:string phone:string discount:float ename lastUpdated:datetime -f --no-migration
+
+
+rails generate scaffold Vehicle veh_reg_no:string category:string name:string desc:string photo:binary daily_rate:decimal
+
+rails generate scaffold RentalRecord customer:references vehicle:references start_date:date end_date:date lastUpdated:datetime
+
+= 
+
+yes
+rails g scaffold PasengerList clocknum:string name:string active:boolean --no-migration -f
+
+ 
+no.. rails g scaffold Passenger name:string description:string output:text rental_record:belongs_to -f --no-migration
+
+
+rails g scaffold Passenger name:string description:string output:text rental_record:belongs_to pasenger_list:references --no-migration
+
+=
+rails g scaffold RentalRecord customer:references start_date:date end_date:date
+rails g scaffold Customer clocknum:string phone:string
+rake db:migrate
+rails g scaffold RentalRecord customer:references start_date:date end_date:date --no-migration -f
+rails g scaffold Customer clocknum:string phone:string --no-migration -f
+railss
+ 
+1259 rails new rail258
+1260 rails g scaffold RentalRecord customer:references start_date:date end_date:date
+1261 rails g scaffold Customer clocknum:string phone:string
+1262 cd rail258
+1263 rails g scaffold RentalRecord customer:references start_date:date end_date:date
+1264 bundle
+1265 rails g scaffold RentalRecord customer:references start_date:date end_date:date
+1266 railss
+ 
+1268 railss
+1269 rails g scaffold Customer clocknum:string phone:string
+1270 railss
+ 
+1273 rails generate simple_form:install
+1274 rails g scaffold RentalRecord customer:references start_date:date end_date:date --no-migration -f
+1275 rails g scaffold Customer clocknum:string phone:string --no-migration -f
+1276 bundle
+ 
+1283 rails generate simple_form:install --bootstrap -f
+1284 rails g scaffold RentalRecord customer:references start_date:date end_date:date --no-migration -f
+1285 rails g scaffold Customer clocknum:string phone:string --no-migration -f
+1286 railss
+
+=
+ 
+ref:
+rails generate scaffold Customer name:string address:string phone:string discount:float --no-migration -f
+
+rails generate scaffold Vehicle name:string veh_reg_no:string category:string desc:string photo:binary daily_rate:decimal --no-migration -f
+rails generate scaffold RentalRecord customer:references vehicle:references start_date:date end_date:date lastUpdated:datetime --no-migration -f
+
+ref:
+rails g scaffold Project name:string description:string
+use job rather than task. job is unique....
+rails g scaffold Job description:string done:boolean project:belongs_to
+
+ 
+use job rather than task. job is unique....
+rails g scaffold Job description:string done:boolean project:belongs_to
+_____________
+
+rails g scaffold Passenger name:string description:string output:text rental_record:belongs_to passenger_list:references --no-migration
+
+rails g scaffold PassengerList name:string clocknum:string
+_____________
+ 
+  
+=
+ef:
+rails generate scaffold Customer name:string address:string phone:string discount:float --no-migration -f
+
+rails generate scaffold Vehicle name:string veh_reg_no:string category:string desc:string photo:binary daily_rate:decimal --no-migration -f
+rails generate scaffold RentalRecord customer:references vehicle:references start_date:date end_date:date lastUpdated:datetime --no-migration -f
+
+ 
+ref:
+rails g scaffold Project name:string description:string
+use job rather than task. job is unique....
+rails g scaffold Job description:string done:boolean project:belongs_to
+
+ 
+use job rather than task. job is unique....
+rails g scaffold Job description:string done:boolean project:belongs_to
+
+ 
+
+rails g scaffold Passenger name:string description:string output:text rental_record:belongs_to passenger_list:references --no-migration
+
+ 
+
+rails g scaffold PassengerList name:string clocknum:string
+
+=
+
+ref:
+rails generate scaffold Customer name:string address:string phone:string discount:float --no-migration -f
+rails generate scaffold Vehicle name:string veh_reg_no:string category:string desc:string photo:binary daily_rate:decimal --no-migration -f
+rails generate scaffold RentalRecord customer:references vehicle:references start_date:date end_date:date lastUpdated:datetime --no-migration -f
+
+ 
+ref:
+rails g scaffold Project name:string description:string
+use job rather than task. job is unique....
+rails g scaffold Job description:string done:boolean project:belongs_to
+
+ 
+
+rails g scaffold Passenger name:string description:string output:text rental_record:belongs_to -f --no-migration
+
+ 
+use job rather than task. job is unique....
+rails g scaffold Job description:string done:boolean project:belongs_to
+
+
+=
+
+rails g scaffold Project name:string description:string
+
+ 
+
+rails g scaffold Job description:string done:boolean project:belongs_to
+
+ 
+=
+rails g scaffold user email:string crypted_password:string salt:string --migration false
+
+ 
+
+add generate scaffold for user, role like.. rails g scaffold user email:string crypted_password:string salt:string --migration false
+add code from 255 git changes
+ 
+
+rails generate scaffold Customer name:string address:string phone:string discount:float --no-migration -f
+
+rails generate scaffold Vehicle name:string veh_reg_no:string category:string desc:string photo:binary daily_rate:decimal --no-migration -f
+
+
+rails generate scaffold RentalRecord customer:references vehicle:references start_date:date end_date:date lastUpdated:datetime --no-migration -f
+
+
+=
+
+
+ef:
+rails generate scaffold Customer name:string address:string phone:string discount:float
+
+rails generate scaffold Vehicle veh_reg_no:string category:string brand:string desc:string photo:binary daily_rate:decimal
+rails generate scaffold RentalRecord customer:references vehicle:references start_date:date end_date:date lastUpdated:datetime
+
+ 
+
+rails generate scaffold Role name:string description:string
+rails generate scaffold User name:string role:references email:string sign_in_count:integer current_sign_in_at:datetime --no-migration
+
+albe@v206b1:~/share203/drail246b$ rails generate scaffold User name:string role:references email:string sign_in_count:integer current_sign_in_at:datetime --no-migration
+Running via Spring preloader in process 2942
+ 
+
+rails generate scaffold User1 name:string role:references email:string sign_in_count:integer current_sign_in_at:datetime --no-migration
+rails generate scaffold User2 name:string role:references email:string sign_in_count:integer current_sign_in_at:datetime --no-migration
+
+rails generate scaffold User name:string role:references email:string sign_in_count:integer current_sign_in_at:datetime --no-migration
+
+rails generate scaffold Customer2 name:string address:string phone:string discount:float --no-migration
+
+
+
+=
+
+rails generate scaffold Customer name:string address:string phone:string discount:float
+
+desc..
+rails generate scaffold Vehicle veh_reg_no:string category:string brand:string desc:string photo:binary daily_rate:decimal
+rails generate scaffold RentalRecord customer:references vehicle:references start_date:date end_date:date lastUpdated:datetime
+
+ 
+
+rails generate scaffold Customer name:string address:string phone:string discount:float -f --no-migration
+
+name was desc..
+rails generate scaffold Vehicle veh_reg_no:string category:string brand:string name:string photo:binary daily_rate:decimal -f --no-migration
+rails generate scaffold RentalRecord customer:references vehicle:references start_date:date end_date:date lastUpdated:datetime --no-migration
+
+ 
+
+rails generate scaffold RentalRecord customer:references vehicle:references start_date:date end_date:date lastUpdated:datetime output:text --no-migration
+
+
+=
+
+ails generate scaffold Customer name:string address:string phone:string discount:float
+
+rails generate scaffold Vehicle veh_reg_no:string category:string brand:string desc:string photo:binary daily_rate:decimal
+rails generate scaffold RentalRecord customer:references vehicle:references start_date:date end_date:date lastUpdated:datetime
+
+=
+Script for scaffold:
+
+rails generate scaffold Customer name:string address:string phone:string discount:float --no-migration
+
+rails generate scaffold RentalRecord veh_reg_no:string customer:references start_date:date end_date:date lastUpdated:datetime --no-migration
+
+rails generate scaffold Vehicle category:string brand:string desc:string photo:binary daily_rate:decimal --no-migration
+
+
+rails generate scaffold User email:string encrypted_password:string reset_password_token:string reset_password_sent_at:datetime remember_created_at:datetime sign_in_count:integer current_sign_in_at:datetime last_sign_in_at:datetime current_sign_in_ip:string last_sign_in_ip:string name:string role:integer --no-migration
+
+ 
+
+rails generate scaffold Customer name:string address:string phone:string discount:float --no-migration
+rails generate scaffold Vehicle category:string brand:string desc:string photo:binary daily_rate:decimal --no-migration
+
+ 
+
+rails generate scaffold RentalRecord customer:references vehicle:references start_date:date end_date:date lastUpdated:datetime --no-migration
+
+ 
+
+=
+
+rails generate scaffold Customer name:string address:string phone:string discount:float -f
+rails generate scaffold Vehicle veh_reg_no:string category:string brand:string desc:string photo:binary daily_rate:decimal -f
+rails generate scaffold RentalRecord customer:references vehicle:references start_date:date end_date:date lastUpdated:datetime -f
+
+ 
+
+##rails destroy scaffold user
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+
+Script for scaffold:
+
+rails generate scaffold Customer name:string address:string phone:string discount:float --no-migration
+
+rails generate scaffold RentalRecord veh_reg_no:string customer:references start_date:date end_date:date lastUpdated:datetime --no-migration
+
+rails generate scaffold Vehicle category:string brand:string desc:string photo:binary daily_rate:decimal --no-migration
+
+rails generate scaffold Role name:string description:string --no-migration
+rails generate scaffold RolesUser user:references role:references --no-migration
+rails generate scaffold User first_name:string last_name:string email:string password:string active:integer confirmed_at:datetime --no-migration
+
+ 
+
+Script for scaffold:
+
+rails generate scaffold Customer name:string address:string phone:string discount:float --no-migration
+rails generate scaffold RentalRecord veh_reg_no:string customer:references start_date:date end_date:date lastUpdated:datetime --no-migration
+rails generate scaffold Role name:string description:string --no-migration
+rails generate scaffold RolesUser user:references role:references --no-migration
+rails generate scaffold User first_name:string last_name:string email:string password:string active:integer confirmed_at:datetime --no-migration
+rails generate scaffold User email:string encrypted_password:string reset_password_token:string reset_password_sent_at:datetime remember_created_at:datetime sign_in_count:integer current_sign_in_at:datetime last_sign_in_at:datetime current_sign_in_ip:string last_sign_in_ip:string name:string role:integer --no-migration
+rails generate scaffold Vehicle category:string brand:string desc:string photo:binary daily_rate:decimal --no-migration
+
+ 
+
+Script for scaffold:
+
+ 
+
+rails generate scaffold Customer name:string address:string phone:string discount:float --no-migration
+
+rails generate scaffold Vehicle veh_reg_no:string category:string brand:string desc:string photo:binary daily_rate:decimal --no-migration
+rails generate scaffold RentalRecord customer:references start_date:date end_date:date lastUpdated:datetime vehicles_vehicle:references --no-migration
+
+#rails generate scaffold User email:string encrypted_password:string reset_password_token:string reset_password_sent_at:datetime remember_created_at:datetime sign_in_count:integer current_sign_in_at:datetime last_sign_in_at:datetime current_sign_in_ip:string last_sign_in_ip:string name:string role:integer --no-migration
+
+ 
+
+=
+ttp://stackoverflow.com/questions/5188444/auto-generate-scaffolding-for-an-existing-database-scheme-in-rails-3
+
+ 
+Run in terminal rake db:schema:dump (Generates schema.rb)
+Install gem 'schema_to_scaffold' (https://github.com/frenesim/schema_to_scaffold/)
+Run in terminal .. scaffold ... to generate rails scaffold commands and follow what is requested
+copy "rails scaffold commands" generated by step 7 on a separated .txt file
+Run each "rails scaffold command" separately
+Be happy!
+ 
+
+Script for scaffold:
+
+rails generate scaffold Customer name:string address:string phone:string discount:float --no-migration
+
+rails generate scaffold RentalRecord veh_reg_no:string customer:references start_date:date end_date:date lastUpdated:datetime --no-migration
+
+rails generate scaffold Vehicle category:string brand:string desc:string photo:binary daily_rate:decimal --no-migration
+
+rails generate scaffold Role name:string description:string --no-migration
+rails generate scaffold RolesUser user:references role:references --no-migration
+rails generate scaffold User first_name:string last_name:string email:string password:string active:integer confirmed_at:datetime --no-migration
+
+=
+
