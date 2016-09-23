@@ -3,12 +3,16 @@
 1468703835|.rubocop.yml
 1468703835|.ruby-version
 1468703838|DEPLOYMENT.md
+1473607630|Gemfile
+1474629212|Gemfile.lock
 1468703839|Procfile
+1472956201|README.md
 1468703839|Rakefile
 1469214152|__offline/20160722190232_add_devise_to_users - Copy1.rb
 1468703839|__offline/_passenger_fields.html copy.haml
 1468703835|__offline/application-nosigpad.js
 1471629074|__offline/application_helper - Copy.rb
+1474629212|__offline/mtimestore.exe.stackdump
 1468714558|__offline/passenger.js.offline-2016-07-16_Sat_20.14-PM.js
 1469544527|__offline/passw.rb
 1469188184|__offline/rail262-mailer-2016-07-21.txt
@@ -18,12 +22,18 @@
 1465257040|app/assets/images/.keep
 1471618870|app/assets/javascripts/application.js
 1471620073|app/assets/javascripts/dgbestinplace.js
+1468703835|app/assets/javascripts/dgselect2.js
+1468703835|app/assets/javascripts/dgsigpad.js
+1468718459|app/assets/javascripts/passenger.js
+1469106954|app/assets/javascripts/showhidesearch.js
 1468703835|app/assets/javascripts/turbo.7z
 1462131221|app/assets/stylesheets/1st_load_framework.css.scss
 1468703835|app/assets/stylesheets/_components.sass
 1468703835|app/assets/stylesheets/application-nosigpad.css
 1468703835|app/assets/stylesheets/application.css
 1468703835|app/assets/stylesheets/bootstrap_overrides.sass
+1471488663|app/assets/stylesheets/dg.css
+1468703835|app/assets/stylesheets/dgsigpad.css
 1468703835|app/controllers/admin/application_controller.rb
 1468703835|app/controllers/admin/roles_controller.rb
 1468703835|app/controllers/admin/users_controller.rb
@@ -35,6 +45,7 @@
 1469383708|app/controllers/passengers_controller.rb
 1469383719|app/controllers/rental_records_controller.rb
 1469383736|app/controllers/roles_controller.rb
+1469383761|app/controllers/users_controller.rb
 1469383822|app/controllers/vehicles_controller.rb
 1468703835|app/dashboards/role_dashboard.rb
 1468703835|app/dashboards/user_dashboard.rb
@@ -50,6 +61,8 @@
 1472856302|app/helpers/passenger_helper.rb
 1468703835|app/inputs/collection_select_input.rb
 1465257040|app/mailers/.keep
+1469188184|app/mailers/application_mailer.rb
+1469188184|app/mailers/example_mailer.rb
 1465257040|app/models/.keep
 1472301767|app/models/ability.rb
 1472308610|app/models/admin_ability.rb
@@ -84,9 +97,12 @@
 1469468784|app/views/devise/sessions/new.html.erb
 1469214656|app/views/devise/shared/_links.html.erb
 1469214657|app/views/devise/unlocks/new.html.erb
+1469188184|app/views/example_mailer/sample_email.html.erb
+1469188184|app/views/example_mailer/sample_email.text.erb
 1468703835|app/views/home/index.html.haml
 1468703835|app/views/layouts/application.html - Copy-navbarfixedtop.haml.7z
 1469388336|app/views/layouts/application.html.haml
+1469188184|app/views/layouts/mailer.html.haml
 1469188184|app/views/layouts/mailer.text.haml
 1468703836|app/views/pasenger_lists/_form.html.haml
 1468703836|app/views/pasenger_lists/edit.html.haml
@@ -108,6 +124,7 @@
 1469040038|app/views/passengers/show.html.haml
 1468703836|app/views/passengers/show.json.jbuilder
 1468703836|app/views/rental_records/_form.html.haml
+1473014043|app/views/rental_records/_passenger_fields.html.haml
 1468703836|app/views/rental_records/edit.html.haml
 1468703836|app/views/rental_records/index.html.haml
 1468703836|app/views/rental_records/index.json.jbuilder
@@ -134,6 +151,7 @@
 1432296023|app/views/users/new.html.erb
 1468703836|app/views/users/new.html.haml
 1432296023|app/views/users/show.html.erb
+1469188184|app/views/users/show.html.haml
 1432296023|app/views/users/show.json.jbuilder
 1471370642|app/views/vehicles/_form.html.haml
 1468703836|app/views/vehicles/edit.html.haml
@@ -148,10 +166,14 @@
 1468703836|bin/setup
 1468703836|bin/spring
 1468703837|config.ru
+1472948081|config/application.rb
 1468703836|config/boot.rb
 1468703836|config/brakeman.yml
+1472954578|config/database-mysql.yml
 1468703836|config/database-sqlite.yml
+1468703836|config/database.yml
 1468703836|config/environment.rb
+1469213527|config/environments/development.rb
 1468703836|config/environments/production.rb
 1468703836|config/environments/test.rb
 1468703836|config/initializers/assets.rb
@@ -184,6 +206,7 @@
 1468703837|config/locales/nl.yml
 1468703837|config/locales/simple_form.en.yml
 1468703837|config/puma.rb.offline
+1472919077|config/routes.rb
 1468703837|config/secrets.yml
 1468703837|config/simple_form.rb
 1471967789|db/_offline/papertrail____20160823155629_create_versions.rb
@@ -202,7 +225,9 @@
 1472303418|db/migrate/20160827131021_add_transaction_id_column_to_versions.rb
 1468703838|db/production.sqlite3
 1472914454|db/schema.rb
+1473723041|db/seeds.rb
 1472658518|deploy/copyof/rbcp,railci278.bat
+1468703838|deploy/deploy-drail-howto-notes.txt
 1469388533|deploy/deploysh
 1468703838|deploy/etc/puma.conf
 1468948214|deploy/older/deploysh1
@@ -213,12 +238,16 @@
 1468703838|deploy/puma.rb
 1468945623|deploy/rail260.conf
 1472956016|docs/error-mysql-migration-2016-09-03_Sat_22.26-PM.txt
+1474629212|docs/rail263scaffold.txt
+1474629212|docs/search-djangolike-markcampbell-2016-09-19.rb
+1474629212|docs/searchtest-markcampbell-2016-09-19.rb
 1468950865|example.env
 1465257040|lib/assets/.keep
 1468703838|lib/extensions/draper_decorator_ext.rb
 1465257040|lib/tasks/.keep
 1468703838|lib/tasks/db.rake
 1468703838|lib/tasks/example.rake
+1473725756|lib/tasks/populate.rake
 1472917645|lib/tasks/populate1.rake
 1471486648|lib/templates/haml/scaffold/_form.html.haml
 1468703838|lib/templates/haml/scaffold/edit.html.haml
@@ -230,6 +259,7 @@
 1471486676|lib/templates/haml/scaffold/show.html.haml
 1469383432|lib/templates/rails/controller/controller.rb
 1469383389|lib/templates/rails/scaffold_controller/controller.rb
+1469623249|passw.rb
 1468703839|public/404.html
 1468703839|public/422.html
 1468703839|public/500.html
@@ -257,6 +287,8 @@
 1468703840|spec/factories/users.rb
 1468703840|spec/factories/vehicles.rb
 1468703840|spec/helpers/application_helper_spec.rb
+1469188184|spec/mailers/example_mailer_spec.rb
+1469188184|spec/mailers/previews/example_mailer_preview.rb
 1468703840|spec/models/customer_spec.rb
 1468703840|spec/models/pasenger_list_spec.rb
 1468703840|spec/models/passenger_spec.rb
@@ -272,30 +304,4 @@
 1465257040|test/models/.keep
 1468703840|test/test_helper.rb
 1465257040|vendor/assets/stylesheets/.keep
-1473014043|app/views/rental_records/_passenger_fields.html.haml
-1472954578|config/database-mysql.yml
-1468703836|config/database.yml
-1473607630|Gemfile
-1473723041|db/seeds.rb
-1473725756|lib/tasks/populate.rake
-1472956201|README.md
-1468703835|app/assets/javascripts/dgselect2.js
-1468703835|app/assets/javascripts/dgsigpad.js
-1468718459|app/assets/javascripts/passenger.js
-1469106954|app/assets/javascripts/showhidesearch.js
-1471488663|app/assets/stylesheets/dg.css
-1468703835|app/assets/stylesheets/dgsigpad.css
-1469383761|app/controllers/users_controller.rb
-1469188184|app/mailers/application_mailer.rb
-1469188184|app/mailers/example_mailer.rb
-1469188184|app/views/example_mailer/sample_email.html.erb
-1469188184|app/views/example_mailer/sample_email.text.erb
-1469188184|app/views/layouts/mailer.html.haml
-1469188184|app/views/users/show.html.haml
-1472948081|config/application.rb
-1469213527|config/environments/development.rb
-1472919077|config/routes.rb
-1468703838|deploy/deploy-drail-howto-notes.txt
-1469623249|passw.rb
-1469188184|spec/mailers/example_mailer_spec.rb
-1469188184|spec/mailers/previews/example_mailer_preview.rb
+1474629328|.mtimes
