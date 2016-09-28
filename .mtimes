@@ -301,8 +301,7 @@
 1468703840|test/test_helper.rb
 1465257040|vendor/assets/stylesheets/.keep
 1474655629|__offline/__2016-09-23_14.31.33.mtimes
-1474979784|Gemfile
-1474979794|Gemfile.lock
 1474979994|db/seeddump1.rb
 1468703837|__offline/puma.rb.offline
 1475082671|config/environment.rb
+1475104096|Gemfile

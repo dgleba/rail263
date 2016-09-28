@@ -67,8 +67,10 @@ group :development, :test do
   gem 'spring'
   gem 'byebug'
   gem 'pry-byebug'
+  # comment out better errors and binding of caller to avoid live shell prompt on error page.
   gem 'better_errors'
   gem 'binding_of_caller'
+  
   gem 'quiet_assets'
   gem 'letter_opener'
   gem 'bullet'
