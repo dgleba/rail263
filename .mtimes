@@ -170,7 +170,6 @@
 1472954578|config/database-mysql.yml
 1468703836|config/database-sqlite.yml
 1468703836|config/database.yml
-1468703836|config/environment.rb
 1469213527|config/environments/development.rb
 1468703836|config/environments/production.rb
 1468703836|config/environments/test.rb
@@ -304,5 +303,6 @@
 1474655629|__offline/__2016-09-23_14.31.33.mtimes
 1474979784|Gemfile
 1474979794|Gemfile.lock
-1475078538|config/puma.rb.offline
 1474979994|db/seeddump1.rb
+1468703837|__offline/puma.rb.offline
+1475082671|config/environment.rb
