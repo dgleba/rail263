@@ -3,8 +3,6 @@
 1468703835|.rubocop.yml
 1468703835|.ruby-version
 1468703838|DEPLOYMENT.md
-1473607630|Gemfile
-1474629212|Gemfile.lock
 1468703839|Procfile
 1472956201|README.md
 1468703839|Rakefile
@@ -205,7 +203,6 @@
 1468703837|config/locales/nl.models.yml
 1468703837|config/locales/nl.yml
 1468703837|config/locales/simple_form.en.yml
-1468703837|config/puma.rb.offline
 1472919077|config/routes.rb
 1468703837|config/secrets.yml
 1468703837|config/simple_form.rb
@@ -305,3 +302,7 @@
 1468703840|test/test_helper.rb
 1465257040|vendor/assets/stylesheets/.keep
 1474655629|__offline/__2016-09-23_14.31.33.mtimes
+1474979784|Gemfile
+1474979794|Gemfile.lock
+1475078538|config/puma.rb.offline
+1474979994|db/seeddump1.rb

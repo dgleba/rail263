@@ -109,7 +109,7 @@ gem "administrate", "~> 0.2.2"
 gem 'populator'
 gem 'faker'
 gem 'seed_dump'
-#gem 'yaml_db'
+# gem 'yaml_db'
 gem "yaml_db", :git => "git://github.com/dgleba/yaml_db.git"
 #
 

@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/dgleba/yaml_db.git
-  revision: 1538f2789f2f38c2925e14a08f1a192301957326
+  revision: 8135ee098b678d1cdd0a05649593dfa1d289405e
   specs:
     yaml_db (0.4.0)
       rails (>= 3.0, < 5.1)
