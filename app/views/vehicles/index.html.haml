@@ -29,6 +29,7 @@
       %th= sort_link(@q, :desc, Vehicle.human_attribute_name(:desc))
       %th= sort_link(@q, :photo, Vehicle.human_attribute_name(:photo))
       %th= sort_link(@q, :daily_rate, Vehicle.human_attribute_name(:daily_rate))
+      %th  features
 
   %tbody
     - @vehicles.each do |vehicle|
@@ -41,6 +42,7 @@
         %td= vehicle.desc
         %td= vehicle.photo
         %td= vehicle.daily_rate
+        %td= vehicle.features
         %td= vehicle.id
 
 = paginate @vehicles

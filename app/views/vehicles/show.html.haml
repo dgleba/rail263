@@ -13,6 +13,8 @@
   %dd= @vehicle.photo
   %dt= Vehicle.human_attribute_name :daily_rate
   %dd= @vehicle.daily_rate
+  %dt= Vehicle.human_attribute_name :features
+  %dd= @vehicle.features
 
 = link_to t('actions.edit'), edit_vehicle_path(@vehicle), class: 'btn btn-primary'
 \&nbsp &nbsp &nbsp|&nbsp &nbsp &nbsp

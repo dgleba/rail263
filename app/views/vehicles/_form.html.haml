@@ -16,8 +16,39 @@
 
     /= f.input :category 
     /= f.input :daily_rate
+    
+    - a = f.object.features
+    - puts a
+    
+    / http://stackoverflow.com/questions/21511294/saving-array-through-form-not-working-correctly-using-checkboxes-and-simple-for
+    / collection: [['1', 'Yes'] ,['2', 'No']]
+    / http://stackoverflow.com/questions/16549382/how-to-permit-an-array-with-strong-parameters
+    /    I explicitly set category_ids to be an array   --  :city, :category_ids => [])
+    / http://stackoverflow.com/questions/13823655/rails-multiple-checkboxes-in-1-db-column-saves-correctly-but-doesnt-show-as-ch
+    / https://github.com/plataformatec/simple_form/wiki/check_boxes-input-preselection
+    / 
+    /  collection:  [["air conditioning","ac"],    ["Stereo Radio","stereo"],   ["4 wheel drive","4WD"],  ["cruise control","cruisecontrol"]],
+    /        item_label_class:  "check_boxes-inline", item_wrapper_tag: false
+    / works:  collection:  ["ac", "Stereo Radio", "4 wheel drive"],  :checked => ["Stereo Radio", "4 wheel drive", ""]
+    / 
+    / 
+    /= f.input :features
+    = f.input :features, as: :check_boxes, 
+    collection:  ["ac", "Stereo Radio", "4 wheel drive"], :checked => f.object.features
 
+    - a = f.object.features
+    - puts a    
+    - b = @vehicle.features
+    - puts b    
+    - a = f.object.color
+    - puts a    
+ 
+    / rails g migration add_color_to_vehicles color:string
+    = f.input :color, as: :check_boxes, collection:  ["red", "green", "blue"], :checked => f.object.color
+
+   
+    
   .form-actions
     = f.button :submit
-    \&nbsp &nbsp|&nbsp &nbsp
+    &nbsp &nbsp|&nbsp &nbsp
     = link_to t('actions.cancel'), vehicles_path

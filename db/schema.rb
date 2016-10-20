@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160903145405) do
+ActiveRecord::Schema.define(version: 20161020022706) do
 
   create_table "audits", force: :cascade do |t|
     t.integer  "auditable_id"
@@ -125,8 +125,10 @@ ActiveRecord::Schema.define(version: 20160903145405) do
     t.string   "desc"
     t.binary   "photo"
     t.decimal  "daily_rate"
+    t.text     "features"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "color"
   end
 
   create_table "version_associations", force: :cascade do |t|

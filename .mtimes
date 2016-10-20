@@ -1,5 +1,4 @@
 1468703834|.erdconfig
-1471622439|.gitignore
 1468703835|.rubocop.yml
 1468703835|.ruby-version
 1468703838|DEPLOYMENT.md
@@ -44,7 +43,6 @@
 1469383719|app/controllers/rental_records_controller.rb
 1469383736|app/controllers/roles_controller.rb
 1469383761|app/controllers/users_controller.rb
-1469383822|app/controllers/vehicles_controller.rb
 1468703835|app/dashboards/role_dashboard.rb
 1468703835|app/dashboards/user_dashboard.rb
 1468703835|app/decorators/customer_decorator.rb
@@ -151,12 +149,9 @@
 1432296023|app/views/users/show.html.erb
 1469188184|app/views/users/show.html.haml
 1432296023|app/views/users/show.json.jbuilder
-1471370642|app/views/vehicles/_form.html.haml
 1468703836|app/views/vehicles/edit.html.haml
-1468703836|app/views/vehicles/index.html.haml
 1468703836|app/views/vehicles/index.json.jbuilder
 1468703836|app/views/vehicles/new.html.haml
-1468703836|app/views/vehicles/show.html.haml
 1468703836|app/views/vehicles/show.json.jbuilder
 1468703836|bin/bundle
 1468703836|bin/rails
@@ -220,7 +215,6 @@
 1472303418|db/migrate/20160827131020_create_version_associations.rb
 1472303418|db/migrate/20160827131021_add_transaction_id_column_to_versions.rb
 1468703838|db/production.sqlite3
-1472914454|db/schema.rb
 1473723041|db/seeds.rb
 1472658518|deploy/copyof/rbcp,railci278.bat
 1468703838|deploy/deploy-drail-howto-notes.txt
@@ -305,4 +299,14 @@
 1468703837|__offline/puma.rb.offline
 1475082671|config/environment.rb
 1475104603|Gemfile
-1469708154|config/initializers/devise-ldap265.rb
+1476931139|.gitignore
+1469708154|__offline/devise-ldap265.rb
+1476930802|app/controllers/vehicles_controller.rb
+1476930899|app/views/vehicles/_form.html.haml
+1476929719|app/views/vehicles/index.html.haml
+1476929611|app/views/vehicles/show.html.haml
+1476930903|db/development.sqlite3
+1476924239|db/migrate/20161020004359_add_features_to_vehicles.rb
+1476930426|db/migrate/20161020022706_add_color_to_vehicles.rb
+1476930460|db/schema.rb
+1473860983|db/test.sqlite3
