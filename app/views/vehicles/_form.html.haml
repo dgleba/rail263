@@ -17,6 +17,7 @@
     /= f.input :category 
     /= f.input :daily_rate
     
+    - a = []
     - a = f.object.features
     - puts a
     
@@ -34,17 +35,18 @@
     / 
     /= f.input :features
     = f.input :features, as: :check_boxes, 
-    collection:  ["ac", "Stereo Radio", "4 wheel drive"], :checked => f.object.features
+    collection:  ["ac", "Stereo Radio", "4 wheel drive"], :checked => f.object.features.to_s
 
-    - a = f.object.features
-    - puts a    
+    - c = f.object.features.to_s
+    - puts c    
     - b = @vehicle.features
     - puts b    
-    - a = f.object.color
-    - puts a    
+    - d = raw(f.object.color)
+    - puts d    
  
     / rails g migration add_color_to_vehicles color:string
-    = f.input :color, as: :check_boxes, collection:  ["red", "green", "blue"], :checked => f.object.color
+    / http://stackoverflow.com/questions/37538685/how-do-i-properly-store-multiple-checkboxed-values-using-simpleform --  q.refactor_rule.reject!(&:empty?)
+    = f.input :color, as: :check_boxes, collection:  ["red", "green", "blue"], :checked => raw(f.object.color)
 
    
     

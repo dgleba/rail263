@@ -302,11 +302,11 @@
 1476931139|.gitignore
 1469708154|__offline/devise-ldap265.rb
 1476930802|app/controllers/vehicles_controller.rb
-1476930899|app/views/vehicles/_form.html.haml
 1476929719|app/views/vehicles/index.html.haml
 1476929611|app/views/vehicles/show.html.haml
 1476924239|db/migrate/20161020004359_add_features_to_vehicles.rb
 1476930426|db/migrate/20161020022706_add_color_to_vehicles.rb
 1476930460|db/schema.rb
 1473860983|db/test.sqlite3
-1476931429|db/development.sqlite3
+1476933660|app/views/vehicles/_form.html.haml
+1476933385|db/development.sqlite3
