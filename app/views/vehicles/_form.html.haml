@@ -35,7 +35,8 @@
     / 
     /= f.input :features
     = f.input :features, as: :check_boxes, 
-    collection:  ["ac", "Stereo Radio", "4 wheel drive"], :checked => f.object.features.to_s
+      collection:  ["AC", "Stereo-Radio", "4-wheel-drive"], :checked => f.object.features,
+      item_label_class:  "check_boxes-inline", item_wrapper_tag: false
 
     - c = f.object.features.to_s
     - puts c    
@@ -46,7 +47,7 @@
  
     / rails g migration add_color_to_vehicles color:string
     / http://stackoverflow.com/questions/37538685/how-do-i-properly-store-multiple-checkboxed-values-using-simpleform --  q.refactor_rule.reject!(&:empty?)
-    = f.input :color, as: :check_boxes, collection:  ["red", "green", "blue"], :checked => raw(f.object.color)
+    = f.input :color, as: :check_boxes, collection:  ["red", "green", "blue"], :checked => f.object.color
 
    
     

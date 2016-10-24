@@ -29,7 +29,6 @@
 1468703835|app/assets/stylesheets/application-nosigpad.css
 1468703835|app/assets/stylesheets/application.css
 1468703835|app/assets/stylesheets/bootstrap_overrides.sass
-1471488663|app/assets/stylesheets/dg.css
 1468703835|app/assets/stylesheets/dgsigpad.css
 1468703835|app/controllers/admin/application_controller.rb
 1468703835|app/controllers/admin/roles_controller.rb
@@ -70,7 +69,6 @@
 1471970736|app/models/rental_record.rb
 1468703835|app/models/role.rb
 1471970789|app/models/user.rb
-1471970508|app/models/vehicle.rb
 1471358559|app/views/customers/_form.html - form-horizontal.haml
 1468703835|app/views/customers/_form.html-orig.haml
 1471371962|app/views/customers/_form.html.haml
@@ -186,7 +184,6 @@
 1468703837|config/initializers/rotate_log_dev_test.rb
 1469388359|config/initializers/session_store.rb
 1468703837|config/initializers/simple_form.rb
-1471371557|config/initializers/simple_form_bootstrap.rb
 1468703837|config/initializers/version.rb
 1468703837|config/initializers/wrap_parameters.rb
 1469213258|config/locales/devise.en.yml
@@ -302,11 +299,14 @@
 1476931139|.gitignore
 1469708154|__offline/devise-ldap265.rb
 1476930802|app/controllers/vehicles_controller.rb
-1476929719|app/views/vehicles/index.html.haml
 1476929611|app/views/vehicles/show.html.haml
 1476924239|db/migrate/20161020004359_add_features_to_vehicles.rb
 1476930426|db/migrate/20161020022706_add_color_to_vehicles.rb
 1476930460|db/schema.rb
 1473860983|db/test.sqlite3
-1476933660|app/views/vehicles/_form.html.haml
-1476933385|db/development.sqlite3
+1477325325|app/assets/stylesheets/dg.css
+1477323529|app/models/vehicle.rb
+1477324196|app/views/vehicles/_form.html.haml
+1477337978|app/views/vehicles/index.html.haml
+1477325384|config/initializers/simple_form_bootstrap.rb
+1477324380|db/development.sqlite3

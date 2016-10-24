@@ -4,6 +4,9 @@ class Vehicle < ActiveRecord::Base
   # no..... has_paper_trail
   # use audited for model record history
   audited
+  
+  serialize :features, Array
+  serialize :color, Array
 
   def to_s
     # show columns contents, not record object like:  #<Vehicle:0x007f343b3f2890> 2016-06-08  Details Edit  Delete

@@ -14,7 +14,11 @@
         %span.input-group-btn
           %button.btn.btn-primary
             %i.fa.fa-search    
-            
+  
+  .col-sm-2.col-md-2.col-lg-2{:style => "background-color:white;"}
+    %a{:href => "http://#{request.host}/shiftcsd1/index.php?-table=sf_rpt"} Search-2(Login. Works after that)
+    - puts request.host
+    
 = paginate @vehicles
     
  
