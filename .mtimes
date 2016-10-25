@@ -59,7 +59,6 @@
 1469188184|app/mailers/application_mailer.rb
 1469188184|app/mailers/example_mailer.rb
 1465257040|app/models/.keep
-1472301767|app/models/ability.rb
 1472308610|app/models/admin_ability.rb
 1472307217|app/models/audit.rb
 1465257040|app/models/concerns/.keep
@@ -166,7 +165,6 @@
 1469213527|config/environments/development.rb
 1468703836|config/environments/production.rb
 1468703836|config/environments/test.rb
-1468703836|config/initializers/assets.rb
 1468703836|config/initializers/backtrace_silencers.rb
 1468703836|config/initializers/cookies_serializer.rb
 1469215682|config/initializers/devise.rb
@@ -180,7 +178,6 @@
 1468703837|config/initializers/lib_extensions.rb
 1468703837|config/initializers/mime_types.rb
 1472741700|config/initializers/rails_admin-263.rb
-1472741495|config/initializers/rails_admin.rb
 1468703837|config/initializers/rotate_log_dev_test.rb
 1469388359|config/initializers/session_store.rb
 1468703837|config/initializers/simple_form.rb
@@ -309,4 +306,8 @@
 1477324196|app/views/vehicles/_form.html.haml
 1477337978|app/views/vehicles/index.html.haml
 1477325384|config/initializers/simple_form_bootstrap.rb
-1477324380|db/development.sqlite3
+1477366081|app/assets/javascripts/rails_admin/custom/ui.js
+1477366516|app/models/ability.rb
+1477365498|config/initializers/assets.rb
+1477365619|config/initializers/rails_admin.rb
+1477365370|db/development.sqlite3

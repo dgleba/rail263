@@ -50,7 +50,7 @@ RailsAdmin.config do |config|
      history_show
   end
 
-  config.total_columns_width = 10000
+  config.total_columns_width = 987000
   # got error.. include_all_fields
   # don't exclude empty fields in show...
   config.compact_show_view = false
