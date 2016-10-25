@@ -8,6 +8,8 @@ class Ability
       can :access, :rails_admin       # only allow admin users to access Rails Admin
       can :dashboard                  # allow access to dashboard
 
+    # remember to add roles to user.rb
+    #
     # http://hibbard.eu/authentication-with-devise-and-cancancan-in-rails-4-2/  
     elsif user.sc_seller?
       can :read, Customer
@@ -28,11 +30,15 @@ class Ability
 
     elsif user.sc_readonly?
       can :read, Vehicle
-      
+
+    elsif user.sc_minimal?
+      #can :read, [Role]
+    
+    elsif user.sc_create?
+      can :read, [Role]
     end
 
   end
-
   
 # sc_minimal  
 # sc_readonly  
@@ -41,7 +47,6 @@ class Ability
 # sc_supervisor
 # sc_delete
 # sc_admin
-
   
 end
 

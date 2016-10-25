@@ -1,0 +1,13 @@
+
+Role.create!([
+  {name: "sc_admin", description: "Can perform any CRUD operation on any resource"},
+  {name: "sc_minimal", description: ""},
+  {name: "sc_read", description: ""},
+  {name: "sc_create", description: ""},
+  {name: "sc_regular", description: ""},
+  {name: "sc_supervisor", description: ""},
+  {name: "sc_delete", description: ""},
+  {name: "sc_vip", description: ""},
+  {name: "sc_special1", description: ""},
+  {name: "sc_seller", description: ""}
+])

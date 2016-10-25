@@ -67,7 +67,6 @@
 1471970748|app/models/passenger.rb
 1471970736|app/models/rental_record.rb
 1468703835|app/models/role.rb
-1471970789|app/models/user.rb
 1471358559|app/views/customers/_form.html - form-horizontal.haml
 1468703835|app/views/customers/_form.html-orig.haml
 1471371962|app/views/customers/_form.html.haml
@@ -193,7 +192,6 @@
 1472919077|config/routes.rb
 1468703837|config/secrets.yml
 1468703837|config/simple_form.rb
-1471967789|db/_offline/papertrail____20160823155629_create_versions.rb
 1468703838|db/migrate/20160607161156_create_roles.rb
 1468703838|db/migrate/20160607161249_create_users.rb
 1468703838|db/migrate/20160620172715_create_pasenger_lists.rb
@@ -208,7 +206,6 @@
 1472303418|db/migrate/20160827131020_create_version_associations.rb
 1472303418|db/migrate/20160827131021_add_transaction_id_column_to_versions.rb
 1468703838|db/production.sqlite3
-1473723041|db/seeds.rb
 1472658518|deploy/copyof/rbcp,railci278.bat
 1468703838|deploy/deploy-drail-howto-notes.txt
 1468703838|deploy/etc/puma.conf
@@ -296,7 +293,6 @@
 1476929611|app/views/vehicles/show.html.haml
 1476924239|db/migrate/20161020004359_add_features_to_vehicles.rb
 1476930426|db/migrate/20161020022706_add_color_to_vehicles.rb
-1476930460|db/schema.rb
 1473860983|db/test.sqlite3
 1477325325|app/assets/stylesheets/dg.css
 1477323529|app/models/vehicle.rb
@@ -304,10 +300,8 @@
 1477337978|app/views/vehicles/index.html.haml
 1477325384|config/initializers/simple_form_bootstrap.rb
 1477366081|app/assets/javascripts/rails_admin/custom/ui.js
-1477366516|app/models/ability.rb
 1477365498|config/initializers/assets.rb
 1477365619|config/initializers/rails_admin.rb
-1477401775|Gemfile
 1477401775|__offline/development.sqlite3
 1477401775|config/environments/production.rb
 1477318423|config/puma.rb
@@ -315,3 +309,13 @@
 1469388533|deploy/deploysh 2016-10-24_09.55.38
 1477318195|deploy/rail263.conf
 1477320339|railsl
+1477406767|.mtimes
+1477402850|Gemfile
+1477403043|Gemfile.lock
+1471967789|__offline/_offline/papertrail____20160823155629_create_versions.rb
+1477398650|__offline/seed-roles.txt
+1477405863|app/models/ability.rb
+1477406087|app/models/user.rb
+1477406301|db/development.sqlite3
+1477402586|db/schema.rb
+1477406083|db/seeds.rb

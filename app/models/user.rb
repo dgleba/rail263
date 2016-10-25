@@ -39,14 +39,31 @@ class User < ActiveRecord::Base
     self.role.name == "sc_admin"
   end
 
-  def sc_seller?
-    self.role.name == "sc_seller"
+  def sc_minimal?
+    self.role.name == "sc_minimal"
+  end
+
+  def sc_readonly?
+    self.role.name == "sc_readonly"
+  end
+  
+  def sc_create?
+    self.role.name == "sc_create"
   end
 
   def sc_regular?
     self.role.name == "sc_regular"
   end
+
+  def sc_supervisor?
+    self.role.name == "sc_supervisor"
+  end
+
+  def sc_seller?
+    self.role.name == "sc_seller"
+  end
   
+     
  
   private
 

@@ -36,15 +36,6 @@ ActiveRecord::Schema.define(version: 20161020022706) do
   add_index "audits", ["request_uuid"], name: "index_audits_on_request_uuid"
   add_index "audits", ["user_id", "user_type"], name: "user_index"
 
-  create_table "contact1s", force: :cascade do |t|
-    t.string   "name"
-    t.string   "address"
-    t.boolean  "active"
-    t.datetime "updatetime"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "customers", force: :cascade do |t|
     t.string   "name"
     t.string   "address"
@@ -125,9 +116,9 @@ ActiveRecord::Schema.define(version: 20161020022706) do
     t.string   "desc"
     t.binary   "photo"
     t.decimal  "daily_rate"
-    t.text     "features"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "features"
     t.string   "color"
   end
 
