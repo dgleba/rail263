@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+function Purpose() {
+# begin block comment =============================
+: <<'END'
+
+#  Purpose:  run rails dev mode on a port
+
+    
+usage: run this from /srv/web/rail263
+
+ cd /srv/web/rail263
+ railsl
+
+end -- usage. 
+
+END
+# end block comment ===============================
+}
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#cd ;
+date ; set +vx  ; set -vx ; # echo off, then echo on
+#
+
+rails s -b 0.0.0.0 -p 3014
+#

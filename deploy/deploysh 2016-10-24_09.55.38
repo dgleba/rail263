@@ -6,23 +6,11 @@ function Purpose() {
 
 #  Purpose:  tar the current folder and give the archive a useful name..
 
+usage: run this from /srv/web/rail260
 
-Read and edit these files. they may need editing.
-    port number -- C:\var\share203\rail263\deploy\rail260.conf  >>>>>  rename and edit.
-    project name in this file. 
-    ..
-    
-    
-usage: run this from /srv/web/rail263
+cd /srv/web/rail260
+deploy/deploysh
 
-
-*******   Don't run with sudo..  *******
-
-
- cd /srv/web/rail263
- deploy/deploysh
-
-end -- usage. 
 
 END
 # end block comment ===============================
@@ -33,8 +21,8 @@ date ; set +vx  ; set -vx ; # echo off, then echo on
 #
 
 
-prjname="rail263"
-dpath="/srv/web/$prjname"
+prjname = 'rail260
+dpath = "/srv/web/$prjname"
 
 echo $prjname
 echo $dpath
@@ -56,16 +44,13 @@ cp deploy/puma.rb config/puma.rb
 # sudo sed -i "s/.*$dpath.*//$dpath/g" /etc/puma.conf
 
 
-
 # add path to etc/puma.conf...
-if grep --quiet "$dpath" /etc/puma.conf; then
+if grep --quiet $dpath /etc/puma.conf; then
   echo  the text exists.. do nothing..
 else
   #  it's not found..
   sudo sh -c "echo $dpath >> /etc/puma.conf"
-  echo added $dpath to puma.conf
 fi
-
 
 
 sudo cp  /etc/nginx/sites-available/$prjname.conf  /etc/nginx/sites-available/$prjname.conf$(date +"__%Y.%m.%d_%H.%M.%S").bk
@@ -81,21 +66,3 @@ sudo start puma-manager
 sudo restart puma-manager
 sudo service nginx restart
 
-
-
-# http://stackoverflow.com/questions/4883891/ruby-on-rails-production-log-rotation
-# http://www.thegeekstuff.com/2010/07/logrotate-examples
-#
-sudo tee /etc/logrotate.d/raillog_rail263 <<EOF
-/srv/web/rail263/log/*.log {
-    size=5k
-    daily
-    missingok
-    rotate 62
-    compress
-    delaycompress
-    notifempty
-    copytruncate
-}
-EOF
-#

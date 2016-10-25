@@ -78,4 +78,30 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  
+    # Mail setup David Gleba...
+  config.action_mailer.delivery_method = :smtp
+  # SMTP settings for
+  #10.5.1.210  # MESG01.stackpole.ca
+  # works..
+  
+  config.action_mailer.smtp_settings = {
+   :address           => "mesg01.stackpole.ca"
+  }
+ 
+  # gmail worked, 2016-07-21_Thu_14.44-PM.
+  # or try smtp-mail.outlook.com
+  
+  # config.action_mailer.smtp_settings = {
+   # :address              => "smtp.gmail.com",
+   # :port                 => 587,
+   # :user_name            => ENV['gmail_username'],
+   # :password             => ENV['gmail_password'],
+   # :authentication       => "plain",
+  # :enable_starttls_auto => true
+  # } 
+  
+  #for devise.. 2016-07-22_Fri_14.52-PM David Gleba
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3001 }  
+  
 end

@@ -163,7 +163,6 @@
 1468703836|config/database-sqlite.yml
 1468703836|config/database.yml
 1469213527|config/environments/development.rb
-1468703836|config/environments/production.rb
 1468703836|config/environments/test.rb
 1468703836|config/initializers/backtrace_silencers.rb
 1468703836|config/initializers/cookies_serializer.rb
@@ -212,7 +211,6 @@
 1473723041|db/seeds.rb
 1472658518|deploy/copyof/rbcp,railci278.bat
 1468703838|deploy/deploy-drail-howto-notes.txt
-1469388533|deploy/deploysh
 1468703838|deploy/etc/puma.conf
 1468948214|deploy/older/deploysh1
 1469188184|deploy/older/deploysh1-becareful
@@ -292,7 +290,6 @@
 1474979994|db/seeddump1.rb
 1468703837|__offline/puma.rb.offline
 1475082671|config/environment.rb
-1475104603|Gemfile
 1476931139|.gitignore
 1469708154|__offline/devise-ldap265.rb
 1476930802|app/controllers/vehicles_controller.rb
@@ -310,4 +307,11 @@
 1477366516|app/models/ability.rb
 1477365498|config/initializers/assets.rb
 1477365619|config/initializers/rails_admin.rb
-1477365370|db/development.sqlite3
+1477401775|Gemfile
+1477401775|__offline/development.sqlite3
+1477401775|config/environments/production.rb
+1477318423|config/puma.rb
+1477401775|deploy/deploysh
+1469388533|deploy/deploysh 2016-10-24_09.55.38
+1477318195|deploy/rail263.conf
+1477320339|railsl
