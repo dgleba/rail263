@@ -313,8 +313,11 @@
 1477406083|db/seeds.rb
 1477492935|app/views/vehicles/index.html.haml
 1477492315|config/database.yml
-1477492995|db/development.sqlite3
-1477537756|deploy/deploysh
 1469388533|deploy/older/deploysh 2016-10-24_09.55.38
 1468945623|deploy/older/rail260.conf
-1477537535|deploy/rail263.conf
+1477590266|db/development.sqlite3
+1477590027|deploy/deploy.sh
+1477590027|deploy/deploysh
+1477539098|deploy/older/deploysh 2016-10-27_12.20.27
+1477539099|deploy/older/rail263 2016-10-27_12.20.30.conf
+1477539099|deploy/older/rail263.conf

@@ -4,14 +4,15 @@ function Purpose() {
 # begin block comment =============================
 : <<'END'
 
-#  Purpose:  deploy the app to production
+#  Purpose:  tar the current folder and give the archive a useful name..
 
 
 Read and edit these files. they may need editing.
-  edit prjname dpath and vport..
+    port number and project folder name -- C:\var\share203\incident295\deploy\rail263.conf  >>>>>  rename and edit.
+    project name in this file. 
     ..
   
-  
+    
 usage: run this from /srv/web/rail263
 
 
@@ -19,7 +20,7 @@ usage: run this from /srv/web/rail263
 
 
  cd /srv/web/rail263
- deploy/deploy.sh
+ deploy/deploysh
 
 end -- usage. 
 
@@ -31,13 +32,12 @@ END
 date ; set +vx  ; set -vx ; # echo off, then echo on
 #
 
+
 prjname="rail263"
 dpath="/srv/web/$prjname"
-vport="1236"
 
 echo $prjname
 echo $dpath
-echo $vport
 
 cd $dpath
 
@@ -68,59 +68,17 @@ fi
 
 
 
-# Use &&& as a marker for $ in the heredoc tee...
-#
-sudo tee /etc/nginx/sites-available/$prjname.conf <<EOF
-############
-#
-# http://pmdsdata:$vport/
-# nginx conf $prjname 
-
-upstream app$vport {
-    # Path to Puma SOCK file, as defined previously
-    server unix:/srv/web/$prjname/shared/sockets/puma.sock fail_timeout=0;
-}
-
-server {
-    listen $vport;
-    #server_name localhost;
-    server_name 127.0.0.1;
-
-    root /srv/web/$prjname/public;
-
-    try_files &&&uri/index.html &&&uri @app$vport;
-
-    location @app$vport {
-        proxy_pass http://app$vport;
-        proxy_set_header X-Forwarded-For &&&proxy_add_x_forwarded_for;
-        proxy_set_header Host &&&http_host;
-        proxy_redirect off;
-    }
-
-    error_page 500 502 503 504 /500.html;
-    client_max_body_size 4G;
-    keepalive_timeout 10;
-}
-#
-EOF
-#
-# replace &&& markers with $
-#  
-sudo sed -i -e 's/&&&/\$/g' /etc/nginx/sites-available/$prjname.conf 
-
-
-
-
 sudo cp  /etc/nginx/sites-available/$prjname.conf  /etc/nginx/sites-available/$prjname.conf$(date +"__%Y.%m.%d_%H.%M.%S").bk
 # copy file into place --  from $prjname app folder /srv/web/$prjname
-# now in tee above... sudo cp  deploy/$prjname.conf /etc/nginx/sites-available/$prjname.conf
+sudo cp  deploy/$prjname.conf /etc/nginx/sites-available/$prjname.conf
 sudo ln -nfs /etc/nginx/sites-available/$prjname.conf /etc/nginx/sites-enabled/$prjname.conf
 
 #https://github.com/sferik/rails_admin/issues/2515 -- Gradient has outdated direction syntax. New syntax is like `to left` instead of `right` #2515
-sleep 1
+sleep 4
 bundle exec rake assets:precompile RAILS_ENV=production
 sleep 3
 bundle exec rake assets:precompile RAILS_ENV=production
+
 
 sudo start puma-manager
 sudo restart puma-manager
@@ -131,8 +89,8 @@ sudo service nginx restart
 # http://stackoverflow.com/questions/4883891/ruby-on-rails-production-log-rotation
 # http://www.thegeekstuff.com/2010/07/logrotate-examples
 #
-sudo tee /etc/logrotate.d/raillog_$prjname <<EOF
-/srv/web/$prjname/log/*.log {
+sudo tee /etc/logrotate.d/raillog_rail263 <<EOF
+/srv/web/rail263/log/*.log {
     size=5k
     daily
     missingok
