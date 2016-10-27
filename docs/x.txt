@@ -1,0 +1,14 @@
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2016-10-26[Oct-Wed]23-22PM
+
+http://stackoverflow.com/questions/7124486/what-to-do-with-commit-made-in-a-detached-head
+
+git branch my-temporary-work
+git checkout master
+git pull
+git merge my-temporary-work
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
