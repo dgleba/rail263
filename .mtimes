@@ -1,18 +1,27 @@
 1468703834|.erdconfig
+1476931139|.gitignore
 1468703835|.rubocop.yml
 1468703835|.ruby-version
 1468703838|DEPLOYMENT.md
+1477402850|Gemfile
+1477403043|Gemfile.lock
 1468703839|Procfile
 1472956201|README.md
 1468703839|Rakefile
 1469214152|__offline/20160722190232_add_devise_to_users - Copy1.rb
+1474655629|__offline/__2016-09-23_14.31.33.mtimes
+1471967789|__offline/_offline/papertrail____20160823155629_create_versions.rb
 1468703839|__offline/_passenger_fields.html copy.haml
 1468703835|__offline/application-nosigpad.js
 1471629074|__offline/application_helper - Copy.rb
+1477401775|__offline/development.sqlite3
+1469708154|__offline/devise-ldap265.rb
 1474629212|__offline/mtimestore.exe.stackdump
 1468714558|__offline/passenger.js.offline-2016-07-16_Sat_20.14-PM.js
 1469544527|__offline/passw.rb
+1468703837|__offline/puma.rb.offline
 1469188184|__offline/rail262-mailer-2016-07-21.txt
+1477398650|__offline/seed-roles.txt
 1468718241|__offline/showhidesearch - Copy.js
 1468703837|__offline/sorcery.rb
 1468703835|__offline/user_sessions_controller.rb
@@ -22,6 +31,7 @@
 1468703835|app/assets/javascripts/dgselect2.js
 1468703835|app/assets/javascripts/dgsigpad.js
 1468718459|app/assets/javascripts/passenger.js
+1477366081|app/assets/javascripts/rails_admin/custom/ui.js
 1469106954|app/assets/javascripts/showhidesearch.js
 1468703835|app/assets/javascripts/turbo.7z
 1462131221|app/assets/stylesheets/1st_load_framework.css.scss
@@ -29,6 +39,7 @@
 1468703835|app/assets/stylesheets/application-nosigpad.css
 1468703835|app/assets/stylesheets/application.css
 1468703835|app/assets/stylesheets/bootstrap_overrides.sass
+1477325325|app/assets/stylesheets/dg.css
 1468703835|app/assets/stylesheets/dgsigpad.css
 1468703835|app/controllers/admin/application_controller.rb
 1468703835|app/controllers/admin/roles_controller.rb
@@ -42,6 +53,7 @@
 1469383719|app/controllers/rental_records_controller.rb
 1469383736|app/controllers/roles_controller.rb
 1469383761|app/controllers/users_controller.rb
+1476930802|app/controllers/vehicles_controller.rb
 1468703835|app/dashboards/role_dashboard.rb
 1468703835|app/dashboards/user_dashboard.rb
 1468703835|app/decorators/customer_decorator.rb
@@ -59,6 +71,7 @@
 1469188184|app/mailers/application_mailer.rb
 1469188184|app/mailers/example_mailer.rb
 1465257040|app/models/.keep
+1477405863|app/models/ability.rb
 1472308610|app/models/admin_ability.rb
 1472307217|app/models/audit.rb
 1465257040|app/models/concerns/.keep
@@ -67,6 +80,8 @@
 1471970748|app/models/passenger.rb
 1471970736|app/models/rental_record.rb
 1468703835|app/models/role.rb
+1477406087|app/models/user.rb
+1477323529|app/models/vehicle.rb
 1471358559|app/views/customers/_form.html - form-horizontal.haml
 1468703835|app/views/customers/_form.html-orig.haml
 1471371962|app/views/customers/_form.html.haml
@@ -145,9 +160,12 @@
 1432296023|app/views/users/show.html.erb
 1469188184|app/views/users/show.html.haml
 1432296023|app/views/users/show.json.jbuilder
+1477324196|app/views/vehicles/_form.html.haml
 1468703836|app/views/vehicles/edit.html.haml
+1477492935|app/views/vehicles/index.html.haml
 1468703836|app/views/vehicles/index.json.jbuilder
 1468703836|app/views/vehicles/new.html.haml
+1476929611|app/views/vehicles/show.html.haml
 1468703836|app/views/vehicles/show.json.jbuilder
 1468703836|bin/bundle
 1468703836|bin/rails
@@ -160,8 +178,12 @@
 1468703836|config/brakeman.yml
 1472954578|config/database-mysql.yml
 1468703836|config/database-sqlite.yml
+1477492315|config/database.yml
+1475082671|config/environment.rb
 1469213527|config/environments/development.rb
+1477401775|config/environments/production.rb
 1468703836|config/environments/test.rb
+1477365498|config/initializers/assets.rb
 1468703836|config/initializers/backtrace_silencers.rb
 1468703836|config/initializers/cookies_serializer.rb
 1469215682|config/initializers/devise.rb
@@ -175,9 +197,11 @@
 1468703837|config/initializers/lib_extensions.rb
 1468703837|config/initializers/mime_types.rb
 1472741700|config/initializers/rails_admin-263.rb
+1477365619|config/initializers/rails_admin.rb
 1468703837|config/initializers/rotate_log_dev_test.rb
 1469388359|config/initializers/session_store.rb
 1468703837|config/initializers/simple_form.rb
+1477325384|config/initializers/simple_form_bootstrap.rb
 1468703837|config/initializers/version.rb
 1468703837|config/initializers/wrap_parameters.rb
 1469213258|config/locales/devise.en.yml
@@ -188,9 +212,11 @@
 1468703837|config/locales/nl.models.yml
 1468703837|config/locales/nl.yml
 1468703837|config/locales/simple_form.en.yml
+1477318423|config/puma.rb
 1472919077|config/routes.rb
 1468703837|config/secrets.yml
 1468703837|config/simple_form.rb
+1477590266|db/development.sqlite3
 1468703838|db/migrate/20160607161156_create_roles.rb
 1468703838|db/migrate/20160607161249_create_users.rb
 1468703838|db/migrate/20160620172715_create_pasenger_lists.rb
@@ -204,20 +230,35 @@
 1472303418|db/migrate/20160827131019_add_object_changes_to_versions.rb
 1472303418|db/migrate/20160827131020_create_version_associations.rb
 1472303418|db/migrate/20160827131021_add_transaction_id_column_to_versions.rb
+1476924239|db/migrate/20161020004359_add_features_to_vehicles.rb
+1476930426|db/migrate/20161020022706_add_color_to_vehicles.rb
 1468703838|db/production.sqlite3
+1477402586|db/schema.rb
+1474979994|db/seeddump1.rb
+1477406083|db/seeds.rb
+1473860983|db/test.sqlite3
 1472658518|deploy/copyof/rbcp,railci278.bat
 1468703838|deploy/deploy-drail-howto-notes.txt
+1477592595|deploy/deploy.sh
+1477590027|deploy/deploysh
 1468703838|deploy/etc/puma.conf
+1469388533|deploy/older/deploysh 2016-10-24_09.55.38
+1477539098|deploy/older/deploysh 2016-10-27_12.20.27
 1468948214|deploy/older/deploysh1
 1469188184|deploy/older/deploysh1-becareful
 1469041476|deploy/older/deploysh1a
+1468945623|deploy/older/rail260.conf
+1477539099|deploy/older/rail263 2016-10-27_12.20.30.conf
+1477539099|deploy/older/rail263.conf
 1468703838|deploy/puma-manager.conf
 1468703838|deploy/puma.conf
 1468703838|deploy/puma.rb
 1472956016|docs/error-mysql-migration-2016-09-03_Sat_22.26-PM.txt
+1477599678|docs/rail263notes.txt
 1474629212|docs/rail263scaffold.txt
-1474629212|docs/search-djangolike-markcampbell-2016-09-19.rb
+1477599678|docs/search-djangolike-markcampbell-2016-09-19.rb.txt
 1474629212|docs/searchtest-markcampbell-2016-09-19.rb
+1477599678|docs/x.txt
 1468950865|example.env
 1465257040|lib/assets/.keep
 1468703838|lib/extensions/draper_decorator_ext.rb
@@ -242,6 +283,7 @@
 1468703839|public/500.html
 1465257040|public/favicon.ico
 1468703839|public/robots.txt
+1477320339|railsl
 1468703839|spec/controllers/customers_controller_spec.rb
 1468703839|spec/controllers/pasenger_lists_controller_spec.rb
 1468703839|spec/controllers/passengers_controller_spec.rb
@@ -281,43 +323,4 @@
 1465257040|test/models/.keep
 1468703840|test/test_helper.rb
 1465257040|vendor/assets/stylesheets/.keep
-1474655629|__offline/__2016-09-23_14.31.33.mtimes
-1474979994|db/seeddump1.rb
-1468703837|__offline/puma.rb.offline
-1475082671|config/environment.rb
-1476931139|.gitignore
-1469708154|__offline/devise-ldap265.rb
-1476930802|app/controllers/vehicles_controller.rb
-1476929611|app/views/vehicles/show.html.haml
-1476924239|db/migrate/20161020004359_add_features_to_vehicles.rb
-1476930426|db/migrate/20161020022706_add_color_to_vehicles.rb
-1473860983|db/test.sqlite3
-1477325325|app/assets/stylesheets/dg.css
-1477323529|app/models/vehicle.rb
-1477324196|app/views/vehicles/_form.html.haml
-1477325384|config/initializers/simple_form_bootstrap.rb
-1477366081|app/assets/javascripts/rails_admin/custom/ui.js
-1477365498|config/initializers/assets.rb
-1477365619|config/initializers/rails_admin.rb
-1477401775|__offline/development.sqlite3
-1477401775|config/environments/production.rb
-1477318423|config/puma.rb
-1477320339|railsl
-1477402850|Gemfile
-1477403043|Gemfile.lock
-1471967789|__offline/_offline/papertrail____20160823155629_create_versions.rb
-1477398650|__offline/seed-roles.txt
-1477405863|app/models/ability.rb
-1477406087|app/models/user.rb
-1477402586|db/schema.rb
-1477406083|db/seeds.rb
-1477492935|app/views/vehicles/index.html.haml
-1477492315|config/database.yml
-1469388533|deploy/older/deploysh 2016-10-24_09.55.38
-1468945623|deploy/older/rail260.conf
-1477590266|db/development.sqlite3
-1477590027|deploy/deploysh
-1477539098|deploy/older/deploysh 2016-10-27_12.20.27
-1477539099|deploy/older/rail263 2016-10-27_12.20.30.conf
-1477539099|deploy/older/rail263.conf
-1477592595|deploy/deploy.sh
+1477599782|.mtimes
