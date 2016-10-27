@@ -8,10 +8,10 @@ function Purpose() {
 
 
 Read and edit these files. they may need editing.
-    port number -- C:\var\share203\rail263\deploy\rail260.conf  >>>>>  rename and edit.
+    port number and project folder name -- C:\var\share203\incident295\deploy\rail263.conf  >>>>>  rename and edit.
     project name in this file. 
     ..
-    
+  
     
 usage: run this from /srv/web/rail263
 
@@ -74,6 +74,9 @@ sudo cp  deploy/$prjname.conf /etc/nginx/sites-available/$prjname.conf
 sudo ln -nfs /etc/nginx/sites-available/$prjname.conf /etc/nginx/sites-enabled/$prjname.conf
 
 #https://github.com/sferik/rails_admin/issues/2515 -- Gradient has outdated direction syntax. New syntax is like `to left` instead of `right` #2515
+sleep 4
+bundle exec rake assets:precompile RAILS_ENV=production
+sleep 3
 bundle exec rake assets:precompile RAILS_ENV=production
 
 

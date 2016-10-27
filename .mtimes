@@ -160,7 +160,6 @@
 1468703836|config/brakeman.yml
 1472954578|config/database-mysql.yml
 1468703836|config/database-sqlite.yml
-1468703836|config/database.yml
 1469213527|config/environments/development.rb
 1468703836|config/environments/test.rb
 1468703836|config/initializers/backtrace_silencers.rb
@@ -215,7 +214,6 @@
 1468703838|deploy/puma-manager.conf
 1468703838|deploy/puma.conf
 1468703838|deploy/puma.rb
-1468945623|deploy/rail260.conf
 1472956016|docs/error-mysql-migration-2016-09-03_Sat_22.26-PM.txt
 1474629212|docs/rail263scaffold.txt
 1474629212|docs/search-djangolike-markcampbell-2016-09-19.rb
@@ -297,7 +295,6 @@
 1477325325|app/assets/stylesheets/dg.css
 1477323529|app/models/vehicle.rb
 1477324196|app/views/vehicles/_form.html.haml
-1477337978|app/views/vehicles/index.html.haml
 1477325384|config/initializers/simple_form_bootstrap.rb
 1477366081|app/assets/javascripts/rails_admin/custom/ui.js
 1477365498|config/initializers/assets.rb
@@ -305,17 +302,19 @@
 1477401775|__offline/development.sqlite3
 1477401775|config/environments/production.rb
 1477318423|config/puma.rb
-1477401775|deploy/deploysh
-1469388533|deploy/deploysh 2016-10-24_09.55.38
-1477318195|deploy/rail263.conf
 1477320339|railsl
-1477406767|.mtimes
 1477402850|Gemfile
 1477403043|Gemfile.lock
 1471967789|__offline/_offline/papertrail____20160823155629_create_versions.rb
 1477398650|__offline/seed-roles.txt
 1477405863|app/models/ability.rb
 1477406087|app/models/user.rb
-1477406301|db/development.sqlite3
 1477402586|db/schema.rb
 1477406083|db/seeds.rb
+1477492935|app/views/vehicles/index.html.haml
+1477492315|config/database.yml
+1477492995|db/development.sqlite3
+1477537756|deploy/deploysh
+1469388533|deploy/older/deploysh 2016-10-24_09.55.38
+1468945623|deploy/older/rail260.conf
+1477537535|deploy/rail263.conf
