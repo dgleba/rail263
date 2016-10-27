@@ -68,7 +68,7 @@ fi
 
 
 
-# Use &&& as a marker for $ in the heredoc tee...
+# Use &&& as a marker for $ in the heredoc tee. Then replace &&& markers with $ afterward..
 #
 sudo tee /etc/nginx/sites-available/$prjname.conf <<EOF
 ############
