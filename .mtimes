@@ -326,3 +326,6 @@
 1477616771|mtimeh.txt
 1477616771|mtimehs.txt
 1477622159|util/mtimeh.rb
+1477697826|hook.sh
+1477697866|util/hooks/post-checkout
+1477697815|util/hooks/pre-commit
