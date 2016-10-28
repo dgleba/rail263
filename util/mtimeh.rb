@@ -2,7 +2,7 @@
 # Read .mtimes from stdin and write human readable datetime
 # usage : cat infile | ruby mtimeh.rb  > out.txt
 #
-#  sort mti | ruby mt.rb > out.txt
+#  sort -r .mtimes | ruby mtimeh.rb > out.txt
 #
 
 # read the infile and split into arrays... 
