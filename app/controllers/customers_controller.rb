@@ -10,8 +10,14 @@ class CustomersController < ApplicationController
 
   # GET /customers
   def index
-    @q = @customers.search params[:q]
-    @customers = @q.result.page(params[:page])
+    @q = @customers.ransack (  params[:q] )
+    # @customers = @q.result.page(params[:page]) # regular entry.
+    
+    # customized..
+    # @q.name_cont = 'Kumar'  unless params[:q]  # default to name contains Kumar, but allow search.
+    @q.name_cont = 'Kumar'     # limit view to only name is Kumar..
+    @results = @q.result
+    @customers = @results.page(params[:page] ) 
   end
 
   # GET /customers/1

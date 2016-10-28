@@ -1,0 +1,114 @@
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2016-10-28[Oct-Fri]16-44PM
+
+works..
+
+def index
+  @search = Job.search(params[:q])
+  @search.status_cont = 'Open' unless params[:q] #or whatever, must use Ransack's predicates here
+  @results = @search.result
+  @job = @results.paginate(:per_page => 10, :page => params[:page])
+end
+
+
+
+ggl..
+ransack params :q and second parameter
+
+http://stackoverflow.com/questions/13284172/setting-default-search-parameter-on-ransack-for-rails
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2016-10-28[Oct-Fri]16-36PM
+
+noluck..
+
+https://github.com/activerecord-hackery/ransack
+
+
+ 
+  def self.ransackable_scopes(auth_object = nil)
+    if auth_object.try(:admin?)
+      # allow admin users access to all  methods
+      %i(namefilter)
+    else
+      # allow other users to search on  only some..
+      %i(namefilter)
+    end
+  end
+
+  private_class_method :ransackable_scopes
+
+  
+  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2016-10-28[Oct-Fri]16-26PM
+
+noluck..
+
+http://www.justinweiss.com/articles/search-and-filter-rails-models-without-bloating-your-controller/
+
+scope :starts_with, -> (name) { where("name like ?", "#{name}%")}
+
+
+SyntaxError in CustomersController#index
+/srv/web/rail263/app/controllers/customers_controller.rb:15: syntax error, unexpected '=', expecting keyword_end @customers.namefilter("Kumar") = @q.result.page(params[:page] ) ^
+
+Extracted source (around line #15):
+13
+18
+              
+  def index
+    @q = @customers.search params[:q]
+    @customers.namefilter("Kumar") = @q.result.page(params[:page] ) 
+  end
+
+  # GET /customers/1
+
+Rails.root: /srv/web/rail263
+
+Application Trace | Framework Trace | Full Trace
+app/controllers/customers_controller.rb:15: syntax error, unexpected '=', expecting keyword_end
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2016-10-28[Oct-Fri]16-19PM
+
+noluck..
+
+http://stackoverflow.com/questions/18080854/rails-applying-filters-to-views
+
+try:
+
+Let's say you have a table or a list of persons that you want to filter by name,
+
+have a :name scope included in your person.rb model like this:
+
+scope :name, lambda{|name| where('name = ?', name )}
+
+in the persons_controller.rb or any other controller on which view you want persons filtered by name, 
+add, 
+has_scope :name at the top.
+
+on the view pass the :name param to fetch filtered results like this:
+
+<%= link_to 'filtered_name', {controller: 'persons', action: 'index', :name => 'the_name'}  %>
+
+You can apply filters for ascending and descend order similarly.
+
+edited Aug 6 '13 at 13:35
+answered Aug 6 '13 at 13:28
+Optimus Pette
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

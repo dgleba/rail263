@@ -3,7 +3,9 @@ class Customer < ActiveRecord::Base
   self.table_name = 'customers'
 
   default_scope {order('id DESC')}
-  
+    
+  # not used 2016-10-28_Fri_17.02-PM,  http://www.justinweiss.com/articles/search-and-filter-rails-models-without-bloating-your-controller/
+  scope :namefilter, -> (name) { where("name like ?", "#{name}%")}
   
   # use audited for model record history
   audited
@@ -21,4 +23,7 @@ class Customer < ActiveRecord::Base
     "##{id},#{name},#{address}"
   end
 
+ 
 end
+
+

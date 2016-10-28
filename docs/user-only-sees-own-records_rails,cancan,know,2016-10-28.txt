@@ -1,0 +1,19 @@
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2016-10-28[Oct-Fri]17-04PM
+
+
+
+cancan user only sees own records
+
+http://stackoverflow.com/questions/6323658/how-can-i-allow-a-user-to-only-visit-their-own-show-page-using-cancan
+
+
+rails associate user with model
+
+http://stackoverflow.com/questions/6009295/devise-how-to-associate-current-user-to-post
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
