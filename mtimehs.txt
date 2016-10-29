@@ -1,9 +1,13 @@
-2016-10-29 15:35:17 -0400 || 1477769717 || db/development.sqlite3
-2016-10-29 15:34:55 -0400 || 1477769695 || app/controllers/customers_controller.rb
+2016-10-29 16:54:51 -0400 || 1477774491 || app/models/ability.rb
+2016-10-29 16:54:29 -0400 || 1477774469 || app/controllers/customers_controller.rb
+2016-10-29 16:50:37 -0400 || 1477774237 || app/views/customers/show.html.haml
+2016-10-29 16:48:17 -0400 || 1477774097 || app/views/customers/index.html.erb
+2016-10-29 16:44:26 -0400 || 1477773866 || db/development.sqlite3
+2016-10-29 16:44:20 -0400 || 1477773860 || app/models/user.rb
+2016-10-29 16:43:47 -0400 || 1477773827 || app/models/role.rb
 2016-10-29 15:29:31 -0400 || 1477769371 || db/schema.rb
 2016-10-29 15:28:33 -0400 || 1477769313 || app/models/customer.rb
 2016-10-29 15:26:23 -0400 || 1477769183 || db/migrate/20161029192623_add_user_to_customers.rb
-2016-10-29 15:16:32 -0400 || 1477768592 || app/views/customers/index.html.erb
 2016-10-29 13:26:35 -0400 || 1477761995 || mtimehs.txt
 2016-10-29 13:26:35 -0400 || 1477761995 || mtimeh.txt
 2016-10-29 13:10:27 -0400 || 1477761027 || hook.sh
@@ -22,9 +26,7 @@
 2016-10-26 23:31:38 -0400 || 1477539098 || deploy/older/deploysh 2016-10-27_12.20.27
 2016-10-26 10:42:15 -0400 || 1477492935 || app/views/vehicles/index.html.haml
 2016-10-26 10:31:55 -0400 || 1477492315 || config/database.yml
-2016-10-25 10:34:47 -0400 || 1477406087 || app/models/user.rb
 2016-10-25 10:34:43 -0400 || 1477406083 || db/seeds.rb
-2016-10-25 10:31:03 -0400 || 1477405863 || app/models/ability.rb
 2016-10-25 09:44:03 -0400 || 1477403043 || Gemfile.lock
 2016-10-25 09:40:50 -0400 || 1477402850 || Gemfile
 2016-10-25 09:22:55 -0400 || 1477401775 || config/environments/production.rb
@@ -274,13 +276,11 @@
 2016-07-16 17:17:15 -0400 || 1468703835 || app/views/layouts/application.html - Copy-navbarfixedtop.haml.7z
 2016-07-16 17:17:15 -0400 || 1468703835 || app/views/home/index.html.haml
 2016-07-16 17:17:15 -0400 || 1468703835 || app/views/customers/show.json.jbuilder
-2016-07-16 17:17:15 -0400 || 1468703835 || app/views/customers/show.html.haml
 2016-07-16 17:17:15 -0400 || 1468703835 || app/views/customers/new.html.haml
 2016-07-16 17:17:15 -0400 || 1468703835 || app/views/customers/index.json.jbuilder
 2016-07-16 17:17:15 -0400 || 1468703835 || app/views/customers/index.html.haml.offline
 2016-07-16 17:17:15 -0400 || 1468703835 || app/views/customers/edit.html.haml
 2016-07-16 17:17:15 -0400 || 1468703835 || app/views/customers/_form.html-orig.haml
-2016-07-16 17:17:15 -0400 || 1468703835 || app/models/role.rb
 2016-07-16 17:17:15 -0400 || 1468703835 || app/inputs/collection_select_input.rb
 2016-07-16 17:17:15 -0400 || 1468703835 || app/decorators/vehicle_decorator.rb
 2016-07-16 17:17:15 -0400 || 1468703835 || app/decorators/user_decorator.rb

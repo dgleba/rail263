@@ -70,15 +70,12 @@
 2016-07-22 07:49:44 -0400 || 1469188184 || app/mailers/application_mailer.rb
 2016-07-22 07:49:44 -0400 || 1469188184 || app/mailers/example_mailer.rb
 2016-06-06 19:50:40 -0400 || 1465257040 || app/models/.keep
-2016-10-25 10:31:03 -0400 || 1477405863 || app/models/ability.rb
 2016-08-27 10:36:50 -0400 || 1472308610 || app/models/admin_ability.rb
 2016-08-27 10:13:37 -0400 || 1472307217 || app/models/audit.rb
 2016-06-06 19:50:40 -0400 || 1465257040 || app/models/concerns/.keep
 2016-08-23 12:46:00 -0400 || 1471970760 || app/models/pasenger_list.rb
 2016-08-23 12:45:48 -0400 || 1471970748 || app/models/passenger.rb
 2016-08-23 12:45:36 -0400 || 1471970736 || app/models/rental_record.rb
-2016-07-16 17:17:15 -0400 || 1468703835 || app/models/role.rb
-2016-10-25 10:34:47 -0400 || 1477406087 || app/models/user.rb
 2016-10-24 11:38:49 -0400 || 1477323529 || app/models/vehicle.rb
 2016-08-16 10:42:39 -0400 || 1471358559 || app/views/customers/_form.html - form-horizontal.haml
 2016-07-16 17:17:15 -0400 || 1468703835 || app/views/customers/_form.html-orig.haml
@@ -87,7 +84,6 @@
 2016-07-16 17:17:15 -0400 || 1468703835 || app/views/customers/index.html.haml.offline
 2016-07-16 17:17:15 -0400 || 1468703835 || app/views/customers/index.json.jbuilder
 2016-07-16 17:17:15 -0400 || 1468703835 || app/views/customers/new.html.haml
-2016-07-16 17:17:15 -0400 || 1468703835 || app/views/customers/show.html.haml
 2016-07-16 17:17:15 -0400 || 1468703835 || app/views/customers/show.json.jbuilder
 2016-07-22 15:10:56 -0400 || 1469214656 || app/views/devise/confirmations/new.html.erb
 2016-07-22 15:10:57 -0400 || 1469214657 || app/views/devise/mailer/confirmation_instructions.html.erb
@@ -326,9 +322,13 @@
 2016-10-27 22:35:59 -0400 || 1477622159 || util/mtimeh.rb
 2016-07-27 08:40:49 -0400 || 1469623249 || util/passw.rb
 2016-06-06 19:50:40 -0400 || 1465257040 || vendor/assets/stylesheets/.keep
-2016-10-29 15:34:55 -0400 || 1477769695 || app/controllers/customers_controller.rb
 2016-10-29 15:28:33 -0400 || 1477769313 || app/models/customer.rb
-2016-10-29 15:16:32 -0400 || 1477768592 || app/views/customers/index.html.erb
-2016-10-29 15:35:17 -0400 || 1477769717 || db/development.sqlite3
 2016-10-29 15:26:23 -0400 || 1477769183 || db/migrate/20161029192623_add_user_to_customers.rb
 2016-10-29 15:29:31 -0400 || 1477769371 || db/schema.rb
+2016-10-29 16:54:29 -0400 || 1477774469 || app/controllers/customers_controller.rb
+2016-10-29 16:54:51 -0400 || 1477774491 || app/models/ability.rb
+2016-10-29 16:43:47 -0400 || 1477773827 || app/models/role.rb
+2016-10-29 16:44:20 -0400 || 1477773860 || app/models/user.rb
+2016-10-29 16:48:17 -0400 || 1477774097 || app/views/customers/index.html.erb
+2016-10-29 16:50:37 -0400 || 1477774237 || app/views/customers/show.html.haml
+2016-10-29 16:44:26 -0400 || 1477773866 || db/development.sqlite3

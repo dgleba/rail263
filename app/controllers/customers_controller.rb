@@ -10,8 +10,9 @@ class CustomersController < ApplicationController
 
   # GET /customers
   def index
+    # got error for nilclass ..@q = @customers.ransack (  params[:q] ) with ability.rb.. Customer.try(:user) == user
     @q = @customers.ransack (  params[:q] )
-     @customers = @q.result.page(params[:page]) # regular entry.
+    @customers = @q.result.page(params[:page]) # regular entry.
     
     # customized..
     # @q.name_cont = 'Kumar'  unless params[:q]  # default to name contains Kumar, but allow search.
@@ -36,7 +37,7 @@ class CustomersController < ApplicationController
   def create
     respond_to do |format|
     
-      # assign creator of the record...
+      # Assign creator of the record as the current user. This will never be edited anywhere. 2016-10-29
       @customer.user = current_user
       
       if @customer.save

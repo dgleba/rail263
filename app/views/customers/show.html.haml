@@ -9,6 +9,8 @@
   %dd= @customer.phone
   %dt= Customer.human_attribute_name :discount
   %dd= @customer.discount
+  %dt= 'Creator'
+  %dd= @customer.user
 
 = link_to t('actions.edit'), edit_customer_path(@customer), class: 'btn btn-primary'
 \&nbsp &nbsp &nbsp|&nbsp &nbsp &nbsp

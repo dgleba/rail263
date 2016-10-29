@@ -21,6 +21,11 @@ class User < ActiveRecord::Base
   #validates :password_confirmation, presence: true, if: :password_update?
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] }
 
+    def to_s
+    # show columns contents, not record object like: 	#<Vehicle:0x007f343b3f2890>	2016-06-08
+    "#{email},#{name}"
+  end
+
 
 
   # FIXME

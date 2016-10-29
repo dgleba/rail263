@@ -46,6 +46,9 @@
       <th>
         <%= sort_link(@q, :discount, Customer.human_attribute_name(:discount)) %>
       </th>
+      <th>
+        <%= sort_link(@q, :user_id, 'Creator') %>
+      </th>
     </tr>
   </thead>
   <tbody>
@@ -73,6 +76,9 @@
         </td>
         <td>
           <%= customer.discount %>
+        </td>
+        <td>
+          <%= customer.user %>
         </td>
       </tr>
     <% end %>
