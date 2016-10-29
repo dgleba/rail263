@@ -11,13 +11,13 @@ class CustomersController < ApplicationController
   # GET /customers
   def index
     @q = @customers.ransack (  params[:q] )
-    # @customers = @q.result.page(params[:page]) # regular entry.
+     @customers = @q.result.page(params[:page]) # regular entry.
     
     # customized..
     # @q.name_cont = 'Kumar'  unless params[:q]  # default to name contains Kumar, but allow search.
-    @q.name_cont = 'Kumar'     # limit view to only name is Kumar..
-    @results = @q.result
-    @customers = @results.page(params[:page] ) 
+    # @q.name_cont = 'Kumar'     # limit view to only name is Kumar..
+     #@results = @q.result
+    # @customers = @results.page(params[:page] ) 
   end
 
   # GET /customers/1
@@ -35,6 +35,10 @@ class CustomersController < ApplicationController
   # POST /customers
   def create
     respond_to do |format|
+    
+      # assign creator of the record...
+      @customer.user = current_user
+      
       if @customer.save
         format.html { redirect_to @customer, notice: t('success_create') }
         format.json { render :show, status: :created, location: @customer }

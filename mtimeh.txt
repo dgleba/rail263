@@ -46,7 +46,6 @@
 2016-07-16 17:17:15 -0400 || 1468703835 || app/controllers/admin/users_controller.rb
 2016-08-27 12:37:26 -0400 || 1472315846 || app/controllers/application_controller.rb
 2016-06-06 19:50:40 -0400 || 1465257040 || app/controllers/concerns/.keep
-2016-08-27 12:37:44 -0400 || 1472315864 || app/controllers/customers_controller.rb
 2016-07-16 17:17:15 -0400 || 1468703835 || app/controllers/home_controller.rb
 2016-07-24 14:07:39 -0400 || 1469383659 || app/controllers/pasenger_lists_controller.rb
 2016-07-24 14:08:28 -0400 || 1469383708 || app/controllers/passengers_controller.rb
@@ -75,7 +74,6 @@
 2016-08-27 10:36:50 -0400 || 1472308610 || app/models/admin_ability.rb
 2016-08-27 10:13:37 -0400 || 1472307217 || app/models/audit.rb
 2016-06-06 19:50:40 -0400 || 1465257040 || app/models/concerns/.keep
-2016-08-27 10:29:14 -0400 || 1472308154 || app/models/customer.rb
 2016-08-23 12:46:00 -0400 || 1471970760 || app/models/pasenger_list.rb
 2016-08-23 12:45:48 -0400 || 1471970748 || app/models/passenger.rb
 2016-08-23 12:45:36 -0400 || 1471970736 || app/models/rental_record.rb
@@ -86,7 +84,6 @@
 2016-07-16 17:17:15 -0400 || 1468703835 || app/views/customers/_form.html-orig.haml
 2016-08-16 14:26:02 -0400 || 1471371962 || app/views/customers/_form.html.haml
 2016-07-16 17:17:15 -0400 || 1468703835 || app/views/customers/edit.html.haml
-2016-08-19 13:35:36 -0400 || 1471628136 || app/views/customers/index.html.erb
 2016-07-16 17:17:15 -0400 || 1468703835 || app/views/customers/index.html.haml.offline
 2016-07-16 17:17:15 -0400 || 1468703835 || app/views/customers/index.json.jbuilder
 2016-07-16 17:17:15 -0400 || 1468703835 || app/views/customers/new.html.haml
@@ -216,7 +213,6 @@
 2016-09-03 12:11:17 -0400 || 1472919077 || config/routes.rb
 2016-07-16 17:17:17 -0400 || 1468703837 || config/secrets.yml
 2016-07-16 17:17:17 -0400 || 1468703837 || config/simple_form.rb
-2016-10-27 13:44:26 -0400 || 1477590266 || db/development.sqlite3
 2016-07-16 17:17:18 -0400 || 1468703838 || db/migrate/20160607161156_create_roles.rb
 2016-07-16 17:17:18 -0400 || 1468703838 || db/migrate/20160607161249_create_users.rb
 2016-07-16 17:17:18 -0400 || 1468703838 || db/migrate/20160620172715_create_pasenger_lists.rb
@@ -233,7 +229,6 @@
 2016-10-19 20:43:59 -0400 || 1476924239 || db/migrate/20161020004359_add_features_to_vehicles.rb
 2016-10-19 22:27:06 -0400 || 1476930426 || db/migrate/20161020022706_add_color_to_vehicles.rb
 2016-07-16 17:17:18 -0400 || 1468703838 || db/production.sqlite3
-2016-10-25 09:36:26 -0400 || 1477402586 || db/schema.rb
 2016-09-27 08:39:54 -0400 || 1474979994 || db/seeddump1.rb
 2016-10-25 10:34:43 -0400 || 1477406083 || db/seeds.rb
 2016-09-14 09:49:43 -0400 || 1473860983 || db/test.sqlite3
@@ -280,6 +275,8 @@
 2016-08-17 22:17:56 -0400 || 1471486676 || lib/templates/haml/scaffold/show.html.haml
 2016-07-24 14:03:52 -0400 || 1469383432 || lib/templates/rails/controller/controller.rb
 2016-07-24 14:03:09 -0400 || 1469383389 || lib/templates/rails/scaffold_controller/controller.rb
+2016-10-29 13:26:35 -0400 || 1477761995 || mtimeh.txt
+2016-10-29 13:26:35 -0400 || 1477761995 || mtimehs.txt
 2016-07-16 17:17:19 -0400 || 1468703839 || public/404.html
 2016-07-16 17:17:19 -0400 || 1468703839 || public/422.html
 2016-07-16 17:17:19 -0400 || 1468703839 || public/500.html
@@ -329,6 +326,9 @@
 2016-10-27 22:35:59 -0400 || 1477622159 || util/mtimeh.rb
 2016-07-27 08:40:49 -0400 || 1469623249 || util/passw.rb
 2016-06-06 19:50:40 -0400 || 1465257040 || vendor/assets/stylesheets/.keep
-2016-10-29 13:26:32 -0400 || 1477761992 || .mtimes
-2016-10-29 13:13:14 -0400 || 1477761194 || mtimeh.txt
-2016-10-29 13:13:14 -0400 || 1477761194 || mtimehs.txt
+2016-10-29 15:34:55 -0400 || 1477769695 || app/controllers/customers_controller.rb
+2016-10-29 15:28:33 -0400 || 1477769313 || app/models/customer.rb
+2016-10-29 15:16:32 -0400 || 1477768592 || app/views/customers/index.html.erb
+2016-10-29 15:35:17 -0400 || 1477769717 || db/development.sqlite3
+2016-10-29 15:26:23 -0400 || 1477769183 || db/migrate/20161029192623_add_user_to_customers.rb
+2016-10-29 15:29:31 -0400 || 1477769371 || db/schema.rb

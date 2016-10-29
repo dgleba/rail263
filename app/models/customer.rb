@@ -1,5 +1,8 @@
 class Customer < ActiveRecord::Base
 
+  belongs_to :user
+ 
+  #not needed here since the table name follows rails convention. just showing the syntax..
   self.table_name = 'customers'
 
   default_scope {order('id DESC')}

@@ -46,7 +46,6 @@
 1468703835|app/controllers/admin/users_controller.rb
 1472315846|app/controllers/application_controller.rb
 1465257040|app/controllers/concerns/.keep
-1472315864|app/controllers/customers_controller.rb
 1468703835|app/controllers/home_controller.rb
 1469383659|app/controllers/pasenger_lists_controller.rb
 1469383708|app/controllers/passengers_controller.rb
@@ -75,7 +74,6 @@
 1472308610|app/models/admin_ability.rb
 1472307217|app/models/audit.rb
 1465257040|app/models/concerns/.keep
-1472308154|app/models/customer.rb
 1471970760|app/models/pasenger_list.rb
 1471970748|app/models/passenger.rb
 1471970736|app/models/rental_record.rb
@@ -86,7 +84,6 @@
 1468703835|app/views/customers/_form.html-orig.haml
 1471371962|app/views/customers/_form.html.haml
 1468703835|app/views/customers/edit.html.haml
-1471628136|app/views/customers/index.html.erb
 1468703835|app/views/customers/index.html.haml.offline
 1468703835|app/views/customers/index.json.jbuilder
 1468703835|app/views/customers/new.html.haml
@@ -216,7 +213,6 @@
 1472919077|config/routes.rb
 1468703837|config/secrets.yml
 1468703837|config/simple_form.rb
-1477590266|db/development.sqlite3
 1468703838|db/migrate/20160607161156_create_roles.rb
 1468703838|db/migrate/20160607161249_create_users.rb
 1468703838|db/migrate/20160620172715_create_pasenger_lists.rb
@@ -233,7 +229,6 @@
 1476924239|db/migrate/20161020004359_add_features_to_vehicles.rb
 1476930426|db/migrate/20161020022706_add_color_to_vehicles.rb
 1468703838|db/production.sqlite3
-1477402586|db/schema.rb
 1474979994|db/seeddump1.rb
 1477406083|db/seeds.rb
 1473860983|db/test.sqlite3
@@ -331,3 +326,9 @@
 1477622159|util/mtimeh.rb
 1469623249|util/passw.rb
 1465257040|vendor/assets/stylesheets/.keep
+1477769695|app/controllers/customers_controller.rb
+1477769313|app/models/customer.rb
+1477768592|app/views/customers/index.html.erb
+1477769717|db/development.sqlite3
+1477769183|db/migrate/20161029192623_add_user_to_customers.rb
+1477769371|db/schema.rb
