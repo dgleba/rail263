@@ -205,7 +205,6 @@
 2016-07-16 17:17:17 -0400 || 1468703837 || config/locales/nl.models.yml
 2016-07-16 17:17:17 -0400 || 1468703837 || config/locales/nl.yml
 2016-07-16 17:17:17 -0400 || 1468703837 || config/locales/simple_form.en.yml
-2016-09-03 12:11:17 -0400 || 1472919077 || config/routes.rb
 2016-07-16 17:17:17 -0400 || 1468703837 || config/secrets.yml
 2016-07-16 17:17:17 -0400 || 1468703837 || config/simple_form.rb
 2016-07-16 17:17:18 -0400 || 1468703838 || db/migrate/20160607161156_create_roles.rb
@@ -323,12 +322,15 @@
 2016-10-29 16:43:47 -0400 || 1477773827 || app/models/role.rb
 2016-10-29 16:44:20 -0400 || 1477773860 || app/models/user.rb
 2016-10-29 16:48:17 -0400 || 1477774097 || app/views/customers/index.html.erb
-2016-10-29 16:50:37 -0400 || 1477774237 || app/views/customers/show.html.haml
-2016-10-29 16:44:26 -0400 || 1477773866 || db/development.sqlite3
-2016-10-29 16:54:29 -0400 || 1477774469 || app/controllers/customers_controller.rb
 2016-10-29 15:28:33 -0400 || 1477769313 || app/models/customer.rb
 2016-10-24 10:13:43 -0400 || 1477318423 || config/puma-z.rb
 2016-10-28 16:52:36 -0400 || 1477687956 || docs/2016-10-28-filterindex.txt
 2016-10-28 17:14:10 -0400 || 1477689250 || docs/user-only-sees-own-records_rails,cancan,know,2016-10-28.txt
 2016-10-29 13:10:27 -0400 || 1477761027 || hook.sh
 2016-10-29 13:26:35 -0400 || 1477761995 || mtimehs.txt
+2016-10-30 19:08:12 -0400 || 1477868892 || app/controllers/customers_controller.rb
+2016-10-30 19:18:03 -0400 || 1477869483 || app/views/customers/print1.html.haml
+2016-10-30 19:11:37 -0400 || 1477869097 || app/views/customers/print2.html.haml
+2016-10-30 19:16:54 -0400 || 1477869414 || app/views/customers/show.html.haml
+2016-10-30 19:09:08 -0400 || 1477868948 || config/routes.rb
+2016-10-30 19:02:21 -0400 || 1477868541 || db/development.sqlite3

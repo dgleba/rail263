@@ -25,6 +25,18 @@ class CustomersController < ApplicationController
   def show
   end
 
+  def print1
+    # @q = @customers.ransack (  params[:q] )
+    # @customers = @q.result.page(params[:page]) # regular entry.
+     logger.warn "It works!"
+     #redirect_to :back
+  end
+
+  def print2
+     # logger.warn "It works!"
+     #redirect_to :back
+  end
+  
   # GET /customers/new
   def new
   end

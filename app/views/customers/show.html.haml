@@ -1,5 +1,10 @@
 %h1= Customer.model_name.human.singularize
 
+= link_to 'Print page 1', print1_customer_path(@customer), class: 'btn btn-primary'
+= link_to 'Print page 2', print2_customer_path(@customer), class: 'btn btn-primary'
+
+
+
 %dl.dl-horizontal
   %dt= Customer.human_attribute_name :name
   %dd= @customer.name

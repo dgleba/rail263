@@ -1,8 +1,11 @@
+2016-10-30 19:18:03 -0400 || 1477869483 || app/views/customers/print1.html.haml
+2016-10-30 19:16:54 -0400 || 1477869414 || app/views/customers/show.html.haml
+2016-10-30 19:11:37 -0400 || 1477869097 || app/views/customers/print2.html.haml
+2016-10-30 19:09:08 -0400 || 1477868948 || config/routes.rb
+2016-10-30 19:08:12 -0400 || 1477868892 || app/controllers/customers_controller.rb
+2016-10-30 19:02:21 -0400 || 1477868541 || db/development.sqlite3
 2016-10-29 16:54:51 -0400 || 1477774491 || app/models/ability.rb
-2016-10-29 16:54:29 -0400 || 1477774469 || app/controllers/customers_controller.rb
-2016-10-29 16:50:37 -0400 || 1477774237 || app/views/customers/show.html.haml
 2016-10-29 16:48:17 -0400 || 1477774097 || app/views/customers/index.html.erb
-2016-10-29 16:44:26 -0400 || 1477773866 || db/development.sqlite3
 2016-10-29 16:44:20 -0400 || 1477773860 || app/models/user.rb
 2016-10-29 16:43:47 -0400 || 1477773827 || app/models/role.rb
 2016-10-29 15:29:31 -0400 || 1477769371 || db/schema.rb
@@ -60,7 +63,6 @@
 2016-09-03 22:02:58 -0400 || 1472954578 || config/database-mysql.yml
 2016-09-03 20:14:41 -0400 || 1472948081 || config/application.rb
 2016-09-03 12:41:27 -0400 || 1472920887 || app/helpers/customer_helper.rb
-2016-09-03 12:11:17 -0400 || 1472919077 || config/routes.rb
 2016-09-03 11:47:25 -0400 || 1472917645 || lib/tasks/populate1.rake
 2016-09-02 20:45:11 -0400 || 1472863511 || app/views/passengers/index.html.haml
 2016-09-02 18:45:02 -0400 || 1472856302 || app/helpers/passenger_helper.rb

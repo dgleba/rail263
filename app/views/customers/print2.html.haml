@@ -1,0 +1,16 @@
+Second print page for testing..
+%br
+%hr
+%br
+
+%dl.dl-horizontal
+  %dt= Customer.human_attribute_name :name
+  %dd= @customer.name
+  %hr
+  %hr
+  %dt= Customer.human_attribute_name :discount
+  %dd= @customer.discount
+  %dt= 'Creator'
+  %dd= @customer.user
+
+Printing: for best results use Chrome browser to preview and print.

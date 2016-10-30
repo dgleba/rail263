@@ -6,6 +6,14 @@ Rails.application.routes.draw do
     resources :users
   end
 
+  #get 'customers/print1'
+  resources :customers do
+    member do
+      get 'print1'
+      get 'print2'
+    end
+  end
+
   # send email by button click on show users form...
   get :send_user1_email, to: 'users#send_user1_email', as: :send_user1_email
 
@@ -13,7 +21,7 @@ Rails.application.routes.draw do
   resources :passengers
   resources :jobs
   resources :projects
-  resources :customers
+  #resources :customers
   resources :rental_records
   resources :vehicles
 

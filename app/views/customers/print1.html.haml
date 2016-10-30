@@ -1,0 +1,13 @@
+%h1= Customer.model_name.human.singularize
+
+%dl.dl-horizontal
+  %dt= Customer.human_attribute_name :name
+  %dd= @customer.name
+  %dt= Customer.human_attribute_name :address
+  %dd= @customer.address
+  %dt= Customer.human_attribute_name :phone
+  %dd= @customer.phone
+  %dt= 'Creator'
+  %dd= @customer.user
+
+Printing: for best results use Chrome browser to preview and print.
