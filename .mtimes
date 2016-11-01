@@ -326,7 +326,6 @@
 1477318423|config/puma-z.rb
 1477687956|docs/2016-10-28-filterindex.txt
 1477689250|docs/user-only-sees-own-records_rails,cancan,know,2016-10-28.txt
-1477761027|hook.sh
 1477761995|mtimehs.txt
 1477868892|app/controllers/customers_controller.rb
 1477869483|app/views/customers/print1.html.haml
@@ -334,3 +333,4 @@
 1477869414|app/views/customers/show.html.haml
 1477868948|config/routes.rb
 1477868541|db/development.sqlite3
+1477967660|hook.sh

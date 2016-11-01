@@ -1,3 +1,4 @@
+2016-10-31 22:34:20 -0400 || 1477967660 || hook.sh
 2016-10-30 19:18:03 -0400 || 1477869483 || app/views/customers/print1.html.haml
 2016-10-30 19:16:54 -0400 || 1477869414 || app/views/customers/show.html.haml
 2016-10-30 19:11:37 -0400 || 1477869097 || app/views/customers/print2.html.haml
@@ -13,7 +14,6 @@
 2016-10-29 15:26:23 -0400 || 1477769183 || db/migrate/20161029192623_add_user_to_customers.rb
 2016-10-29 13:26:35 -0400 || 1477761995 || mtimehs.txt
 2016-10-29 13:26:35 -0400 || 1477761995 || mtimeh.txt
-2016-10-29 13:10:27 -0400 || 1477761027 || hook.sh
 2016-10-28 19:37:46 -0400 || 1477697866 || util/hooks/post-checkout
 2016-10-28 19:36:55 -0400 || 1477697815 || util/hooks/pre-commit
 2016-10-28 17:14:10 -0400 || 1477689250 || docs/user-only-sees-own-records_rails,cancan,know,2016-10-28.txt

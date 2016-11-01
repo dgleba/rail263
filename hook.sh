@@ -9,6 +9,6 @@
   sort -r mtimeh.txt   > mtimehs.txt
     sleep 1
 
-  git add .mtimes mtimeh.txt mtimehs.txt
+  # git add .mtimes mtimeh.txt mtimehs.txt
  
  
