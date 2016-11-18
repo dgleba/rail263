@@ -72,7 +72,8 @@ application_helper.rb
 ### Application name is referenced in..
 
 
-grep -r rail2 . |grep -v deploy|grep -v tmp |grep -v .git|grep -v /log |grep -v /offlin|grep -v readme-26  
+grep -rin --color=always  rail2 . |  grep -vi -e deploy -e tmp -e .git -e log -e /offline -e readme -e docs -e mtime -e offlin
+
 
 ./.erdconfig:title: rail253y   
 ./app/views/layouts/application.html.haml:          %title rail253y  
