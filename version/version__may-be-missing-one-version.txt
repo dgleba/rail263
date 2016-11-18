@@ -1,3 +1,9 @@
+commit 7452934e53649095703e2c5a38eac44d6293d886
+Author: David Gleba <dgleba@gmail.com>
+Date:   Thu Nov 17 22:20:55 2016 -0500
+
+    turn off pre-push
+
 commit a7da04d29c3908da3307815fd812d45b1612e3b9
 Author: David Gleba <dgleba@gmail.com>
 Date:   Thu Nov 17 22:19:52 2016 -0500
@@ -53,9 +59,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Sat Oct 29 15:37:30 2016 -0400
 
     add user who created record to customers
-
-commit b79c8cbdaed0e9e8d28c9c542c4034dedb3fb7ce
-Author: albe <albe@pmdsdata9.local>
-Date:   Sat Oct 29 14:49:02 2016 -0400
-
-    misc
