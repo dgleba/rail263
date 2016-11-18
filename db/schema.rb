@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161029192623) do
+ActiveRecord::Schema.define(version: 20161118031401) do
 
   create_table "audits", force: :cascade do |t|
     t.integer  "auditable_id"
@@ -41,9 +41,12 @@ ActiveRecord::Schema.define(version: 20161029192623) do
     t.string   "address"
     t.string   "phone"
     t.float    "discount"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.integer  "user_id"
+    t.string   "dummy1"
+    t.string   "rsackdummy2"
+    t.string   "rsackdummy3"
   end
 
   add_index "customers", ["user_id"], name: "index_customers_on_user_id"
@@ -119,10 +122,12 @@ ActiveRecord::Schema.define(version: 20161029192623) do
     t.string   "desc"
     t.binary   "photo"
     t.decimal  "daily_rate"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "features"
     t.string   "color"
+    t.string   "rsackdummy2"
+    t.string   "rsackdummy3"
   end
 
   create_table "version_associations", force: :cascade do |t|

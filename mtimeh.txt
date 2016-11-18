@@ -61,7 +61,6 @@
 2016-07-16 17:17:15 -0400 | 1468703835 | app/decorators/user_decorator.rb
 2016-07-16 17:17:15 -0400 | 1468703835 | app/decorators/vehicle_decorator.rb
 2016-09-02 18:35:02 -0400 | 1472855702 | app/helpers/application_helper.rb
-2016-09-03 12:41:27 -0400 | 1472920887 | app/helpers/customer_helper.rb
 2016-09-02 18:45:02 -0400 | 1472856302 | app/helpers/passenger_helper.rb
 2016-07-16 17:17:15 -0400 | 1468703835 | app/inputs/collection_select_input.rb
 2016-06-06 19:50:40 -0400 | 1465257040 | app/mailers/.keep
@@ -153,7 +152,6 @@
 2015-05-22 08:00:23 -0400 | 1432296023 | app/views/users/show.json.jbuilder
 2016-10-24 11:49:56 -0400 | 1477324196 | app/views/vehicles/_form.html.haml
 2016-07-16 17:17:16 -0400 | 1468703836 | app/views/vehicles/edit.html.haml
-2016-10-26 10:42:15 -0400 | 1477492935 | app/views/vehicles/index.html.haml
 2016-07-16 17:17:16 -0400 | 1468703836 | app/views/vehicles/index.json.jbuilder
 2016-07-16 17:17:16 -0400 | 1468703836 | app/views/vehicles/new.html.haml
 2016-10-19 22:13:31 -0400 | 1476929611 | app/views/vehicles/show.html.haml
@@ -311,7 +309,6 @@
 2016-07-27 08:40:49 -0400 | 1469623249 | util/passw.rb
 2016-06-06 19:50:40 -0400 | 1465257040 | vendor/assets/stylesheets/.keep
 2016-10-29 15:26:23 -0400 | 1477769183 | db/migrate/20161029192623_add_user_to_customers.rb
-2016-10-29 15:29:31 -0400 | 1477769371 | db/schema.rb
 2016-10-29 16:54:51 -0400 | 1477774491 | app/models/ability.rb
 2016-10-29 16:43:47 -0400 | 1477773827 | app/models/role.rb
 2016-10-29 16:44:20 -0400 | 1477773860 | app/models/user.rb
@@ -325,7 +322,6 @@
 2016-10-30 19:11:37 -0400 | 1477869097 | app/views/customers/print2.html.haml
 2016-10-30 19:16:54 -0400 | 1477869414 | app/views/customers/show.html.haml
 2016-10-30 19:09:08 -0400 | 1477868948 | config/routes.rb
-2016-10-30 19:02:21 -0400 | 1477868541 | db/development.sqlite3
 2016-11-17 19:00:46 -0500 | 1479427246 | README.md
 2016-07-16 17:17:18 -0400 | 1468703838 | __offline/DEPLOYMENT.md
 2016-10-31 22:34:20 -0400 | 1477967660 | __offline/hookold.sh
@@ -337,7 +333,19 @@
 2016-11-17 19:16:58 -0500 | 1479428218 | util/hooks/pre-push
 2016-11-14 20:44:14 -0500 | 1479174254 | util/mtimeh.rb
 2016-11-17 19:57:29 -0500 | 1479430649 | version/version.sh
-2016-11-17 19:55:17 -0500 | 1479430517 | version/version__may-be-missing-one-version.txt
-2016-11-17 20:01:47 -0500 | 1479430907 | version/version-a.txt
-2016-11-17 20:01:47 -0500 | 1479430907 | version/version-n.txt
-2016-11-17 20:01:47 -0500 | 1479430907 | version/version.txt
+2016-11-17 22:01:47 -0500 | 1479438107 | app/helpers/customer_helper.rb
+2016-08-31 16:57:05 -0400 | 1472677025 | app/helpers/dgrail_helper.rb
+2016-11-17 22:15:33 -0500 | 1479438933 | app/helpers/vehicle_helper.rb
+2016-11-17 22:02:59 -0500 | 1479438179 | app/views/customers/index.html.haml.works.4box.search
+2016-11-17 22:08:22 -0500 | 1479438502 | app/views/vehicles/index.html.haml
+2016-11-17 22:14:21 -0500 | 1479438861 | db/development.sqlite3
+2016-11-17 21:59:32 -0500 | 1479437972 | db/migrate/20161118025934_add_rsackdummy2_to_customers.rb
+2016-11-17 21:59:33 -0500 | 1479437973 | db/migrate/20161118025935_add_rsackdummy3_to_customers.rb
+2016-11-17 22:13:59 -0500 | 1479438839 | db/migrate/20161118031400_add_rsackdummy2_to_vehicles.rb
+2016-11-17 22:14:00 -0500 | 1479438840 | db/migrate/20161118031401_add_rsackdummy3_to_vehicles.rb
+2016-11-17 22:14:21 -0500 | 1479438861 | db/schema.rb
+2016-11-17 20:03:31 -0500 | 1479431011 | version/version-a.txt
+2016-11-17 20:01:47 -0500 | 1479430907 | version/version-a.txt.save
+2016-11-17 20:03:31 -0500 | 1479431011 | version/version-n.txt
+2016-11-17 20:03:31 -0500 | 1479431011 | version/version.txt
+2016-11-17 20:03:35 -0500 | 1479431015 | version/version__may-be-missing-one-version.txt

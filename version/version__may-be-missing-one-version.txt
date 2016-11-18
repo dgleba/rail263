@@ -1,3 +1,15 @@
+commit d642a4e365739224abd388d6ed843c93ace426ba
+Author: David Gleba <dgleba@gmail.com>
+Date:   Thu Nov 17 20:03:32 2016 -0500
+
+    misc 2
+
+commit 4fefa7718c9329bbb6ce0aba8228eabc090c1039
+Author: David Gleba <dgleba@gmail.com>
+Date:   Thu Nov 17 20:01:47 2016 -0500
+
+    misc
+
 commit 5914fbf7cf30ea4a1448beb1c744debe6aba1cf5
 Author: David Gleba <dgleba@gmail.com>
 Date:   Thu Nov 17 19:55:13 2016 -0500
@@ -47,15 +59,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Fri Oct 28 19:38:14 2016 -0400
 
     hooks
-
-commit 4656f2d2e211b52f3cc1ea4d31982f8a9736f79f
-Author: dgleba <dgleba@gmail.com>
-Date:   Fri Oct 28 17:20:53 2016 -0400
-
-    filter/limit index view with ransack
-
-commit 236059e1c0dcdd8d1633d2d1190fd8693a3be506
-Author: David Gleba <dgleba@gmail.com>
-Date:   Thu Oct 27 22:41:41 2016 -0400
-
-    comment 2016-10-27

@@ -61,7 +61,6 @@
 1468703835|app/decorators/user_decorator.rb
 1468703835|app/decorators/vehicle_decorator.rb
 1472855702|app/helpers/application_helper.rb
-1472920887|app/helpers/customer_helper.rb
 1472856302|app/helpers/passenger_helper.rb
 1468703835|app/inputs/collection_select_input.rb
 1465257040|app/mailers/.keep
@@ -153,7 +152,6 @@
 1432296023|app/views/users/show.json.jbuilder
 1477324196|app/views/vehicles/_form.html.haml
 1468703836|app/views/vehicles/edit.html.haml
-1477492935|app/views/vehicles/index.html.haml
 1468703836|app/views/vehicles/index.json.jbuilder
 1468703836|app/views/vehicles/new.html.haml
 1476929611|app/views/vehicles/show.html.haml
@@ -311,7 +309,6 @@
 1469623249|util/passw.rb
 1465257040|vendor/assets/stylesheets/.keep
 1477769183|db/migrate/20161029192623_add_user_to_customers.rb
-1477769371|db/schema.rb
 1477774491|app/models/ability.rb
 1477773827|app/models/role.rb
 1477773860|app/models/user.rb
@@ -325,7 +322,6 @@
 1477869097|app/views/customers/print2.html.haml
 1477869414|app/views/customers/show.html.haml
 1477868948|config/routes.rb
-1477868541|db/development.sqlite3
 1479427246|README.md
 1468703838|__offline/DEPLOYMENT.md
 1477967660|__offline/hookold.sh
@@ -337,7 +333,19 @@
 1479428218|util/hooks/pre-push
 1479174254|util/mtimeh.rb
 1479430649|version/version.sh
-1479430517|version/version__may-be-missing-one-version.txt
-1479430907|version/version-a.txt
-1479430907|version/version-n.txt
-1479430907|version/version.txt
+1479438107|app/helpers/customer_helper.rb
+1472677025|app/helpers/dgrail_helper.rb
+1479438933|app/helpers/vehicle_helper.rb
+1479438179|app/views/customers/index.html.haml.works.4box.search
+1479438502|app/views/vehicles/index.html.haml
+1479438861|db/development.sqlite3
+1479437972|db/migrate/20161118025934_add_rsackdummy2_to_customers.rb
+1479437973|db/migrate/20161118025935_add_rsackdummy3_to_customers.rb
+1479438839|db/migrate/20161118031400_add_rsackdummy2_to_vehicles.rb
+1479438840|db/migrate/20161118031401_add_rsackdummy3_to_vehicles.rb
+1479438861|db/schema.rb
+1479431011|version/version-a.txt
+1479430907|version/version-a.txt.save
+1479431011|version/version-n.txt
+1479431011|version/version.txt
+1479431015|version/version__may-be-missing-one-version.txt
