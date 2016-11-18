@@ -1,0 +1,61 @@
+commit 5914fbf7cf30ea4a1448beb1c744debe6aba1cf5
+Author: David Gleba <dgleba@gmail.com>
+Date:   Thu Nov 17 19:55:13 2016 -0500
+
+    readme, version, hooks
+    
+    Signed-off-by: David Gleba <dgleba@gmail.com>
+
+commit 61ca1f5d25d257026ceb97763eabaa4f922b383b
+Author: David Gleba <dgleba@gmail.com>
+Date:   Tue Nov 1 19:43:22 2016 -0400
+
+    1101
+
+commit 7c88e2945b8aa2faf1647408b9dcd31c8b6c6ebb
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sun Oct 30 19:45:27 2016 -0400
+
+    Add print page - show views.
+
+commit b7d57890cb436f46fa3cd2a92237d511bd1df41c
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sun Oct 30 11:53:06 2016 -0400
+
+    misc
+
+commit a061dbfa947131eb004b5e5307ba7ab3c2061c89
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sat Oct 29 17:04:15 2016 -0400
+
+    Limit Customers access to only the user who created it.
+
+commit 75f97e156f5665b95d8700988668892cd7286a65
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sat Oct 29 15:37:30 2016 -0400
+
+    add user who created record to customers
+
+commit b79c8cbdaed0e9e8d28c9c542c4034dedb3fb7ce
+Author: albe <albe@pmdsdata9.local>
+Date:   Sat Oct 29 14:49:02 2016 -0400
+
+    misc
+
+commit e8f421bee97a68d8a1a423c7f17d38a79431314c
+Author: David Gleba <dgleba@gmail.com>
+Date:   Fri Oct 28 19:38:14 2016 -0400
+
+    hooks
+
+commit 4656f2d2e211b52f3cc1ea4d31982f8a9736f79f
+Author: dgleba <dgleba@gmail.com>
+Date:   Fri Oct 28 17:20:53 2016 -0400
+
+    filter/limit index view with ransack
+
+commit 236059e1c0dcdd8d1633d2d1190fd8693a3be506
+Author: David Gleba <dgleba@gmail.com>
+Date:   Thu Oct 27 22:41:41 2016 -0400
+
+    comment 2016-10-27
