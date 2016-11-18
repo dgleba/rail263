@@ -330,7 +330,6 @@
 2016-11-14 23:27:08 -0500 | 1479184028 | util/hook.sh
 2016-11-17 19:21:30 -0500 | 1479428490 | util/hooks/post-checkout
 2016-11-17 19:21:38 -0500 | 1479428498 | util/hooks/pre-commit
-2016-11-17 19:16:58 -0500 | 1479428218 | util/hooks/pre-push
 2016-11-14 20:44:14 -0500 | 1479174254 | util/mtimeh.rb
 2016-11-17 19:57:29 -0500 | 1479430649 | version/version.sh
 2016-11-17 22:01:47 -0500 | 1479438107 | app/helpers/customer_helper.rb
@@ -344,8 +343,9 @@
 2016-11-17 22:13:59 -0500 | 1479438839 | db/migrate/20161118031400_add_rsackdummy2_to_vehicles.rb
 2016-11-17 22:14:00 -0500 | 1479438840 | db/migrate/20161118031401_add_rsackdummy3_to_vehicles.rb
 2016-11-17 22:14:21 -0500 | 1479438861 | db/schema.rb
-2016-11-17 20:03:31 -0500 | 1479431011 | version/version-a.txt
-2016-11-17 20:01:47 -0500 | 1479430907 | version/version-a.txt.save
-2016-11-17 20:03:31 -0500 | 1479431011 | version/version-n.txt
-2016-11-17 20:03:31 -0500 | 1479431011 | version/version.txt
-2016-11-17 20:03:35 -0500 | 1479431015 | version/version__may-be-missing-one-version.txt
+2016-11-17 22:20:28 -0500 | 1479439228 | util/hooks/pre-push
+2016-11-17 22:19:52 -0500 | 1479439192 | version/version-a.txt
+2016-11-17 20:03:31 -0500 | 1479431011 | version/version-a.txt.save
+2016-11-17 22:19:52 -0500 | 1479439192 | version/version-n.txt
+2016-11-17 22:19:52 -0500 | 1479439192 | version/version.txt
+2016-11-17 22:19:57 -0500 | 1479439197 | version/version__may-be-missing-one-version.txt

@@ -330,7 +330,6 @@
 1479184028|util/hook.sh
 1479428490|util/hooks/post-checkout
 1479428498|util/hooks/pre-commit
-1479428218|util/hooks/pre-push
 1479174254|util/mtimeh.rb
 1479430649|version/version.sh
 1479438107|app/helpers/customer_helper.rb
@@ -344,8 +343,9 @@
 1479438839|db/migrate/20161118031400_add_rsackdummy2_to_vehicles.rb
 1479438840|db/migrate/20161118031401_add_rsackdummy3_to_vehicles.rb
 1479438861|db/schema.rb
-1479431011|version/version-a.txt
-1479430907|version/version-a.txt.save
-1479431011|version/version-n.txt
-1479431011|version/version.txt
-1479431015|version/version__may-be-missing-one-version.txt
+1479439228|util/hooks/pre-push
+1479439192|version/version-a.txt
+1479431011|version/version-a.txt.save
+1479439192|version/version-n.txt
+1479439192|version/version.txt
+1479439197|version/version__may-be-missing-one-version.txt

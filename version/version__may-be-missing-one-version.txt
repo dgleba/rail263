@@ -1,3 +1,9 @@
+commit a7da04d29c3908da3307815fd812d45b1612e3b9
+Author: David Gleba <dgleba@gmail.com>
+Date:   Thu Nov 17 22:19:52 2016 -0500
+
+    add 4-box search most fields to vehicle
+
 commit d642a4e365739224abd388d6ed843c93ace426ba
 Author: David Gleba <dgleba@gmail.com>
 Date:   Thu Nov 17 20:03:32 2016 -0500
@@ -53,9 +59,3 @@ Author: albe <albe@pmdsdata9.local>
 Date:   Sat Oct 29 14:49:02 2016 -0400
 
     misc
-
-commit e8f421bee97a68d8a1a423c7f17d38a79431314c
-Author: David Gleba <dgleba@gmail.com>
-Date:   Fri Oct 28 19:38:14 2016 -0400
-
-    hooks
