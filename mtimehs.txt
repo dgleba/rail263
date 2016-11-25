@@ -1,8 +1,10 @@
+2016-11-17 22:28:09 -0500 | 1479439689 | version/version.txt
+2016-11-17 22:28:09 -0500 | 1479439689 | version/version-n.txt
+2016-11-17 22:28:09 -0500 | 1479439689 | version/version-a.txt
+2016-11-17 22:25:59 -0500 | 1479439559 | util/hooks/pre-commit
+2016-11-17 22:20:55 -0500 | 1479439255 | version/version-a.txt.save
 2016-11-17 22:20:28 -0500 | 1479439228 | util/hooks/pre-push
 2016-11-17 22:19:57 -0500 | 1479439197 | version/version__may-be-missing-one-version.txt
-2016-11-17 22:19:52 -0500 | 1479439192 | version/version.txt
-2016-11-17 22:19:52 -0500 | 1479439192 | version/version-n.txt
-2016-11-17 22:19:52 -0500 | 1479439192 | version/version-a.txt
 2016-11-17 22:15:33 -0500 | 1479438933 | app/helpers/vehicle_helper.rb
 2016-11-17 22:14:21 -0500 | 1479438861 | db/schema.rb
 2016-11-17 22:14:21 -0500 | 1479438861 | db/development.sqlite3
@@ -13,13 +15,12 @@
 2016-11-17 22:01:47 -0500 | 1479438107 | app/helpers/customer_helper.rb
 2016-11-17 21:59:33 -0500 | 1479437973 | db/migrate/20161118025935_add_rsackdummy3_to_customers.rb
 2016-11-17 21:59:32 -0500 | 1479437972 | db/migrate/20161118025934_add_rsackdummy2_to_customers.rb
-2016-11-17 20:03:31 -0500 | 1479431011 | version/version-a.txt.save
 2016-11-17 19:57:29 -0500 | 1479430649 | version/version.sh
 2016-11-17 19:50:47 -0500 | 1479430247 | mtimehs.txt
 2016-11-17 19:50:47 -0500 | 1479430247 | mtimeh.txt
-2016-11-17 19:21:38 -0500 | 1479428498 | util/hooks/pre-commit
 2016-11-17 19:21:30 -0500 | 1479428490 | util/hooks/post-checkout
 2016-11-17 19:00:46 -0500 | 1479427246 | README.md
+2016-11-17 09:09:02 -0500 | 1479391742 | railst
 2016-11-14 23:27:08 -0500 | 1479184028 | util/hook.sh
 2016-11-14 20:44:14 -0500 | 1479174254 | util/mtimeh.rb
 2016-10-31 22:34:20 -0400 | 1477967660 | __offline/hookold.sh
@@ -40,10 +41,9 @@
 2016-10-27 16:21:18 -0400 | 1477599678 | docs/search-djangolike-markcampbell-2016-09-19.rb.txt
 2016-10-27 16:21:18 -0400 | 1477599678 | docs/rail263notes.txt
 2016-10-27 14:23:15 -0400 | 1477592595 | deploy/deploy.sh
-2016-10-27 13:40:27 -0400 | 1477590027 | deploy/deploysh
+2016-10-27 13:40:27 -0400 | 1477590027 | deploy/older/deploysh
 2016-10-26 23:31:39 -0400 | 1477539099 | deploy/older/rail263.conf
 2016-10-26 23:31:39 -0400 | 1477539099 | deploy/older/rail263 2016-10-27_12.20.30.conf
-2016-10-26 23:31:38 -0400 | 1477539098 | deploy/older/deploysh 2016-10-27_12.20.27
 2016-10-26 10:31:55 -0400 | 1477492315 | config/database.yml
 2016-10-25 10:34:43 -0400 | 1477406083 | db/seeds.rb
 2016-10-25 09:44:03 -0400 | 1477403043 | Gemfile.lock
@@ -113,7 +113,6 @@
 2016-07-27 08:40:49 -0400 | 1469623249 | util/passw.rb
 2016-07-26 10:48:47 -0400 | 1469544527 | __offline/passw.rb
 2016-07-25 13:46:24 -0400 | 1469468784 | app/views/devise/sessions/new.html.erb
-2016-07-24 15:28:53 -0400 | 1469388533 | deploy/older/deploysh 2016-10-24_09.55.38
 2016-07-24 15:25:59 -0400 | 1469388359 | config/initializers/session_store.rb
 2016-07-24 15:25:36 -0400 | 1469388336 | app/views/layouts/application.html.haml
 2016-07-24 14:09:21 -0400 | 1469383761 | app/controllers/users_controller.rb

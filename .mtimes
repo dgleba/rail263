@@ -225,10 +225,7 @@
 1472658518|deploy/copyof/rbcp,railci278.bat
 1468703838|deploy/deploy-drail-howto-notes.txt
 1477592595|deploy/deploy.sh
-1477590027|deploy/deploysh
 1468703838|deploy/etc/puma.conf
-1469388533|deploy/older/deploysh 2016-10-24_09.55.38
-1477539098|deploy/older/deploysh 2016-10-27_12.20.27
 1468948214|deploy/older/deploysh1
 1469188184|deploy/older/deploysh1-becareful
 1469041476|deploy/older/deploysh1a
@@ -325,8 +322,6 @@
 1479427246|README.md
 1468703838|__offline/DEPLOYMENT.md
 1477967660|__offline/hookold.sh
-1479430247|mtimeh.txt
-1479430247|mtimehs.txt
 1479184028|util/hook.sh
 1479428490|util/hooks/post-checkout
 1479174254|util/mtimeh.rb
@@ -349,3 +344,8 @@
 1479439255|version/version-a.txt.save
 1479439689|version/version-n.txt
 1479439689|version/version.txt
+1480095028|.mtimes
+1477590027|deploy/older/deploysh
+1480095026|mtimeh.txt
+1480095026|mtimehs.txt
+1479391742|railst
