@@ -15,7 +15,7 @@ development:
   database: rail263_dev
   pool: 5
   username: root
-  password: lean
+  password: x
   host: localhost
   port: 3306
 
@@ -29,7 +29,7 @@ test:
   database: rail263_test
   pool: 5
   username: root
-  password: lean
+  password: x
   host: localhost
   port: 3306
 

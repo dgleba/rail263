@@ -165,7 +165,6 @@
 1472948081|config/application.rb
 1468703836|config/boot.rb
 1468703836|config/brakeman.yml
-1472954578|config/database-mysql.yml
 1468703836|config/database-sqlite.yml
 1477492315|config/database.yml
 1475082671|config/environment.rb
@@ -319,7 +318,6 @@
 1477869097|app/views/customers/print2.html.haml
 1477869414|app/views/customers/show.html.haml
 1477868948|config/routes.rb
-1479427246|README.md
 1468703838|__offline/DEPLOYMENT.md
 1477967660|__offline/hookold.sh
 1479184028|util/hook.sh
@@ -344,8 +342,9 @@
 1479439255|version/version-a.txt.save
 1479439689|version/version-n.txt
 1479439689|version/version.txt
-1480095028|.mtimes
 1477590027|deploy/older/deploysh
 1480095026|mtimeh.txt
 1480095026|mtimehs.txt
 1479391742|railst
+1490228593|README.md
+1489893044|config/database-mysql.yml

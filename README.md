@@ -7,6 +7,10 @@ This is a Rails 4.2.6 app.
 in a command prompt terminal..  
 cd into the project folder  
 
+
+  (note: the stars around customer are not showing on github. open the raw readme.md...)
+  
+```  
 find  -name '*customer*' -delete  
 find . -name "customer*" -type d -exec rm -r "{}" \;  
 
@@ -34,15 +38,27 @@ find . -name "$fname1*" -type d -exec rm -r "{}" \;
 fname1='passenger'  
 find  -name "*$fname1*" -delete  
 find . -name "$fname1*" -type d -exec rm -r "{}" \;  
-
+```
 _____________ 
 
 This can be done, but doesn't delete as much as the above.
 
+```
 rails destroy scaffold Customer  
  rails destroy scaffold RentalRecords  
  rails destroy scaffold Vehicle  
  etc...  
+``` 
+
+ 
+#### Check to see what's left:
+
+```
+  grep -ri vehicle .  
+  grep -ri customer .   
+  grep -ri rental .   
+  etc..   
+```
  
 _____________ 
 
@@ -50,7 +66,7 @@ _____________
  
  
 ### git repo...
-
+```
 rm -rf .git  
 git init  
 git add -A  # Add all files and commit them  
@@ -59,15 +75,17 @@ git commit -m "Removed history and started over"
 ###  Other files..
 delete the databases in db/*.sqlite3  
 delete rail263\config\initializers\rails_admin-263.rb
+```
 
 edit these files to remove unwanted items..  
+```
 ability.rb      
 application.html
 routes.rb        
 schema.rb       
 seeds.rb        
 application_helper.rb
-
+```
 
 ### Application name is referenced in..
 
