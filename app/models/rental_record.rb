@@ -2,7 +2,8 @@ class RentalRecord < ActiveRecord::Base
   belongs_to :customer
   belongs_to :vehicle
 
-  has_many :passengers
+  # delete associated records..  
+  has_many :passengers, dependent: :destroy
   has_many :pasenger_lists, :through => :passengers, :class_name => 'PasengerList'
 
   accepts_nested_attributes_for :pasenger_lists
